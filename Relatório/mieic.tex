@@ -43,6 +43,8 @@
 \usepackage{color}
 \definecolor{cloudwhite}{cmyk}{0,0,0,0.025}
 
+\usepackage{multirow}
+
 %% Include source-code listings package
 \usepackage{listings}
 \lstset{ %
@@ -92,8 +94,8 @@
 %%----------------------------------------
 %% Information about the work
 %%----------------------------------------
-\title{Título da Dissertação}
-\author{Nome do Autor}
+\title{Estudo, conceção, desenvolvimento e teste de uma aplicação móvel de pagamento e validação para Transportes Públicos de Passageiros}
+\author{André Gonçalves Dias}
 
 %% Uncomment next line for date of submission
 %\thesisdate{31 de Julho de 2008}
@@ -101,10 +103,10 @@
 %% Uncomment next line for copyright text if used
 %\copyrightnotice{Nome do Autor, 2008}
 
-\supervisor{Orientador}{Nome do Orientador}
+\supervisor{Orientador}{João Bernardo de Sena Esteves Falcão e Cunha}
 
 %% Uncomment next line if necessary
-%\supervisor{Co-orientador}{Nome de Outro Orientador}
+\supervisor{Co-orientador}{Marta Maria Campos Ferreira}
 
 %% Uncomment committee stuff in the final version
 %\committeetext{Aprovado em provas públicas pelo Júri:}
@@ -126,8 +128,8 @@
 % remove unnecessary \include{} commands
 \begin{Prolog}
   \include{abstract} % the abstract
-  \include{acknows}  % the acknowledgments
-  \include{quote}    % initial quotation if desired
+  %\include{acknows}  % the acknowledgments
+  %\include{quote}    % initial quotation if desired
   \cleardoublepage
   \pdfbookmark[0]{Conteúdo}{contents}
   \tableofcontents
@@ -151,7 +153,7 @@
 \include{chapter2}
 \include{chapter3}
 \include{chapter4}
-\include{chapter5} 
+%\include{chapter5} 
 
 %%----------------------------------------
 %% Final materials
@@ -160,11 +162,12 @@
 %% Bibliography
 %% Comment the next command if BibTeX file not used, 
 %% Assumes that bibliography is in ``myrefs.bib''
-\PrintBib{myrefs}
+\PrintBib{refs}
 
 %% Comment next 2 commands if numbered appendices are not used
 \appendix
 \include{appendix1}
+\include{appendix2}
 
 %% Index
 %% Uncomment next command if index is required, 

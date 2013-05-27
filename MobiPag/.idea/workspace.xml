@@ -22,7 +22,9 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" name="Default" comment="" />
+    <list default="true" id="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="AndanteMobile.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/a.html" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1368748312523" ignored="false" />
@@ -50,7 +52,7 @@
     <file path="/WebServiceHandler.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369416655879" ignored="false" />
     <file path="/DatePickerFragment.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369410715212" ignored="false" />
     <file path="/MultiSpinner.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1368754974250" ignored="false" />
-    <file path="/Dummy.txt" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369412481302" ignored="false" />
+    <file path="/Dummy.txt" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369659125036" ignored="false" />
     <file path="/a.xml" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369148504754" ignored="false" />
     <file path="$PROJECT_DIR$/gen/pt/up/fe/andantemobile/R.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369321110961" ignored="false" />
     <file path="/SettingsActivity.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369410773193" ignored="false" />
@@ -76,7 +78,6 @@
     <file path="$PROJECT_DIR$/gen/pt/up/fe/mobipag/Manifest.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369410176739" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369410223943" ignored="false" />
     <file path="$PROJECT_DIR$/gen/com/opt/mobipag/BuildConfig.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369410333654" ignored="false" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369411082455" ignored="false" />
     <file path="$PROJECT_DIR$/gen/com/opt/mobipag/Manifest.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369410721864" ignored="false" />
     <file path="$PROJECT_DIR$/gen/com/opt/mobipag/R.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369411145003" ignored="false" />
     <file path="/config.xml" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369417367483" ignored="false" />
@@ -151,7 +152,7 @@
       <file leaf-file-name="ValidationActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/ValidationActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="216" column="41" selection-start="8953" selection-end="8953" vertical-scroll-proportion="3.4796855">
+            <state line="216" column="41" selection-start="8953" selection-end="8953" vertical-scroll-proportion="0.044510387">
               <folding>
                 <element signature="method#updateFields#0;class#ValidationActivity#0" expanded="false" />
                 <element signature="class#GetTickets#0;class#ValidationActivity#0" expanded="false" />
@@ -176,6 +177,11 @@
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
@@ -222,7 +228,7 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -370,6 +376,7 @@
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Galaxy_Nexus_2.2" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
@@ -547,11 +554,13 @@
       <workItem from="1369416280576" duration="4096000" />
       <workItem from="1369654712719" duration="3068000" />
       <workItem from="1369657951594" duration="14000" />
+      <workItem from="1369659034291" duration="32000" />
+      <workItem from="1369659093129" duration="34000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50701000" />
+    <option name="totallyTimeSpent" value="50767000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -580,7 +589,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38726792" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5307692" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5286783" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24605452" sideWeight="0.42643392" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24605452" sideWeight="0.42643392" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -589,7 +598,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24839126" sideWeight="0.6717949" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27977043" sideWeight="0.6717949" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27977043" sideWeight="0.6717949" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3254364" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.6717949" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -677,196 +686,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/AboutActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="542" selection-end="542" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#561#585#0" expanded="true" />
-            <element signature="e#561#596#0" expanded="true" />
-            <element signature="e#599#624#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="18" column="0" selection-start="542" selection-end="542" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/ConfirmBuyOCActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="99" selection-start="5412" selection-end="5412" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1940#1971#0" expanded="true" />
-            <element signature="e#2455#2487#0" expanded="true" />
-            <element signature="e#2613#2647#0" expanded="true" />
-            <element signature="e#2667#2696#0" expanded="true" />
-            <element signature="e#2771#2805#0" expanded="true" />
-            <element signature="e#2882#2912#0" expanded="true" />
-            <element signature="e#2934#2956#0" expanded="true" />
-            <element signature="e#3805#3830#0" expanded="true" />
-            <element signature="e#5385#5411#0" expanded="true" />
-            <element signature="e#5412#5442#0" expanded="true" />
-            <element signature="e#5901#5934#0" expanded="true" />
-            <element signature="e#6100#6132#0" expanded="true" />
-            <element signature="e#6574#6603#0" expanded="true" />
-            <element signature="e#6698#6732#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="129" column="99" selection-start="5412" selection-end="5412" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/BuyActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="248" column="88" selection-start="9765" selection-end="9765" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#3630#3655#0" expanded="true" />
-            <element signature="e#4378#4404#0" expanded="true" />
-            <element signature="e#4405#4435#0" expanded="true" />
-            <element signature="e#6988#7022#0" expanded="true" />
-            <element signature="e#7420#7446#0" expanded="true" />
-            <element signature="e#7447#7475#0" expanded="true" />
-            <element signature="e#9738#9764#0" expanded="true" />
-            <element signature="e#9765#9796#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="248" column="88" selection-start="9765" selection-end="9765" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/TicketBalanceActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="88" selection-start="2913" selection-end="2913" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#2005#2030#0" expanded="true" />
-            <element signature="e#2886#2912#0" expanded="true" />
-            <element signature="e#2913#2944#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="82" column="88" selection-start="2913" selection-end="2913" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/RegisterActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="405" column="99" selection-start="16707" selection-end="16707" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#6454#6485#0" expanded="true" />
-            <element signature="e#6700#6726#0" expanded="true" />
-            <element signature="e#7077#7112#0" expanded="true" />
-            <element signature="e#7366#7391#0" expanded="true" />
-            <element signature="e#13571#13597#0" expanded="true" />
-            <element signature="e#13598#13627#0" expanded="true" />
-            <element signature="e#14042#14077#0" expanded="true" />
-            <element signature="e#15266#15297#0" expanded="true" />
-            <element signature="e#15514#15543#0" expanded="true" />
-            <element signature="e#15743#15777#0" expanded="true" />
-            <element signature="e#16680#16706#0" expanded="true" />
-            <element signature="e#16707#16736#0" expanded="true" />
-            <element signature="e#17151#17186#0" expanded="true" />
-            <element signature="e#17894#17926#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="405" column="99" selection-start="16707" selection-end="16707" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="109" selection-start="4343" selection-end="4343" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="120" column="109" selection-start="4343" selection-end="4343" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/AccountMovementsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="211" column="88" selection-start="7505" selection-end="7505" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#2234#2259#0" expanded="true" />
-            <element signature="e#3126#3157#0" expanded="true" />
-            <element signature="e#3180#3203#0" expanded="true" />
-            <element signature="e#3226#3249#0" expanded="true" />
-            <element signature="e#4456#4478#0" expanded="true" />
-            <element signature="e#4539#4561#0" expanded="true" />
-            <element signature="e#5172#5198#0" expanded="true" />
-            <element signature="e#5199#5227#0" expanded="true" />
-            <element signature="e#7478#7504#0" expanded="true" />
-            <element signature="e#7505#7536#0" expanded="true" />
-            <element signature="e#10321#10353#0" expanded="true" />
-            <element signature="e#10525#10556#0" expanded="true" />
-            <element signature="e#11213#11241#0" expanded="true" />
-            <element signature="e#11732#11754#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="211" column="88" selection-start="7505" selection-end="7505" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/TicketValidationActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="496" column="112" selection-start="19900" selection-end="19900" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#2567#2598#0" expanded="true" />
-            <element signature="e#3009#3034#0" expanded="true" />
-            <element signature="e#3821#3852#0" expanded="true" />
-            <element signature="e#3875#3900#0" expanded="true" />
-            <element signature="e#4872#4900#0" expanded="true" />
-            <element signature="e#4916#4944#0" expanded="true" />
-            <element signature="e#5674#5705#0" expanded="true" />
-            <element signature="e#5728#5753#0" expanded="true" />
-            <element signature="e#7056#7088#0" expanded="true" />
-            <element signature="e#7159#7190#0" expanded="true" />
-            <element signature="e#8799#8825#0" expanded="true" />
-            <element signature="e#8826#8857#0" expanded="true" />
-            <element signature="e#9824#9850#0" expanded="true" />
-            <element signature="e#9851#9885#0" expanded="true" />
-            <element signature="e#17862#17904#0" expanded="true" />
-            <element signature="e#18050#18082#0" expanded="true" />
-            <element signature="e#18556#18580#0" expanded="true" />
-            <element signature="e#18592#18621#0" expanded="true" />
-            <element signature="e#19865#19889#0" expanded="true" />
-            <element signature="e#19901#19926#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="496" column="112" selection-start="19900" selection-end="19900" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/ConfirmBuySignatureActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="99" selection-start="4854" selection-end="4854" vertical-scroll-proportion="0.21786198">
-          <folding>
-            <element signature="e#2576#2613#0" expanded="true" />
-            <element signature="e#2680#2710#0" expanded="true" />
-            <element signature="e#2732#2754#0" expanded="true" />
-            <element signature="e#3603#3628#0" expanded="true" />
-            <element signature="e#4827#4853#0" expanded="true" />
-            <element signature="e#4854#4887#0" expanded="true" />
-            <element signature="e#5346#5380#0" expanded="true" />
-            <element signature="e#5546#5578#0" expanded="true" />
-            <element signature="e#7026#7054#0" expanded="true" />
-            <element signature="e#7206#7235#0" expanded="true" />
-            <element signature="e#7330#7364#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="121" column="99" selection-start="4854" selection-end="4854" vertical-scroll-proportion="0.21786198" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/SettingsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="323" column="88" selection-start="13101" selection-end="13101" vertical-scroll-proportion="0.21941489">
-          <folding>
-            <element signature="e#6236#6262#0" expanded="true" />
-            <element signature="e#6768#6803#0" expanded="true" />
-            <element signature="e#8360#8385#0" expanded="true" />
-            <element signature="e#10591#10617#0" expanded="true" />
-            <element signature="e#10618#10647#0" expanded="true" />
-            <element signature="e#12265#12296#0" expanded="true" />
-            <element signature="e#12512#12544#0" expanded="true" />
-            <element signature="e#12639#12673#0" expanded="true" />
-            <element signature="e#13074#13100#0" expanded="true" />
-            <element signature="e#13101#13129#0" expanded="true" />
-            <element signature="e#14090#14125#0" expanded="true" />
-            <element signature="e#17286#17311#0" expanded="true" />
-            <element signature="e#17372#17406#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="323" column="88" selection-start="13101" selection-end="13101" vertical-scroll-proportion="0.21941489" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/ManualStopSelector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="219" column="101" selection-start="8437" selection-end="8437" vertical-scroll-proportion="0.21941489">
-          <folding>
-            <element signature="e#2083#2108#0" expanded="true" />
-            <element signature="e#5373#5397#0" expanded="true" />
-            <element signature="e#5409#5438#0" expanded="true" />
-            <element signature="e#6667#6691#0" expanded="true" />
-            <element signature="e#6692#6721#0" expanded="true" />
-            <element signature="e#8402#8426#0" expanded="true" />
-            <element signature="e#8438#8470#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="219" column="101" selection-start="8437" selection-end="8437" vertical-scroll-proportion="0.21941489" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/revisor.xml">
@@ -879,9 +749,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values/config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="60" selection-start="1457" selection-end="1457" vertical-scroll-proportion="0.6181319">
-          <folding />
-        </state>
+        <state line="30" column="60" selection-start="1457" selection-end="1457" vertical-scroll-proportion="0.6181319" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
@@ -893,7 +761,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/ValidationActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="216" column="41" selection-start="8953" selection-end="8953" vertical-scroll-proportion="3.4796855">
+        <state line="216" column="41" selection-start="8953" selection-end="8953" vertical-scroll-proportion="0.044510387">
           <folding>
             <element signature="method#updateFields#0;class#ValidationActivity#0" expanded="false" />
             <element signature="class#GetTickets#0;class#ValidationActivity#0" expanded="false" />
