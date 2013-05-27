@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MobiPag STCP</string>
+    <string name="filename_user">active_user</string>
+    <string name="version">1.3</string>
+
+
+    <string name="stop_radius">80</string>
+
+    <string name="SERVERMP">http://move-me.mobi:35004/MobiPag/MobiPagService.svc/</string>
+    <string name="SERVER">http://move-me.mobi:35004/MobileProxy/MobileService.svc/</string>
+
+    <string name="LOGINURL">login</string>
+    <string name="REGISTERURL">newUser</string>
+    <string name="ADDTICKETURL">addTicket</string>
+    <string name="ADDSIGNATUREURL">addSignature</string>
+    <string name="ADDMONEYURL">addMoneyUser</string>
+    <string name="EDITUSERURL">editUser</string>
+    <string name="VALIDATEURL">validate</string>
+    <string name="GETPRICESURL">getPrices</string>
+    <string name="GETUSERURL">getUser</string>
+    <string name="GETTICKETSURL">getTickets</string>
+    <string name="GETHISTORYURL">getAccountMovements</string>
+    <string name="GETVALHISTORYURL">getAccountValidations</string>
+    <string name="STOPZONEURL">getStopZone</string>
+    <string name="LINEURL">GetAllLinesPathsByStop</string>
+    <string name="STOPSURL">GetAllNearStops</string>
+    <string name="STOPWORDURL">LoadStopsByWord</string>
+    <string name="OPERATORURL">GetAllProvidersName</string>
+    <string name="LINEBYOPURL">GetAllLinesByProvider</string>
+    <string name="STOPSBYLINEURL">GetAllStopsByLine</string>
+
+</resources>

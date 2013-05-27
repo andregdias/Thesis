@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.opt.mobipag"
+          android:versionCode="3"
+          android:versionName="1.3">
+
+    <uses-sdk
+            android:minSdkVersion="8"
+            android:targetSdkVersion="17"/>
+
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+
+    <application
+            android:allowBackup="true"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name">
+
+        <activity
+                android:name="com.opt.mobipag.gui.MainActivity"
+                android:label="@string/app_name"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.Light"
+                android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="com.opt.mobipag.gui.AboutActivity"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.Dialog">
+        </activity>
+        <activity
+                android:name="com.opt.mobipag.gui.LoginPinActivity"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.Dialog">
+        </activity>
+        <activity
+                android:name="com.opt.mobipag.gui.LoginActivity"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.Light">
+        </activity>
+        <activity
+                android:name="com.opt.mobipag.gui.RegisterActivity"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.Light">
+        </activity>
+        <activity
+                android:name="com.opt.mobipag.gui.ManualStopSelector"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.Light">
+        </activity>
+        <activity
+                android:name="com.opt.mobipag.gui.TicketBalanceActivity"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.Light">
+        </activity>
+        <activity
+                android:name="com.opt.mobipag.gui.AccountMovementsActivity"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.Light">
+        </activity>
+        <activity
+                android:name="com.opt.mobipag.gui.TicketValidationActivity"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.Light">
+        </activity>
+        <activity
+                android:name="com.opt.mobipag.gui.ConfirmBuyOCActivity"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.Light">
+        </activity>
+        <activity
+                android:name="com.opt.mobipag.gui.BuyOcasionalActivity"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.Light">
+        </activity>
+        <activity
+                android:name="com.opt.mobipag.gui.ConfirmBuySignatureActivity"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.Light">
+        </activity>
+        <activity
+                android:name="com.opt.mobipag.gui.BuySignatureActivity"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.Light">
+        </activity>
+        <activity
+                android:name="com.opt.mobipag.gui.ValidationActivity"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.Light">
+        </activity>
+        <activity
+                android:name="com.opt.mobipag.gui.HelpActivity"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.Dialog">
+        </activity>
+        <activity
+                android:name="com.opt.mobipag.gui.RevisorActivity"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.Light">
+        </activity>
+        <activity
+                android:name="com.opt.mobipag.gui.BuyActivity"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.Light">
+        </activity>
+        <activity
+                android:name="com.opt.mobipag.gui.ConsultActivity"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.Light">
+        </activity>
+        <activity
+                android:name="com.opt.mobipag.gui.SettingsActivity"
+                android:screenOrientation="portrait"
+                android:theme="@android:style/Theme.Light">
+        </activity>
+
+        <service android:name="com.opt.mobipag.data.TravelTimer"/>
+    </application>
+
+</manifest>

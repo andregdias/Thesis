@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Menu Principal-->
+    <string name="main_validar">Validar</string>
+    <string name="main_comprar">Comprar</string>
+    <string name="main_consultar">Consultar</string>
+    <string name="main_definicoes">Definições</string>
+    <string name="main_sobre">Sobre</string>
+
+    <!--Registo-->
+    <string name="reg_title">Formulário de Registo</string>
+    <string name="reg_obrig_fields">* Campos obrigatórios</string>
+    <string name="reg_name">Nome *</string>
+    <string name="reg_email">Email *</string>
+    <string name="reg_email_">Email</string>
+    <string name="reg_password">Palavra-Passe *</string>
+    <string name="reg_pin">PIN (4 dígitos) *</string>
+    <string name="reg_password_">Palavra-Passe</string>
+    <string name="reg_dob">Data de Nascimento</string>
+    <string name="reg_mobile">Telemóvel</string>
+    <string name="reg_address">Morada</string>
+    <string name="reg_nif">Número de Identificação Fiscal *</string>
+    <string name="reg_nif_">Número de Identificação Fiscal</string>
+    <string name="reg_max">Valor Máx. sem PIN (0: desligado)</string>
+    <string name="reg_tirar_foto">Tirar Fotografia</string>
+    <string name="reg_terms">Ao clicar Registar, assume que leu a política de privacidade e que concorda com os termos da aplicação.</string>
+    <string name="reg_button_reg">Registar</string>
+    <string name="reg_allfields">Os campos Nome, Email, Password, PIN e NIF são obrigatórios!</string>
+    <string name="reg_pin4">O PIN deve conter 4 dígitos!</string>
+    <string name="reg_email_already">O email utilizado já se encontra registado!</string>
+    <string name="reg_success">Parabéns!\nA sua conta foi criada com sucesso!</string>
+
+    <!--Definições-->
+    <string name="alterar_dados_utilizador">Alterar dados do utilizador</string>
+    <string name="alterar_dados_button">Alterar</string>
+    <string name="change_success">A sua conta foi alterada com sucesso!</string>
+
+    <!--Sobre-->
+    <string name="about">"Esta aplicação encontra-se em fase de desenvolvimento.\n\nÉ um projeto que envolve a Faculdade de Engenharia da Universidade do Porto, a OPT - Optimização e Planeamento de Transportes e a STCP - Sociedade de Transportes Colectivos do Porto.\n\n\nCopyright © 2013"</string>
+    <string name="versao">"Versão: "</string>
+
+    <!--Login-->
+    <string name="login_email">Email</string>
+    <string name="login_password">Palavra-Passe</string>
+    <string name="login_button_login">Confirmar</string>
+    <string name="login_button_register">Registar Novo Utilizador</string>
+    <string name="email_inexistente">Email inexistente!</string>
+    <string name="wrong_pass">Palavra-Passe não corresponde ao email introduzido!</string>
+
+    <!--Compra-->
+    <string name="buy_title">Comprar título de viagem</string>
+    <string name="buy_occasional">Ocasional</string>
+    <string name="buy_andante24">Andante 24</string>
+    <string name="buy_signature">Assinatura Mensal</string>
+    <string name="buy_balance">Saldo atual de títulos:</string>
+    <string name="buy_no_balance">Saldo insuficiente.</string>
+    <string name="buy_success">A sua compra foi efetuada com sucesso!</string>
+
+    <!--Compra Oc.-->
+    <string name="buy_oc_title">Títulos ocasionais</string>
+    <string name="buy_oc_title2">Títulos Andante 24</string>
+    <string name="buy_oc_numzones">Número de Zonas</string>
+    <string name="buy_oc_numtitles">"Número de títulos: "</string>
+    <string name="buy_oc_total">"Valor a pagar: "</string>
+    <string name="buy_oc_balance">"Saldo atual: "</string>
+    <string name="buy_oc_buy">Comprar</string>
+    <string name="buy_oc_free">" + 1 grátis"</string>
+    <string name="b1">1</string>
+    <string name="b2">2</string>
+    <string name="b5">5</string>
+    <string name="b10">10+1</string>
+
+    <!--Compra Ass.-->
+    <string name="buy_sig_zones">Zonas</string>
+    <string name="buy_sig_min2">Deve escolher pelo menos 2 zonas.</string>
+    <string name="buy_sig_curr">Já possui uma assinatura para o mês corrente!</string>
+    <string name="buy_sig_next">Já possui uma assinatura para o próximo mês!</string>
+    <string name="zonelimit">Apenas as 12 primeiras zonas serão selecionadas.</string>
+
+    <!--Confirmação Compra Oc.-->
+    <string name="buy_occonf_title">Confirmação da compra</string>
+    <string name="buy_occonf_conf">Confirmar</string>
+    <string name="buy_occonf_oc">"Título de viagem ocasional: "</string>
+    <string name="buy_occonf_a24">"Título de viagem Andante 24: "</string>
+    <string name="buy_occonf_4001">Contacte o admin com o código 4001.</string>
+
+    <!--Confirmação Compra Ass.-->
+    <string name="buy_sigconf_details">"Assinatura com as zonas: "</string>
+    <string name="buy_sigconf_5001">Contacte o admin com o código 5001.</string>
+
+    <!--Validação-->
+    <string name="validate_title">Validação</string>
+    <string name="validate_entrada">Paragem de entrada</string>
+    <string name="validate_titulo">Título</string>
+    <string name="validate_validar">Validar</string>
+    <string name="validate_operador">Operador</string>
+    <string name="validate_confirmar">Confirmar</string>
+    <string name="other">Outra…</string>
+    <string name="sem_titulos">Sem títulos!</string>
+    <string name="validate_linhas">Linhas</string>
+    <string name="saldo_">" (Saldo: "</string>
+    <string name="ativo">" (Ativo)"</string>
+    <string name="noTitleBesidesSig">Não possui nenhum título para além da assinatura mensal e esta não pode ser usada na paragem selecionada.</string>
+    <string name="selectStopLine">Selecione paragem e linha!</string>
+    <string name="val_success">"Validação com sucesso!\nPode viajar até à paragem: "</string>
+    <string name="error_invalid_key">Contacte o admin com o código 4201.</string>
+    <string name="error_titulo_inexistente">Título inexistente!</string>
+
+    <!--Consulta-->
+    <string name="consultar_carteira">Carteira</string>
+    <string name="consultar_saldo">Saldo de Títulos</string>
+    <string name="consultar_operacoes">Operações de Conta</string>
+    <string name="consultar_validacoes">Histórico de Validações</string>
+    <string name="consultar_validacoes_occ">Ocasionais e Andante 24</string>
+    <string name="consultar_validacoes_sig">Assinatura Mensal (</string>
+
+    <!--Consulta Operações Conta-->
+    <string name="consultar_movimentos">Movimentos</string>
+    <string name="data_detalhes">Data, Detalhes</string>
+    <string name="valor">Valor</string>
+    <string name="saldo">Saldo</string>
+    <string name="charge_account">Carregamento de Conta</string>
+
+    <!--Revisor-->
+    <string name="remaining">"Tempo Restante: "</string>
+    <string name="expired">Título expirado!</string>
+    <string name="tituloAtivo">Título Ativo</string>
+    <string name="bilhete">Bilhete</string>
+    <string name="noActiveTitle">Não possui nenhum título ativo!</string>
+
+    <!--Login Pin-->
+    <string name="pin">PIN (4 dígitos)</string>
+    <string name="pin_incorreto">PIN incorreto!</string>
+
+    <!--Tipos de Título-->
+    <string name="ocasional">Ocasional Z</string>
+    <string name="andante24">Andante 24 Z</string>
+    <string name="ocasional_">"Ocasional "</string>
+    <string name="andante24_">"Andante 24 "</string>
+    <string name="assinatura">"Assinatura "</string>
+
+    <!--Location Providers Notification-->
+    <string name="gps_not_found_title">Acesso à Localização</string>
+    <string name="gps_not_found_message">Não está ativo nenhum fornecedor de acesso à localização. É necessário que ative pelo menos um para um funcionamento correto da aplicação.</string>
+    <string name="fake">Não é possível utilizar a aplicação com o serviço de localizações fictícias ativo. Vá às definições do dispositivo e desative o serviço.</string>
+
+    <!--Consulta Saldo-->
+    <string name="tipo">Tipo</string>
+    <string name="detalhes">Detalhes</string>
+    <string name="titulo">" Título"</string>
+    <string name="titulos">" Títulos"</string>
+
+    <!--Consulta Valid. Ass.-->
+    <string name="sem_assinatura">Sem assinatura atual!</string>
+
+    <string-array name="help">
+        <item><![CDATA["<b>Menu Principal</b><br><br>Neste menu são apresentadas as funcionalidades da aplicação.<br><b>Validar</b>, para a validação de títulos existentes em carteira.<br><b>Comprar</b>, para a aquisição de novos títulos.<br><b>Consultar</b>, para visualização dos títulos em carteira, do histórico de operações e do histórico de validações.<br><b>Definições</b>, para a alteração dos dados pessoais do utilizador ou para efetuar logout da aplicação.<br><b>Sobre</b>, para a visualização de informação relativa ao desenvolvimento da aplicação."]]></item>
+        <item><![CDATA["<b>Validação</b><br><br>Neste menu pode proceder à validação de um título, selecionando a paragem e linha de entrada e o título a validar. Caso a listagem de paragens não inclua a paragem desejada pode clicar no botão de atualização ou selecionar a paragem manualmente, escolhendo a opção \"Outra…\" na listagem de paragens."]]></item>
+        <item><![CDATA["<b>Compra</b><br><br>Neste menu pode proceder à compra de títulos Ocasionais, Andante 24 e Assinatura Mensal. Para além disso, é apresentada a carteira de títulos disponíveis."]]></item>
+        <item><![CDATA["<b>Compra de Ocasional</b><br><br>Neste menu pode proceder à compra de títulos Ocasionais, escolhendo o número de zonas e a quantidade desejada."]]></item>
+        <item><![CDATA["<b>Compra de Andante 24</b><br><br>Neste menu pode proceder à compra de títulos Andante 24, escolhendo o número de zonas e a quantidade desejada."]]></item>
+        <item><![CDATA["<b>Confirmação de Compra</b><br><br>Neste menu pode confirmar os dados relativos à compra de títulos Ocasionais antes de finalizar a mesma."]]></item>
+        <item><![CDATA["<b>Confirmação de Compra</b><br><br>Neste menu pode confirmar os dados relativos à compra de títulos Andante 24 antes de finalizar a mesma."]]></item>
+        <item><![CDATA["<b>Compra de Assinatura</b><br><br>Neste menu pode proceder à compra da Assinatura Mensal, escolhendo as zonas necessárias."]]></item>
+        <item><![CDATA["<b>Confirmação de Compra</b><br><br>Neste menu pode confirmar os dados relativos à compra da Assinatura Mensal antes de finalizar a mesma."]]></item>
+        <item><![CDATA["<b>Consulta</b><br><br>Neste menu pode proceder à consulta da carteira de títulos, das operações de conta e do histórico de validações."]]></item>
+        <item><![CDATA["<b>Saldo de Títulos</b><br><br>Neste menu pode consultar os títulos disponíveis para utilização."]]></item>
+        <item><![CDATA["<b>Operações de Conta</b><br><br>Neste menu pode consultar o histórico de operações realizadas, nomeadamente Carregamentos de Conta, Compra de Assinaturas, Compra de Ocasionais, Compra de Andante 24."]]></item>
+        <item><![CDATA["<b>Histórico de Validações<br>(Ocasionais + Andante 24)</b><br><br>Neste menu pode consultar o histórico de validações efetuadas com títulos Ocasionais e Andante 24."]]></item>
+        <item><![CDATA["<b>Histórico de Validações<br>(Assinatura)</b><br><br>Neste menu pode consultar o histórico de validações efetuadas com a Assinatura Mensal do mês corrente."]]></item>
+        <item><![CDATA["<b>Definições</b><br><br>Neste menu pode alterar as definições pessoais."]]></item>
+        <item><![CDATA["<b>Registo</b><br><br>Neste menu pode registar uma nova conta de utilizador. O Email não poder ser o mesmo utilizado numa outra conta."]]></item>
+        <item><![CDATA["<b>Revisor</b><br><br>Neste menu está contida a informação necessária para mostrar ao revisor, quando solicitada."]]></item>
+        <item><![CDATA["<b>Login</b><br><br>Neste menu pode proceder à autenticação de um utilizador já registado ou registar um novo utilizador."]]></item>
+        <item><![CDATA["<b>Selector de Paragem</b><br><br>Neste menu pode escolher uma paragem manualmente, selecionando Operador, Linha e Paragem. As paragens encontram-se listadas por ordem alfabética."]]></item>
+    </string-array>
+
+    <string-array name="meses">
+        <item>janeiro</item>
+        <item>fevereiro</item>
+        <item>março</item>
+        <item>abril</item>
+        <item>maio</item>
+        <item>junho</item>
+        <item>julho</item>
+        <item>agosto</item>
+        <item>setembro</item>
+        <item>outubro</item>
+        <item>novembro</item>
+        <item>dezembro</item>
+    </string-array>
+
+    <!--Descritores Imagens-->
+    <string name="logohome">Logótipo</string>
+    <string name="menuhelp">Ajuda</string>
+    <string name="logout">Sair</string>
+    <string name="reload">Recarregar</string>
+
+    <!--Euro symbol-->
+    <string name="euro">€</string>
+
+    <!--Loading Dialog-->
+    <string name="loading">A Carregar…</string>
+
+    <!--Verify Internet Conn.-->
+    <string name="verifyConnection">Verifique a sua ligação à Internet.</string>
+</resources>

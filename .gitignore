@@ -1,2 +1,5 @@
 
 .DS_Store
+
+MobiPag/bin/*
+MobiPag/out/production/MobiPag/com/opt/mobipag/*

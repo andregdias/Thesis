@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <com.opt.mobipag.gui.ActionBar
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/reg_title"
+                    android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+            <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/reg_obrig_fields"/>
+
+            <EditText
+                    android:id="@+id/tf_RName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:hint="@string/reg_name"
+                    android:inputType="textPersonName">
+
+                <requestFocus/>
+            </EditText>
+
+            <EditText
+                    android:id="@+id/tf_REmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:ems="10"
+                    android:hint="@string/reg_email"
+                    android:inputType="textEmailAddress"/>
+
+            <EditText
+                    android:id="@+id/tf_RPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:ems="10"
+                    android:hint="@string/reg_password"
+                    android:inputType="textPassword"/>
+
+            <EditText
+                    android:id="@+id/tf_RPin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:ems="10"
+                    android:hint="@string/reg_pin"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:password="true"/>
+
+            <EditText
+                    android:id="@+id/tf_RBirth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:ems="10"
+                    android:hint="@string/reg_dob"
+                    android:inputType="text"
+                    android:onClick="showDatePickerDialog"/>
+
+            <EditText
+                    android:id="@+id/tf_RPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:ems="10"
+                    android:hint="@string/reg_mobile"
+                    android:inputType="phone"/>
+
+            <EditText
+                    android:id="@+id/tf_RAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:ems="10"
+                    android:hint="@string/reg_address"/>
+
+            <EditText
+                    android:id="@+id/tf_RNIF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:ems="10"
+                    android:hint="@string/reg_nif"
+                    android:inputType="number"/>
+
+            <EditText
+                    android:id="@+id/tf_RMax"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:ems="10"
+                    android:hint="@string/reg_max"
+                    android:inputType="number"/>
+
+            <Button
+                    android:id="@+id/buttonPhoto"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:drawablePadding="20dip"
+                    android:drawableRight="@drawable/profile_image"
+                    android:text="@string/reg_tirar_foto"/>
+
+            <!-- <RelativeLayout -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_gravity="center" -->
+            <!-- android:gravity="center" > -->
+
+
+            <!-- <Button -->
+            <!-- android:id="@+id/buttonPhoto" -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_centerVertical="true" -->
+            <!-- android:layout_marginRight="10dp" -->
+            <!-- android:text="@string/tirar_foto" /> -->
+
+
+            <!-- <ImageView -->
+            <!-- android:id="@+id/photoImage" -->
+            <!-- android:layout_width="100dp" -->
+            <!-- android:layout_height="150dp" -->
+            <!-- android:layout_marginLeft="10dp" -->
+            <!-- android:layout_toRightOf="@+id/buttonPhoto" -->
+            <!-- android:contentDescription="@string/tirar_foto" -->
+            <!-- android:src="@drawable/ic_launcher" -->
+            <!-- android:visibility="invisible" /> -->
+            <!-- </RelativeLayout> -->
+
+            <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="@string/reg_terms"
+                    android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <Button
+                        android:id="@+id/b_RRegister"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:text="@string/reg_button_reg"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

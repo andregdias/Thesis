@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Action Bar -->
+    <dimen name="actionBarHeight">45dip</dimen>
+    <dimen name="actionBarButtonHeight">41dip</dimen>
+    <dimen name="actionBarButtonWidth">41dip</dimen>
+    <dimen name="actionBarTextSize">15sp</dimen>
+
+    <!-- General -->
+    <dimen name="fontSizeMedium">18sp</dimen>
+</resources>

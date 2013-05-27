@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <com.opt.mobipag.gui.ActionBar
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/consultar_operacoes"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+        <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/buy_oc_balance"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+        <TextView
+                android:id="@+id/t_CurrentBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buy_oc_balance"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/consultar_movimentos"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TableLayout
+                android:id="@+id/tableMovements"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+        </TableLayout>
+    </ScrollView>
+
+</LinearLayout>

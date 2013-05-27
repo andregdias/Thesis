@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                style="@style/actionBarBar">
+
+    <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:contentDescription="@string/logohome"
+            android:scaleType="fitStart"
+            android:src="@drawable/ic_launcher"/>
+
+    <ImageButton
+            android:id="@+id/help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/help"
+            android:contentDescription="@string/menuhelp"/>
+
+    <ImageButton
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/help"
+            android:background="@drawable/logout"
+            android:contentDescription="@string/logout"/>
+
+</RelativeLayout>

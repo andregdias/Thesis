@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/mainLinearLayout"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:baselineAligned="false"
+              android:orientation="vertical">
+
+    <com.opt.mobipag.gui.ActionBar
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:id="@+id/b_ValidateMenu"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/validate"
+            android:drawablePadding="20dip"
+            android:gravity="left|center"
+            android:onClick="onActionDashboardButton1"
+            android:paddingLeft="20dip"
+            android:text="@string/main_validar"
+            android:textSize="20sp">
+    </Button>
+
+    <Button
+            android:id="@+id/b_BuyMenu"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/buy"
+            android:drawablePadding="20dip"
+            android:gravity="left|center"
+            android:onClick="onActionDashboardButton2"
+            android:paddingLeft="20dip"
+            android:text="@string/main_comprar"
+            android:textSize="20sp">
+    </Button>
+
+    <Button
+            android:id="@+id/b_ConsultMenu"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/consult"
+            android:drawablePadding="20dip"
+            android:gravity="left|center"
+            android:onClick="onActionDashboardButton3"
+            android:paddingLeft="20dip"
+            android:text="@string/main_consultar"
+            android:textSize="20sp">
+    </Button>
+
+    <Button
+            android:id="@+id/b_SettingsMenu"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/settings"
+            android:drawablePadding="20dip"
+            android:gravity="left|center"
+            android:onClick="onActionDashboardButton4"
+            android:paddingLeft="20dip"
+            android:text="@string/main_definicoes"
+            android:textSize="20sp"/>
+
+    <Button
+            android:id="@+id/b_AboutMenu"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/about"
+            android:drawablePadding="20dip"
+            android:gravity="left|center"
+            android:onClick="onActionDashboardButton5"
+            android:paddingLeft="20dip"
+            android:text="@string/main_sobre"
+            android:textColor="@color/tabHighlighted"
+            android:textSize="20sp">
+    </Button>
+
+</LinearLayout>

@@ -1,0 +1,995 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidConfiguredLogFilters">
+    <filters>
+      <filter>
+        <option name="logMessagePattern" value="" />
+        <option name="logTagPattern" value="" />
+        <option name="name" value="MobiPag" />
+        <option name="packageNamePattern" value="com.opt.mobipag" />
+        <option name="pid" value="" />
+      </filter>
+    </filters>
+  </component>
+  <component name="AndroidLayoutPreviewToolWindow">
+    <option name="state">
+      <GlobalState />
+    </option>
+  </component>
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" name="Default" comment="" />
+    <ignored path="AndanteMobile.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <file path="/a.html" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1368748312523" ignored="false" />
+    <file path="/a.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1368748313924" ignored="false" />
+    <file path="/AccountMovementsActivity.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369403563989" ignored="false" />
+    <file path="/ActionBar.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1368749871418" ignored="false" />
+    <file path="/BuyActivity.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369147330409" ignored="false" />
+    <file path="/BuyOcasionalActivity.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1368750378089" ignored="false" />
+    <file path="/BuySignatureActivity.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1368750510913" ignored="false" />
+    <file path="/ConfirmBuyOCActivity.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369410351974" ignored="false" />
+    <file path="/ConfirmBuySignatureActivity.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1368750732782" ignored="false" />
+    <file path="/LoginActivity.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369417621885" ignored="false" />
+    <file path="/MainActivity.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1368751306311" ignored="false" />
+    <file path="/ManualStopSelector.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369417791046" ignored="false" />
+    <file path="/RegisterActivity.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1368752031579" ignored="false" />
+    <file path="/RevisorActivity.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369048217307" ignored="false" />
+    <file path="/TicketBalanceActivity.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1368752544503" ignored="false" />
+    <file path="/TicketValidationActivity.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369417818412" ignored="false" />
+    <file path="/ValidationActivity.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369657750847" ignored="false" />
+    <file path="/fragment.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369411273607" ignored="false" />
+    <file path="/a.dummy" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369412533815" ignored="false" />
+    <file path="/SignatureDataSource.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1368754183485" ignored="false" />
+    <file path="/OccasionalDataSource.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1368754220302" ignored="false" />
+    <file path="/TravelTimer.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1368754498073" ignored="false" />
+    <file path="/WebServiceHandler.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369416655879" ignored="false" />
+    <file path="/DatePickerFragment.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369410715212" ignored="false" />
+    <file path="/MultiSpinner.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1368754974250" ignored="false" />
+    <file path="/Dummy.txt" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369412481302" ignored="false" />
+    <file path="/a.xml" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369148504754" ignored="false" />
+    <file path="$PROJECT_DIR$/gen/pt/up/fe/andantemobile/R.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369321110961" ignored="false" />
+    <file path="/SettingsActivity.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369410773193" ignored="false" />
+    <file path="/UserDataSource.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369144825660" ignored="false" />
+    <file path="/HistoryDataSource.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369144836747" ignored="false" />
+    <file path="/strings.xml" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369656829940" ignored="false" />
+    <file path="/HelpActivity.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369216945227" ignored="false" />
+    <file path="$PROJECT_DIR$/gen/pt/up/fe/andantemobile/Manifest.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369321110960" ignored="false" />
+    <file path="$PROJECT_DIR$/gen/pt/up/fe/andantemobile/BuildConfig.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369321228005" ignored="false" />
+    <file path="/Utils.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369410852071" ignored="false" />
+    <file path="$PROJECT_DIR$/src/pt/up/fe/mobipag/database/ZoneDataSource.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369410044539" ignored="false" />
+    <file path="$PROJECT_DIR$/src/pt/up/fe/mobipag/database/HistoryDataSource.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369410044539" ignored="false" />
+    <file path="$PROJECT_DIR$/src/pt/up/fe/mobipag/database/LineDataSource.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369410044539" ignored="false" />
+    <file path="$PROJECT_DIR$/src/pt/up/fe/mobipag/database/UtilsDataSource.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369410044539" ignored="false" />
+    <file path="$PROJECT_DIR$/src/pt/up/fe/mobipag/database/OccasionalDataSource.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369410044539" ignored="false" />
+    <file path="$PROJECT_DIR$/src/pt/up/fe/mobipag/database/TicketDataSource.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369410044539" ignored="false" />
+    <file path="$PROJECT_DIR$/src/pt/up/fe/mobipag/database/SignatureDataSource.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369410044539" ignored="false" />
+    <file path="$PROJECT_DIR$/src/pt/up/fe/mobipag/database/UserDataSource.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369410044539" ignored="false" />
+    <file path="$PROJECT_DIR$/src/pt/up/fe/mobipag/database/StopDataSource.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369410044539" ignored="false" />
+    <file path="$PROJECT_DIR$/src/pt/up/fe/mobipag/database/SQLiteHelper.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369410044539" ignored="false" />
+    <file path="$PROJECT_DIR$/gen/pt/up/fe/mobipag/R.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369410176739" ignored="false" />
+    <file path="$PROJECT_DIR$/gen/pt/up/fe/mobipag/BuildConfig.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369410185542" ignored="false" />
+    <file path="$PROJECT_DIR$/gen/pt/up/fe/mobipag/Manifest.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369410176739" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369410223943" ignored="false" />
+    <file path="$PROJECT_DIR$/gen/com/opt/mobipag/BuildConfig.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369410333654" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369411082455" ignored="false" />
+    <file path="$PROJECT_DIR$/gen/com/opt/mobipag/Manifest.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369410721864" ignored="false" />
+    <file path="$PROJECT_DIR$/gen/com/opt/mobipag/R.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369411145003" ignored="false" />
+    <file path="/config.xml" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369417367483" ignored="false" />
+    <file path="/about.xml" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369417007507" ignored="false" />
+    <file path="/AboutActivity.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369417197038" ignored="false" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="Commander">
+    <leftPanel />
+    <rightPanel />
+    <splitter proportion="0.5" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <breakpoint_rules />
+    <ui_properties />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="AndanteMobile" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="ValidationActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/ValidationActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="216" column="41" selection-start="8953" selection-end="8953" vertical-scroll-proportion="3.4796855">
+              <folding>
+                <element signature="method#updateFields#0;class#ValidationActivity#0" expanded="false" />
+                <element signature="class#GetTickets#0;class#ValidationActivity#0" expanded="false" />
+                <element signature="class#Validate#0;class#ValidationActivity#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="102" column="18" selection-start="5423" selection-end="5440" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/com/opt/mobipag/data/WebServiceHandler.java" />
+        <option value="$PROJECT_DIR$/res/layout/about.xml" />
+        <option value="$PROJECT_DIR$/src/com/opt/mobipag/gui/AboutActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/opt/mobipag/gui/ConfirmBuyOCActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/opt/mobipag/gui/BuyActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/opt/mobipag/gui/ConfirmBuySignatureActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/opt/mobipag/gui/TicketBalanceActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/opt/mobipag/gui/AccountMovementsActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/opt/mobipag/gui/RegisterActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/opt/mobipag/gui/SettingsActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/opt/mobipag/gui/LoginActivity.java" />
+        <option value="$PROJECT_DIR$/res/values/config.xml" />
+        <option value="$PROJECT_DIR$/src/com/opt/mobipag/gui/ManualStopSelector.java" />
+        <option value="$PROJECT_DIR$/src/com/opt/mobipag/gui/TicketValidationActivity.java" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/src/com/opt/mobipag/gui/ValidationActivity.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Spelling</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MobiPag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MobiPag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MobiPag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MobiPag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MobiPag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mobipag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MobiPag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MobiPag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mobipag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MobiPag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MobiPag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mobipag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MobiPag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MobiPag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MobiPag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MobiPag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Galaxy_Nexus_2.2" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="true" />
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="36347AB10AAB00EC" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+  </component>
+  <component name="RunManager" selected="Android Application.MobiPag">
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="MobiPag" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="MobiPag" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <RunnerSettings RunnerId="AndroidDebugRunner" />
+      <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Android Application.MobiPag" />
+    </list>
+    <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SliceManager">
+    <option name="analysisUIOptions">
+      <AnalysisUIOptions />
+    </option>
+  </component>
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <configuration useDefault="true">$USER_HOME$/.subversion</configuration>
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" name="Default" comment="" />
+      <created>1368748029745</created>
+      <updated>1368748029745</updated>
+      <workItem from="1368748033206" duration="887000" />
+      <workItem from="1368748939151" duration="8762000" />
+      <workItem from="1368757909097" duration="13000" />
+      <workItem from="1369047756591" duration="803000" />
+      <workItem from="1369056830049" duration="1673000" />
+      <workItem from="1369141729227" duration="11668000" />
+      <workItem from="1369216179153" duration="3308000" />
+      <workItem from="1369267443111" duration="1205000" />
+      <workItem from="1369312114093" duration="4637000" />
+      <workItem from="1369403136766" duration="7690000" />
+      <workItem from="1369411230490" duration="2877000" />
+      <workItem from="1369416280576" duration="4096000" />
+      <workItem from="1369654712719" duration="3068000" />
+      <workItem from="1369657951594" duration="14000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="50701000" />
+  </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38726792" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5307692" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24605452" sideWeight="0.42643392" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24605452" sideWeight="0.42643392" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42838195" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32820514" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24839126" sideWeight="0.6717949" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27977043" sideWeight="0.6717949" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3254364" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.6717949" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.6717949" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32902297" sideWeight="0.6717949" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32820514" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32820514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917705" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="true" />
+    <option name="myTodoPanelSettings">
+      <value>
+        <are-packages-shown value="false" />
+        <are-modules-shown value="false" />
+        <flatten-packages value="false" />
+        <is-autoscroll-to-source value="false" />
+      </value>
+    </option>
+    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
+    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
+    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
+    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
+    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
+    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
+    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
+    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
+    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
+    <option name="LIMIT_HISTORY" value="true" />
+    <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
+    <option name="UPDATE_FILTER_SCOPE_NAME" />
+    <option name="USE_COMMIT_MESSAGE_MARGIN" value="false" />
+    <option name="COMMIT_MESSAGE_MARGIN_SIZE" value="72" />
+    <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
+    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed to Android Studio" />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
+    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
+    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
+    <option name="ACTIVE_VCS_NAME" />
+    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
+    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
+    <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
+    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
+    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+    <MESSAGE value="changed to Android Studio" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/res/layout/about.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="41" selection-start="799" selection-end="799" vertical-scroll-proportion="-10.555555" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/AboutActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="542" selection-end="542" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#561#585#0" expanded="true" />
+            <element signature="e#561#596#0" expanded="true" />
+            <element signature="e#599#624#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/ConfirmBuyOCActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="129" column="99" selection-start="5412" selection-end="5412" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1940#1971#0" expanded="true" />
+            <element signature="e#2455#2487#0" expanded="true" />
+            <element signature="e#2613#2647#0" expanded="true" />
+            <element signature="e#2667#2696#0" expanded="true" />
+            <element signature="e#2771#2805#0" expanded="true" />
+            <element signature="e#2882#2912#0" expanded="true" />
+            <element signature="e#2934#2956#0" expanded="true" />
+            <element signature="e#3805#3830#0" expanded="true" />
+            <element signature="e#5385#5411#0" expanded="true" />
+            <element signature="e#5412#5442#0" expanded="true" />
+            <element signature="e#5901#5934#0" expanded="true" />
+            <element signature="e#6100#6132#0" expanded="true" />
+            <element signature="e#6574#6603#0" expanded="true" />
+            <element signature="e#6698#6732#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/BuyActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="248" column="88" selection-start="9765" selection-end="9765" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#3630#3655#0" expanded="true" />
+            <element signature="e#4378#4404#0" expanded="true" />
+            <element signature="e#4405#4435#0" expanded="true" />
+            <element signature="e#6988#7022#0" expanded="true" />
+            <element signature="e#7420#7446#0" expanded="true" />
+            <element signature="e#7447#7475#0" expanded="true" />
+            <element signature="e#9738#9764#0" expanded="true" />
+            <element signature="e#9765#9796#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/TicketBalanceActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="88" selection-start="2913" selection-end="2913" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#2005#2030#0" expanded="true" />
+            <element signature="e#2886#2912#0" expanded="true" />
+            <element signature="e#2913#2944#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/RegisterActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="405" column="99" selection-start="16707" selection-end="16707" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#6454#6485#0" expanded="true" />
+            <element signature="e#6700#6726#0" expanded="true" />
+            <element signature="e#7077#7112#0" expanded="true" />
+            <element signature="e#7366#7391#0" expanded="true" />
+            <element signature="e#13571#13597#0" expanded="true" />
+            <element signature="e#13598#13627#0" expanded="true" />
+            <element signature="e#14042#14077#0" expanded="true" />
+            <element signature="e#15266#15297#0" expanded="true" />
+            <element signature="e#15514#15543#0" expanded="true" />
+            <element signature="e#15743#15777#0" expanded="true" />
+            <element signature="e#16680#16706#0" expanded="true" />
+            <element signature="e#16707#16736#0" expanded="true" />
+            <element signature="e#17151#17186#0" expanded="true" />
+            <element signature="e#17894#17926#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="120" column="109" selection-start="4343" selection-end="4343" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/AccountMovementsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="211" column="88" selection-start="7505" selection-end="7505" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#2234#2259#0" expanded="true" />
+            <element signature="e#3126#3157#0" expanded="true" />
+            <element signature="e#3180#3203#0" expanded="true" />
+            <element signature="e#3226#3249#0" expanded="true" />
+            <element signature="e#4456#4478#0" expanded="true" />
+            <element signature="e#4539#4561#0" expanded="true" />
+            <element signature="e#5172#5198#0" expanded="true" />
+            <element signature="e#5199#5227#0" expanded="true" />
+            <element signature="e#7478#7504#0" expanded="true" />
+            <element signature="e#7505#7536#0" expanded="true" />
+            <element signature="e#10321#10353#0" expanded="true" />
+            <element signature="e#10525#10556#0" expanded="true" />
+            <element signature="e#11213#11241#0" expanded="true" />
+            <element signature="e#11732#11754#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/TicketValidationActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="496" column="112" selection-start="19900" selection-end="19900" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#2567#2598#0" expanded="true" />
+            <element signature="e#3009#3034#0" expanded="true" />
+            <element signature="e#3821#3852#0" expanded="true" />
+            <element signature="e#3875#3900#0" expanded="true" />
+            <element signature="e#4872#4900#0" expanded="true" />
+            <element signature="e#4916#4944#0" expanded="true" />
+            <element signature="e#5674#5705#0" expanded="true" />
+            <element signature="e#5728#5753#0" expanded="true" />
+            <element signature="e#7056#7088#0" expanded="true" />
+            <element signature="e#7159#7190#0" expanded="true" />
+            <element signature="e#8799#8825#0" expanded="true" />
+            <element signature="e#8826#8857#0" expanded="true" />
+            <element signature="e#9824#9850#0" expanded="true" />
+            <element signature="e#9851#9885#0" expanded="true" />
+            <element signature="e#17862#17904#0" expanded="true" />
+            <element signature="e#18050#18082#0" expanded="true" />
+            <element signature="e#18556#18580#0" expanded="true" />
+            <element signature="e#18592#18621#0" expanded="true" />
+            <element signature="e#19865#19889#0" expanded="true" />
+            <element signature="e#19901#19926#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/ConfirmBuySignatureActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="121" column="99" selection-start="4854" selection-end="4854" vertical-scroll-proportion="0.21786198">
+          <folding>
+            <element signature="e#2576#2613#0" expanded="true" />
+            <element signature="e#2680#2710#0" expanded="true" />
+            <element signature="e#2732#2754#0" expanded="true" />
+            <element signature="e#3603#3628#0" expanded="true" />
+            <element signature="e#4827#4853#0" expanded="true" />
+            <element signature="e#4854#4887#0" expanded="true" />
+            <element signature="e#5346#5380#0" expanded="true" />
+            <element signature="e#5546#5578#0" expanded="true" />
+            <element signature="e#7026#7054#0" expanded="true" />
+            <element signature="e#7206#7235#0" expanded="true" />
+            <element signature="e#7330#7364#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/SettingsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="323" column="88" selection-start="13101" selection-end="13101" vertical-scroll-proportion="0.21941489">
+          <folding>
+            <element signature="e#6236#6262#0" expanded="true" />
+            <element signature="e#6768#6803#0" expanded="true" />
+            <element signature="e#8360#8385#0" expanded="true" />
+            <element signature="e#10591#10617#0" expanded="true" />
+            <element signature="e#10618#10647#0" expanded="true" />
+            <element signature="e#12265#12296#0" expanded="true" />
+            <element signature="e#12512#12544#0" expanded="true" />
+            <element signature="e#12639#12673#0" expanded="true" />
+            <element signature="e#13074#13100#0" expanded="true" />
+            <element signature="e#13101#13129#0" expanded="true" />
+            <element signature="e#14090#14125#0" expanded="true" />
+            <element signature="e#17286#17311#0" expanded="true" />
+            <element signature="e#17372#17406#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/ManualStopSelector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="219" column="101" selection-start="8437" selection-end="8437" vertical-scroll-proportion="0.21941489">
+          <folding>
+            <element signature="e#2083#2108#0" expanded="true" />
+            <element signature="e#5373#5397#0" expanded="true" />
+            <element signature="e#5409#5438#0" expanded="true" />
+            <element signature="e#6667#6691#0" expanded="true" />
+            <element signature="e#6692#6721#0" expanded="true" />
+            <element signature="e#8402#8426#0" expanded="true" />
+            <element signature="e#8438#8470#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/revisor.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="26" selection-start="738" selection-end="738" vertical-scroll-proportion="0.38516405" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="60" selection-start="1457" selection-end="1457" vertical-scroll-proportion="0.6181319">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="102" column="18" selection-start="5423" selection-end="5440" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/ValidationActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="216" column="41" selection-start="8953" selection-end="8953" vertical-scroll-proportion="3.4796855">
+          <folding>
+            <element signature="method#updateFields#0;class#ValidationActivity#0" expanded="false" />
+            <element signature="class#GetTickets#0;class#ValidationActivity#0" expanded="false" />
+            <element signature="class#Validate#0;class#ValidationActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Android</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>Android 2.2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>AndanteMobile</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>Android 4.2.2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>android-support-v4</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
+

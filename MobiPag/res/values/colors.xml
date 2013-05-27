@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="actionBarBackgroundColor">#006c85</color>
+    <color name="generalTextColor">#000000</color>
+    <color name="actionBarTextColor">#FFFFFF</color>
+    <color name="dashboardTextColor">#000000</color>
+    <color name="dashboardBackgroundColor">#FFFFFF</color>
+    <color name="tabHighlighted">#909090</color>
+</resources>

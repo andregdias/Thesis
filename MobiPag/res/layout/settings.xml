@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <com.opt.mobipag.gui.ActionBar
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/alterar_dados_utilizador"
+                    android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+            <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/reg_obrig_fields"/>
+
+            <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/reg_name"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <EditText
+                    android:id="@+id/tf_EName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:hint="@string/reg_name"
+                    android:inputType="textPersonName">
+
+                <requestFocus/>
+            </EditText>
+
+            <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/reg_email_"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <EditText
+                    android:id="@+id/tf_EEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:ems="10"
+                    android:hint="@string/reg_email_"
+                    android:inputType="textEmailAddress"/>
+
+            <EditText
+                    android:id="@+id/tf_EPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:ems="10"
+                    android:hint="@string/reg_password_"
+                    android:inputType="textPassword"/>
+
+            <EditText
+                    android:id="@+id/tf_EPin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:ems="10"
+                    android:hint="@string/pin"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:password="true"/>
+
+            <EditText
+                    android:id="@+id/tf_RBirth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:ems="10"
+                    android:hint="@string/reg_dob"
+                    android:inputType="text"
+                    android:onClick="showDatePickerDialog"/>
+
+            <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/reg_mobile"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <EditText
+                    android:id="@+id/tf_EPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:ems="10"
+                    android:hint="@string/reg_mobile"
+                    android:inputType="phone"/>
+
+            <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/reg_address"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <EditText
+                    android:id="@+id/tf_EAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:ems="10"
+                    android:hint="@string/reg_address"/>
+
+            <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/reg_nif_"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <EditText
+                    android:id="@+id/tf_ENIF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:ems="10"
+                    android:hint="@string/reg_nif_"
+                    android:inputType="number"/>
+
+            <!-- <TextView -->
+            <!-- android:id="@+id/textView7" -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_marginLeft="10dp" -->
+            <!-- android:text="@string/reg_max" -->
+            <!-- android:textAppearance="?android:attr/textAppearanceMedium" /> -->
+
+            <EditText
+                    android:id="@+id/tf_EMax"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:ems="10"
+                    android:hint="@string/reg_max"
+                    android:inputType="number"/>
+
+            <Button
+                    android:id="@+id/buttonPhoto"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:drawablePadding="20dip"
+                    android:drawableRight="@drawable/profile_image"
+                    android:text="@string/reg_tirar_foto"/>
+            <!-- <RelativeLayout -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="wrap_content" > -->
+
+
+            <!-- <ImageView -->
+            <!-- android:id="@+id/photoImage" -->
+            <!-- android:layout_width="100dp" -->
+            <!-- android:layout_height="150dp" -->
+            <!-- android:layout_marginLeft="10dp" -->
+            <!-- android:layout_toRightOf="@+id/buttonPhoto" -->
+            <!-- android:contentDescription="@string/tirar_foto" -->
+            <!-- android:src="@drawable/ic_launcher" -->
+            <!-- android:visibility="invisible" /> -->
+            <!-- </RelativeLayout> -->
+
+            <Button
+                    android:id="@+id/b_EEdituser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/alterar_dados_button"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
