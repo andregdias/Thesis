@@ -67,6 +67,7 @@ public class ValidationActivity extends Activity {
     private String paragem;
     private String linha = null;
     private Signature s;
+    private GPSTracker gpstracker;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -92,7 +93,8 @@ public class ValidationActivity extends Activity {
             finish();
         }
 
-        l = Utils.getLocation(this);
+        gpstracker = new GPSTracker(this);
+        l = gpstracker.getLocation();
 
         dialog = ProgressDialog.show(this, "", getText(R.string.loading), true);
         dialog.setCancelable(true);
@@ -202,7 +204,7 @@ public class ValidationActivity extends Activity {
                             finish();
                         }
                     });
-                    l = Utils.getLocation(view.getContext());
+                    l = gpstracker.getLocation();
                     new RetrieveStops().execute();
                 }
             }
@@ -215,6 +217,7 @@ public class ValidationActivity extends Activity {
                     Toast.makeText(c, getText(R.string.noTitleBesidesSig), Toast.LENGTH_LONG).show();
                 }
                 else if (stopid != -1 && lineid != -1) {
+                    gpstracker.stopUsingGPS();
                     dialog.setCancelable(false);
                     dialog.show();
                     c = view.getContext();
@@ -244,6 +247,11 @@ public class ValidationActivity extends Activity {
             }
         });
 
+    }
+
+    public void onDestroy(){
+        gpstracker.stopUsingGPS();
+        super.onDestroy();
     }
 
     private void updateFields(final Signature s, int position) {
@@ -355,14 +363,12 @@ public class ValidationActivity extends Activity {
                                 createOccasional(amount, name);
                             }
                         }
+                        result = getValidacoes(result, arg0[0]);
                         break;
                     case 4102:
                         return false;
                 }
-
             }
-
-            result = getValidacoes(result, arg0[0]);
             return result;
         }
 
@@ -588,6 +594,11 @@ public class ValidationActivity extends Activity {
                     new RetrieveStops().execute();
                     updateFields(s, 0);
                 }
+            }
+            else{
+                Toast.makeText(c, getText(R.string.verifyConnection), Toast.LENGTH_SHORT).show();
+                dialog.dismiss();
+                finish();
             }
         }
 
@@ -852,6 +863,12 @@ public class ValidationActivity extends Activity {
                         paragens2.add(s.getCodsms());
                     }
                 }
+                paragens.add(getText(R.string.other).toString());
+            }
+            else{
+                stops.clear();
+                paragens.clear();
+                paragens2.clear();
                 paragens.add(getText(R.string.other).toString());
             }
             return null;

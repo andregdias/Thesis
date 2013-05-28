@@ -168,9 +168,9 @@
         <item><![CDATA["<b>Operações de Conta</b><br><br>Neste menu pode consultar o histórico de operações realizadas, nomeadamente Carregamentos de Conta, Compra de Assinaturas, Compra de Ocasionais, Compra de Andante 24."]]></item>
         <item><![CDATA["<b>Histórico de Validações<br>(Ocasionais + Andante 24)</b><br><br>Neste menu pode consultar o histórico de validações efetuadas com títulos Ocasionais e Andante 24."]]></item>
         <item><![CDATA["<b>Histórico de Validações<br>(Assinatura)</b><br><br>Neste menu pode consultar o histórico de validações efetuadas com a Assinatura Mensal do mês corrente."]]></item>
-        <item><![CDATA["<b>Definições</b><br><br>Neste menu pode alterar as definições pessoais."]]></item>
+        <item><![CDATA["<b>Definições</b><br><br>Neste menu pode alterar as definições pessoais. Pode também fazer logout do utilizador atual, clicando no botão <b>Desligar</b>."]]></item>
         <item><![CDATA["<b>Registo</b><br><br>Neste menu pode registar uma nova conta de utilizador. O Email não poder ser o mesmo utilizado numa outra conta."]]></item>
-        <item><![CDATA["<b>Revisor</b><br><br>Neste menu está contida a informação necessária para mostrar ao revisor, quando solicitada."]]></item>
+        <item><![CDATA["<b>Revisor</b><br><br>Neste menu está contida a informação necessária para mostrar ao revisor, quando solicitada.<br>Pode fechar a notificação clicando no botão <b>Fechar</b> (esta operação não retira a validade do título, podendo ser restaurada, abrindo novamente a aplicação)."]]></item>
         <item><![CDATA["<b>Login</b><br><br>Neste menu pode proceder à autenticação de um utilizador já registado ou registar um novo utilizador."]]></item>
         <item><![CDATA["<b>Selector de Paragem</b><br><br>Neste menu pode escolher uma paragem manualmente, selecionando Operador, Linha e Paragem. As paragens encontram-se listadas por ordem alfabética."]]></item>
     </string-array>

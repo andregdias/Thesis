@@ -21,7 +21,7 @@ Neste capítulo é ilustrada a utilização de dispositivos móveis para efeitos
 \section{Pagamentos Móveis}\label{sec:pagmov}
 
 Os pagamentos móveis e outros serviços móveis, como por exemplo \textit{mobile banking}, originalmente eram baseados em mensagens de texto para completar as transações. O primeiro exemplo de pagamento móvel surgiu em 1997 quando a Coca Cola introduziu um número limitado de máquinas de venda, em Helsínquia, Finlândia, onde o cliente poderia efetuar um pagamento móvel. O cliente enviaria uma mensagem de texto para a máquina de venda para configurar o pagamento e a máquina venderia então o produto. \textit{Mobile banking} surgiu também em 1997, através do banco finlandês Merita, e aceitava mensagens de texto para realizar transações na conta bancária.\cite{nfcorg}
-\\Os serviços relacionados com comércio móvel aumentaram rapidamente no início do século XXI, a Noruega lançou pagamentos móveis de estacionamento, a Áustria, compra de bilhetes de comboio através de dispositivos móveis e no Japão surgiu a compra de bilhetes de avião.
+\\Os serviços relacionados com comércio móvel aumentaram rapidamente no início do século XXI. A Noruega lançou pagamentos móveis de estacionamento, a Áustria, compra de bilhetes de comboio através de dispositivos móveis e no Japão surgiu a compra de bilhetes de avião.
 \\Desde então muitos têm sido os desenvolvimentos na área dos pagamentos móveis e as empresas veem neles uma mais valia para os seus produtos, tornando mais fácil a venda de serviços aos seus clientes. Apesar de ainda se continuar a usar SMS para efetuar transações, surgiram outras tecnologias com mais funcionalidades e segurança acrescida. Hoje em dia são vários os produtos que se baseiam em USSD, débito direto, WAP, QR Code, e NFC.
 
 \subsection{Pagamentos via SMS/USSD} \label{smsussd} 
@@ -30,7 +30,7 @@ O cliente envia um pedido de pagamento através de uma mensagem de texto SMS ou 
 \\Este meio de pagamento está a ser cada vez mais substituído pelos que se apresentam posteriormente, sendo as principais razões as que se seguem:
 \begin{itemize}
 \item Pouca fiabilidade – As transações podem facilmente falhar, tendo em conta que as mensagens se podem perder;
-\item Velocidade baixa – Enviar mensagens pode ser um processo lento e pode levar horas até o vendedor receber a confirmação do pagamento. Os clientes não querem ter de esperar mais do que algus segundos;
+\item Velocidade baixa – Enviar mensagens pode ser um processo lento e pode levar horas até o vendedor receber a confirmação do pagamento. Os clientes não querem ter de esperar mais do que alguns segundos;
 \item Segurança – A encriptação de SMS/USSD termina na interface de rede, portanto a mensagem é texto puro, sem qualquer encriptação;
 \item Custo elevado – Há muitos custos associados a este tipo de pagamento. Primeiro o custo de definir um \textit{short code}, depois o custo de enviar os conteúdos para os clientes através de MMS e também os custos de apoio ao cliente para os casos de mensagens perdidas ou atrasadas.
 \end{itemize} 
@@ -111,9 +111,18 @@ Lançado em 1996, o MB Phone é um serviço inovador que permite efetuar no tele
 \item SMS – A mensagem SMS é composta pelos seguintes campos [telecódigo] [cód. da operação] [n.º de seq. da conta] [outros].
 \end{itemize}
 
-\subsection{tmn wallet} 
+\begin{figure}[t]
+  \begin{center}
+    \leavevmode
+    \includegraphics{mbphone}
+    \caption{Menu Principal da Aplicação MB Phone para Android}
+    \label{fig:mbphone}
+  \end{center}
+\end{figure}
 
-O tmn wallet é uma solução inovadora que permite fazer pagamentos em edifícios PT através do telemóvel. Este serviço baseia-se num saldo pré-pago, distinto do saldo de comunicações, que pode carregar-se na página \web através de diversos meios de pagamento, nomeadamente cartão de crédito, PayPal, multibanco ou MB Phone. É este saldo que permite efetuar pagamentos nos vários comerciantes aderentes. Desta forma, é possível controlar eficazmente os gastos, podendo consultar-se todo o histórico de movimentos na página \web ou os mais recentes através do telemóvel. Pode ser efetuada qualquer compra mesmo sem ter dinheiro na carteira.
+\subsection{WalletPT} 
+
+O WalletPT é uma solução inovadora que permite fazer pagamentos em edifícios PT através do telemóvel. Este serviço baseia-se num saldo pré-pago, distinto do saldo de comunicações, que pode carregar-se na página \web através de diversos meios de pagamento, nomeadamente cartão de crédito, PayPal, multibanco ou MB Phone. É este saldo que permite efetuar pagamentos nos vários comerciantes aderentes. Desta forma, é possível controlar eficazmente os gastos, podendo consultar-se todo o histórico de movimentos na página \web ou os mais recentes através do telemóvel. Pode ser efetuada qualquer compra mesmo sem ter dinheiro na carteira.
 \\Para se utilizar o serviço é necessário um registo prévio e estão disponíveis quatro formas de pagamento:
 \begin{itemize}
 \item SMS
@@ -126,19 +135,19 @@ O tmn wallet é uma solução inovadora que permite fazer pagamentos em edifíci
 \subitem Marcar, no telemóvel, o número indicado no ecrã (*\#566*código*pin de segurança\#);
 \subitem Selecionar o produto pretendido.
 \item NFC
-\subitem Abrir a aplicação tmn wallet no telemóvel e inserir o PIN ou aceder à página \web móvel;
+\subitem Abrir a aplicação WalletPT no telemóvel e inserir o PIN ou aceder à página \web móvel;
 \subitem No ecrã do terminal de pagamento escolher Proximidade/NFC;
 \subitem Encostar o telemóvel ao terminal de pagamento;
 \subitem Introduzir o PIN no telemóvel (apenas necessário se a opção de compras com PIN estiver ativada);
 \subitem Selecionar o produto pretendido.
 \item QR Code
-\subitem Abrir a aplicação tmn wallet no telemóvel e inserir o PIN;
+\subitem Abrir a aplicação WalletPT no telemóvel e inserir o PIN;
 \subitem No ecrã do terminal de pagamento escolher Imagem/QR Code;
 \subitem Apontar a câmara do telemóvel para o QR Code no terminal de pagamento;
 \subitem Confirmar o pagamento no telemóvel;
 \subitem Selecionar o produto pretendido.
 \end{itemize}
-O tmn wallet oferece várias vantagens, nomeadamente rapidez, segurança (pagamentos protegidos com PIN de segurança e sem erros de trocos), controlo de gastos, facilidade de utilização e descontos especiais para pagamentos efetuados com o serviço.\cite{tmnwallet}
+O WalletPT oferece várias vantagens, nomeadamente rapidez, segurança (pagamentos protegidos com PIN de segurança e sem erros de trocos), controlo de gastos, facilidade de utilização e descontos especiais para pagamentos efetuados com o serviço.\cite{walletpt}
 
 \subsection{Vodafone m.Ticket}
 

@@ -112,6 +112,7 @@ public class WebServiceHandler {
             e.printStackTrace();
         } catch (SocketTimeoutException e) {
             e.printStackTrace();
+            return null;
         } catch (IOException e) {
             e.printStackTrace();
         } catch (JSONException e) {
@@ -148,6 +149,7 @@ public class WebServiceHandler {
             e.printStackTrace();
         } catch (SocketTimeoutException e) {
             e.printStackTrace();
+            return null;
         } catch (IOException e) {
             e.printStackTrace();
         } catch (JSONException e) {

@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.graphics.Shader.TileMode;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
@@ -18,10 +19,7 @@ import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.*;
 import com.opt.mobipag.R;
-import com.opt.mobipag.data.Occasional;
-import com.opt.mobipag.data.Signature;
-import com.opt.mobipag.data.User;
-import com.opt.mobipag.data.Validation;
+import com.opt.mobipag.data.*;
 import com.opt.mobipag.database.*;
 
 import java.io.FileInputStream;
@@ -61,6 +59,16 @@ public class RevisorActivity extends Activity {
                 startActivity(i);
             }
         });
+
+        header.logoutButton.setOnClickListener(new ImageButton.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent service = new Intent(v.getContext(), TravelTimer.class);
+                stopService(service);
+            }
+        });
+        header.logoutButton.setBackgroundResource(R.drawable.close);
+        header.logoutButton.setVisibility(View.VISIBLE);
 
         TableLayout table = (TableLayout) findViewById(R.id.tableValidations);
 
@@ -156,8 +164,8 @@ public class RevisorActivity extends Activity {
     private void populateTableSig(TableLayout table) {
         TableRow row = new TableRow(this);
 
-        TextView tv = new TextView(this);
-        TextView tv2 = new TextView(this);
+        OutlineTextView tv = new OutlineTextView(this);
+        OutlineTextView tv2 = new OutlineTextView(this);
         tv.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 17);
         tv2.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 17);
 
@@ -174,9 +182,11 @@ public class RevisorActivity extends Activity {
 
         tv.setPadding(15, 0, 25, 10);
         tv.setTypeface(null, Typeface.BOLD);
+        tv.setShadowLayer(3,0,0, Color.WHITE);
         tv2.setPadding(15, 0, 15, 10);
         tv2.setTypeface(null, Typeface.BOLD);
         tv2.setGravity(Gravity.RIGHT);
+        tv2.setShadowLayer(3,0,0, Color.WHITE);
 
         tv.setText(getText(R.string.data_detalhes));
         tv2.setText(getText(R.string.bilhete));
@@ -188,10 +198,12 @@ public class RevisorActivity extends Activity {
 
         TableRow r = new TableRow(this);
 
-        TextView t = new TextView(this);
-        TextView t2 = new TextView(this);
+        OutlineTextView t = new OutlineTextView(this);
+        OutlineTextView t2 = new OutlineTextView(this);
         t.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 17);
+        t.setShadowLayer(3,0,0, Color.WHITE);
         t2.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 17);
+        t2.setShadowLayer(3,0,0, Color.WHITE);
 
         t.setPadding(15, 5, 25, 5);
         t2.setPadding(15, 5, 15, 5);
@@ -231,16 +243,18 @@ public class RevisorActivity extends Activity {
     private void populateTableOcc(TableLayout table) {
         TableRow row = new TableRow(this);
 
-        TextView tv = new TextView(this);
-        TextView tv2 = new TextView(this);
+        OutlineTextView tv = new OutlineTextView(this);
+        OutlineTextView tv2 = new OutlineTextView(this);
         tv.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 17);
         tv2.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 17);
 
         tv.setPadding(15, 0, 25, 10);
         tv.setTypeface(null, Typeface.BOLD);
+        tv.setShadowLayer(3,0,0, Color.WHITE);
         tv2.setPadding(15, 0, 15, 10);
         tv2.setTypeface(null, Typeface.BOLD);
         tv2.setGravity(Gravity.RIGHT);
+        tv2.setShadowLayer(3,0,0, Color.WHITE);
 
         tv.setText(getText(R.string.data_detalhes));
         tv2.setText(getText(R.string.bilhete));
@@ -252,10 +266,12 @@ public class RevisorActivity extends Activity {
 
         TableRow r = new TableRow(this);
 
-        TextView t = new TextView(this);
-        TextView t2 = new TextView(this);
+        OutlineTextView t = new OutlineTextView(this);
+        OutlineTextView t2 = new OutlineTextView(this);
         t.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 17);
+        t.setShadowLayer(3,0,0, Color.WHITE);
         t2.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 17);
+        t2.setShadowLayer(3,0,0, Color.WHITE);
 
         t.setPadding(15, 5, 25, 5);
         t2.setPadding(15, 5, 15, 5);

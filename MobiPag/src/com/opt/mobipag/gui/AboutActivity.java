@@ -16,8 +16,8 @@ public class AboutActivity extends Activity {
         setContentView(R.layout.about);
 
         TextView t = (TextView) findViewById(R.id.version);
-
         t.setText(getText(R.string.versao).toString() + getText(R.string.version).toString());
+        t.setVisibility(View.VISIBLE);
 
         Button b_Ok = (Button) findViewById(R.id.b_Ok);
         b_Ok.setOnClickListener(new Button.OnClickListener() {

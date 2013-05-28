@@ -24,10 +24,7 @@ public class TravelTimer extends Service {
     private final BroadcastReceiver receiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            thread.quit();
-            stopSelf();
-            unregisterReceiver(this);
-            System.exit(0);
+            stopForeground(true);
         }
     };
     private NotificationManager mNotificationManager;
@@ -85,48 +82,50 @@ public class TravelTimer extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         try {
-            String email = intent.getStringExtra("USER_EMAIL");
-            String title = intent.getStringExtra("title");
-            int titleid = intent.getIntExtra("titleid", -1);
-            int time = intent.getIntExtra("time", -1);
-            String date = intent.getStringExtra("date");
+            if(intent!=null){
+                String email = intent.getStringExtra("USER_EMAIL");
+                String title = intent.getStringExtra("title");
+                int titleid = intent.getIntExtra("titleid", -1);
+                int time = intent.getIntExtra("time", -1);
+                String date = intent.getStringExtra("date");
 
-            ArrayList<Validation> val = new ArrayList<Validation>();
-            val.add(new Validation(0, 0, date, 0));
-            t = new Ticket(titleid, title, 0.0, time, val, date);
+                ArrayList<Validation> val = new ArrayList<Validation>();
+                val.add(new Validation(0, 0, date, 0));
+                t = new Ticket(titleid, title, 0.0, time, val, date);
 
-            // For each start request, send a message to start a job and deliver the
-            // start ID so we know which request we're stopping when we finish the job
-            Message msg = new Message();
-            msg.obj = new NotificationInfo(email, title, titleid, time, date);
-            msg.arg1 = 1;
-            mServiceHandler.sendMessage(msg);
+                // For each start request, send a message to start a job and deliver the
+                // start ID so we know which request we're stopping when we finish the job
+                Message msg = new Message();
+                msg.obj = new NotificationInfo(email, title, titleid, time, date);
+                msg.arg1 = 1;
+                mServiceHandler.sendMessage(msg);
 
-            Intent resultIntent = new Intent(this, RevisorActivity.class);
-            resultIntent.putExtra("USER_EMAIL", email);
-            resultIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                Intent resultIntent = new Intent(this, RevisorActivity.class);
+                resultIntent.putExtra("USER_EMAIL", email);
+                resultIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
-            TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
-            stackBuilder.addParentStack(RevisorActivity.class);
-            stackBuilder.addNextIntent(resultIntent);
-            PendingIntent resultPendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
+                TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
+                stackBuilder.addParentStack(RevisorActivity.class);
+                stackBuilder.addNextIntent(resultIntent);
+                PendingIntent resultPendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
 
-            Intent intent2 = new Intent("NOTIFICATION_DELETED");
-            PendingIntent pendintIntent = PendingIntent.getBroadcast(this, 0, intent2, 0);
-            registerReceiver(receiver, new IntentFilter("NOTIFICATION_DELETED"));
+                Intent intent2 = new Intent("NOTIFICATION_DELETED");
+                PendingIntent pendintIntent = PendingIntent.getBroadcast(this, 0, intent2, 0);
+                registerReceiver(receiver, new IntentFilter("NOTIFICATION_DELETED"));
 
-            mBuilder = new NotificationCompat.Builder(this)
-                    .setSmallIcon(R.drawable.ic_launcher)
-                    .setContentTitle(title)
-                    .setContentText("")
-                    .setContentIntent(resultPendingIntent)
-                    .setDeleteIntent(pendintIntent);
+                mBuilder = new NotificationCompat.Builder(this)
+                        .setSmallIcon(R.drawable.ic_launcher)
+                        .setContentTitle(title)
+                        .setContentText("")
+                        .setContentIntent(resultPendingIntent)
+                        .setDeleteIntent(pendintIntent);
 
-            mBuilder.build();
+                startForeground(1,mBuilder.build());
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return START_NOT_STICKY;
+        return START_STICKY;
     }
 
     @Override

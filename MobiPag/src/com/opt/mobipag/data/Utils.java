@@ -265,29 +265,4 @@ public class Utils {
             }
         }
     }
-
-    public static Location getLocation(final Context ctx) {
-        LocationManager lm = (LocationManager) ctx.getSystemService(Context.LOCATION_SERVICE);
-        List<String> providers = lm.getProviders(true);
-
-        Location l = null;
-
-        int i = 0;
-        while (i < 5) {
-            for (String s : providers) {
-                lm.requestLocationUpdates(s, 10, 1, locationListener);
-                l = lm.getLastKnownLocation(s);
-//				if(l != null && new Date().getTime()-l.getTime()>1*1000){
-//					l=null;
-//				}
-                if (l != null) {
-                    lm.removeUpdates(locationListener);
-                    return l;
-                }
-            }
-            i++;
-        }
-        lm.removeUpdates(locationListener);
-        return l;
-    }
 }
