@@ -40,6 +40,7 @@ public class RevisorActivity extends Activity {
     private String email;
     private Occasional o = null;
     private Signature s = null;
+    private boolean ColorAdd = false;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -93,29 +94,54 @@ public class RevisorActivity extends Activity {
     private void applyBG(LinearLayout v) {
         Date d = new Date();
         int wd = -1;
-        switch (d.getDay()) {
-            case 0:
-                wd = R.drawable.day0;
-                break;
-            case 1:
-                wd = R.drawable.day1;
-                break;
-            case 2:
-                wd = R.drawable.day2;
-                break;
-            case 3:
-                wd = R.drawable.day3;
-                break;
-            case 4:
-                wd = R.drawable.day4;
-                break;
-            case 5:
-                wd = R.drawable.day5;
-                break;
-            case 6:
-                wd = R.drawable.day6;
-                break;
-        }
+        if(ColorAdd)
+            switch (d.getDay()) {
+                case 0:
+                    wd = R.drawable.day0;
+                    break;
+                case 1:
+                    wd = R.drawable.day1;
+                    break;
+                case 2:
+                    wd = R.drawable.day2;
+                    break;
+                case 3:
+                    wd = R.drawable.day3;
+                    break;
+                case 4:
+                    wd = R.drawable.day4;
+                    break;
+                case 5:
+                    wd = R.drawable.day5;
+                    break;
+                case 6:
+                    wd = R.drawable.day6;
+                    break;
+            }
+        else
+            switch (d.getDay()) {
+                case 0:
+                    wd = R.drawable.day0_;
+                    break;
+                case 1:
+                    wd = R.drawable.day1_;
+                    break;
+                case 2:
+                    wd = R.drawable.day2_;
+                    break;
+                case 3:
+                    wd = R.drawable.day3_;
+                    break;
+                case 4:
+                    wd = R.drawable.day4_;
+                    break;
+                case 5:
+                    wd = R.drawable.day5_;
+                    break;
+                case 6:
+                    wd = R.drawable.day6_;
+                    break;
+            }
 
         BitmapDrawable bg = (BitmapDrawable) getResources().getDrawable(wd);
         if (bg != null) {
