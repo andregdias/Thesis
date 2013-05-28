@@ -40,7 +40,8 @@ public class RevisorActivity extends Activity {
     private String email;
     private Occasional o = null;
     private Signature s = null;
-    private boolean ColorAdd = false;
+    private final boolean ColorAdd = false;
+    private final int Alpha = 60;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -145,7 +146,7 @@ public class RevisorActivity extends Activity {
 
         BitmapDrawable bg = (BitmapDrawable) getResources().getDrawable(wd);
         if (bg != null) {
-            bg.setAlpha(45);
+            bg.setAlpha(Alpha*255/100);
             bg.setTileModeY(TileMode.REPEAT);
             bg.setTileModeX(TileMode.REPEAT);
             v.setBackgroundDrawable(bg);
