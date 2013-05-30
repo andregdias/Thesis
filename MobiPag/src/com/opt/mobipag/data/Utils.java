@@ -25,23 +25,6 @@ import java.util.List;
 
 public class Utils {
 
-    private final static LocationListener locationListener = new LocationListener() {
-        public void onLocationChanged(Location location) {
-        }
-
-        @Override
-        public void onProviderDisabled(String provider) {
-        }
-
-        @Override
-        public void onProviderEnabled(String provider) {
-        }
-
-        @Override
-        public void onStatusChanged(String provider, int status, Bundle extras) {
-        }
-    };
-
     public static String SHA256(String original) throws NoSuchAlgorithmException {
         if (original == null)
             return null;

@@ -6,6 +6,10 @@
 
 
     <string name="stop_radius">80</string>
+    <integer name="revisor_background_alpha">60</integer>
+    <bool name="coloradd">false</bool>
+    <integer name="MIN_TIME_BW_UPDATES">1000</integer>
+    <integer name="MIN_DISTANCE_CHANGE_FOR_UPDATES">1</integer>
 
     <string name="SERVERMP">http://move-me.mobi:35004/MobiPag/MobiPagService.svc/</string>
     <string name="SERVER">http://move-me.mobi:35004/MobileProxy/MobileService.svc/</string>

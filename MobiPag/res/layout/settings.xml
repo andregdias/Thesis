@@ -101,6 +101,14 @@
                     android:maxLength="4"
                     android:password="true"/>
 
+            <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/reg_dob"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
             <EditText
                     android:id="@+id/tf_RBirth"
                     android:layout_width="match_parent"
@@ -114,7 +122,7 @@
                     android:onClick="showDatePickerDialog"/>
 
             <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/textView5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -197,21 +205,6 @@
                     android:drawablePadding="20dip"
                     android:drawableRight="@drawable/profile_image"
                     android:text="@string/reg_tirar_foto"/>
-            <!-- <RelativeLayout -->
-            <!-- android:layout_width="match_parent" -->
-            <!-- android:layout_height="wrap_content" > -->
-
-
-            <!-- <ImageView -->
-            <!-- android:id="@+id/photoImage" -->
-            <!-- android:layout_width="100dp" -->
-            <!-- android:layout_height="150dp" -->
-            <!-- android:layout_marginLeft="10dp" -->
-            <!-- android:layout_toRightOf="@+id/buttonPhoto" -->
-            <!-- android:contentDescription="@string/tirar_foto" -->
-            <!-- android:src="@drawable/ic_launcher" -->
-            <!-- android:visibility="invisible" /> -->
-            <!-- </RelativeLayout> -->
 
             <Button
                     android:id="@+id/b_EEdituser"

@@ -38,8 +38,6 @@ public class RevisorActivity extends Activity {
     private String email;
     private Occasional o = null;
     private Signature s = null;
-    private final boolean ColorAdd = false;
-    private final int Alpha = 60;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -103,7 +101,7 @@ public class RevisorActivity extends Activity {
     private void applyBG(LinearLayout v) {
         Date d = new Date();
         int wd = -1;
-        if(ColorAdd)
+        if(getResources().getBoolean(R.bool.coloradd))
             switch (d.getDay()) {
                 case 0:
                     wd = R.drawable.day0;
@@ -154,7 +152,7 @@ public class RevisorActivity extends Activity {
 
         BitmapDrawable bg = (BitmapDrawable) getResources().getDrawable(wd);
         if (bg != null) {
-            bg.setAlpha(Alpha*255/100);
+            bg.setAlpha(getResources().getInteger(R.integer.revisor_background_alpha)*255/100);
             bg.setTileModeY(TileMode.REPEAT);
             bg.setTileModeX(TileMode.REPEAT);
             v.setBackgroundDrawable(bg);

@@ -8,20 +8,9 @@ import android.widget.TextView;
 
 public class OutlineTextView extends TextView {
 
-    private Typeface typeface;
-
     public OutlineTextView(Context context) {
         super(context);
     }
-
-    public OutlineTextView(Context context, AttributeSet attrs) {
-        super(context, attrs);
-    }
-
-    public OutlineTextView(Context context, AttributeSet attrs, int defStyle) {
-        super(context, attrs, defStyle);
-    }
-
 
     @Override
     public void draw(Canvas canvas) {

@@ -2,37 +2,36 @@
 
 \section*{}
 
-O objetivo deste projeto é remover a necessidade de um elemento físico (cartão) nos pagamentos em transportes públicos na Área Metropolitana do Porto, com a implementação de um sistema de pagamento remoto via Internet, utilizando dispositivos móveis com o sistema operativo Android. Para além disso pretende-se recolher informação relativa às infraestruturas mais utilizadas neste âmbito, estudar as principais funcionalidades e operações existentes, para posterior implementação na aplicação a desenvolver e desenvolver soluções apropriadas para os problemas existentes.
+O objetivo deste projeto é remover a necessidade de um elemento físico (cartão) nos pagamentos e validações em transportes públicos na Área Metropolitana do Porto, com a implementação de um sistema de pagamento e validação remoto via Internet, utilizando dispositivos móveis com o sistema operativo Android. Para além disso pretende-se recolher informação relativa às infraestruturas mais utilizadas neste âmbito, estudar as principais funcionalidades e operações existentes para implementação na aplicação e desenvolver soluções apropriadas para os problemas existentes.
 
 \section{Introdução}
 O modelo de utilização baseia-se no sistema atual, com algumas alterações:
 \begin{itemize}
 \item Carregamento de saldo feito através de pré-carregamento de uma carteira, através de diversas modalidades de pagamento (MB Phone, PayPal, cartão de crédito/débito, etc.);
-\item Compra de títulos de viagem com o saldo disponível na carteira virtual, e posterior ativação dos títulos aquando da entrada no veículo (localização via GPS ou ativação manual por parte do passageiro). Sempre que houver transbordo, o passageiro deve fazer essa indicação;
-\item Revisão feita pelo agente autorizado tendo em conta o código de verificação gerado no dispositivo do utilizador, contendo informação pertinente tal como o tempo de validade do título, a estação/paragem de entrada, etc.
+\item Compra de títulos de viagem com o saldo disponível na carteira virtual, e posterior ativação dos títulos aquando da entrada no veículo (localização via GPS ou ativação manual por parte do passageiro). Sempre que houver transbordo, o passageiro deve validar novamente o título;
+\item Revisão feita pelo agente autorizado tendo em conta o ecrã de verificação gerado no dispositivo do utilizador, contendo informação pertinente tal como o histórico de validações, contendo data/hora, paragem de entrada e linha de entrada, a descrição do título em uso, número sequencial e símbolos de controlo.
 \end{itemize}
 
 Este modelo de pagamento e utilização requer um Sistema de Informação complexo e com necessidade de sincronismo e registo de operações em tempo real, sem ocorrência de falhas. É necessário criar também um compromisso entre segurança e conveniência/usabilidade.\\Atualmente são vários os métodos de pagamento disponíveis no mercado, desde o bilhete tradicional em papel ao sistema Andante, baseado em RFID. No entanto, há ainda uma oportunidade por explorar. Tendo em conta que o telemóvel é cada vez mais um objeto indispensável no dia-a-dia dos seres humanos, tirar partido das suas funcionalidades para viajar em transportes públicos é uma solução bastante conveniente para os utilizadores.
 \\Como principais requisitos funcionais, este sistema dispõe de funcionalidades de carregamento da carteira virtual, compra e validação (entrada e saída (opcional)) de títulos de viagem, verificação da validade por parte do revisor; sendo estas as necessidades de um sistema tradicional de transportes públicos.\cite{Buttyan2009}
-\\Pretende-se que o projeto permita uma integração com a aplicação MOVE-ME já existente no mercado, servindo como uma implementação de funcionalidades extra da mesma e também que seja possível por parte do administrador, a recolha, processamento e análise de informações relativas às viagens dos utilizadores.
+\\Pretende-se que o projeto permita, numa fase posterior, uma integração com a aplicação MOVE-ME já existente no mercado, servindo como uma implementação de funcionalidades extra da mesma e também que seja possível por parte do administrador, a recolha, processamento e análise de informações relativas às viagens dos utilizadores.
 
 \section{Arquitetura}
 
-O sistema é composto por três componentes fundamentais. A componente servidor (\emph{Server}) que pode ser considerado o centro do sistema, uma vez que é este que disponibiliza os vários serviços, com a qual as outras componentes interagem remotamente. A componente cliente (\emph{Client}), a qual permite ao passageiro interagir diretamente com os serviços disponibilizados. Finalmente, a componente revisor (\emph{Conductor}), a qualpermite aos revisores fiscalizar os passageiros que usam este sistema. De referir que estas duas últimas componentes estão integradas na mesma aplicação, no telemóvel do passageiro.\\Esta arquitetura segue a típica arquitetura cliente/servidor.
+O sistema é composto por três componentes fundamentais. A componente servidor (\emph{Server}) que pode ser considerado o centro do sistema, uma vez que é este que disponibiliza os vários serviços, com a qual as outras componentes interagem remotamente. A componente cliente (\emph{Client}), a qual permite ao passageiro interagir diretamente com os serviços disponibilizados. Finalmente, a componente revisor (\emph{Conductor}), a qual permite aos revisores fiscalizar os passageiros que usam este sistema. De referir que, nesta fase, estas duas últimas componentes estão integradas na mesma aplicação, no telemóvel do passageiro, removendo a necessidade de os revisores andarem equipados com dispositivos apropriados.\\Esta arquitetura segue a típica arquitetura cliente/servidor.
 
 \subsection{Cliente (Client)}
 Esta componente é a interface que permitirá aos utilizadores desta plataforma interagir com a mesma. Essa interação será conseguida através do uso de um telemóvel com sistema operativo Android para aceder à aplicação. As principais capacidades desta componente são:
 \begin{itemize}
-\item Compra de títulos por dois métodos diferentes:
-\subitem Compra por zonas;
-\subitem Compra por estação de origem/destino e cálculo automático do número de zonas;
+\item Compra de títulos por zonas, permitindo a compra de mais do que um título;
 \item Capacidade de armazenamento de títulos de viagem para uso posterior, sendo que os títulos podem ser de diferentes tipologias (diferente número de zonas, diferente modalidade);
 \item Validação um título de viagem, escolhendo o título desejado para utilização, sendo feita a comunicação com o servidor e recebendo a confirmação do mesmo;
 \item Visualização do saldo da carteira virtual e dos títulos adquiridos;
-\item Visualização do histórico de operações.
+\item Visualização do histórico de operações;
+\item Visualização do histórico de validações de títulos.
 \end{itemize}
 
-\subsection{Revisor (Conductor)}Esta componente é a que permite aos revisores visualizarem a validade dos títulos de viagem em utilização pelos passageiros. Consiste num módulo da aplicação no telemóvel do passageiro que após introdução de um código de verificação, exibe informação detalhada relativa ao título de viagem ativo.\subsection{Servidor (Server)}Esta componente irá disponibilizar serviços para os outros componentes da arquitetura. O funcionamento correto desta componente será assegurado por três subcomponentes:
+\subsection{Revisor (Conductor)}Esta componente é a que permite aos revisores visualizarem a validade dos títulos de viagem em utilização pelos passageiros. Consiste num módulo da aplicação no telemóvel do passageiro que exibe informação detalhada relativa ao título de viagem ativo.\subsection{Servidor (Server)}Esta componente irá disponibilizar serviços para os outros componentes da arquitetura. O funcionamento correto desta componente será assegurado por três subcomponentes:
 \begin{itemize}\item Base de dados – Toda a informação que seja necessária guardar será guardada numa base de dados, acessível apenas localmente;\item Página \web – Esta subcomponente proporcionará um painel de controlo para que o responsável pela administração da plataforma possa gerir todos os aspetos do sistema e ao mesmo tempo será também uma interface que lhe permitirá seguir o progresso dos passageiros;\item Serviço \web – A maioria da lógica do sistema será processada por esta componente e funcionará como intermediário entre a componente cliente/revisor e a base de dados central.
 \end{itemize}
 
@@ -40,13 +39,13 @@ O sistema é composto por três componentes fundamentais. A componente servidor 
 
 \subsection{Android}
 
-A escolha sobre o sistema operativo recaiu sobre o Android por ser a plataforma móvel mais popular no mundo. Com Android, os utilizadores podem usar todos os serviços Google a que estão habituados, para além de mais de 600 mil aplicações e jogos disponíveis na loja virtual Google Play, sendo que muitas das aplicações são gratuitas. Para além disso é possível obter milhões de músicas e livros e também milhares de filmes. Os dispositivos Android são melhorados constantemente com lançamentos de atualizações e novas funcionalidades com bastante frequência. Proporcionam também aos utilizadores uma experiência única e personalização de conteúdos.
+A escolha sobre o sistema operativo recaiu sobre o Android por ser a plataforma móvel mais popular no mundo. Com um dispositivo Android, os utilizadores podem usar todos os serviços Google a que estão habituados, para além de mais de 600 mil aplicações e jogos disponíveis na loja virtual Google Play, sendo que muitas das aplicações são gratuitas. Para além disso é possível obter milhões de músicas e livros e também milhares de filmes. Os dispositivos Android são melhorados constantemente com lançamentos de atualizações e novas funcionalidades com bastante frequência. Proporcionam também aos utilizadores uma experiência única e personalização de conteúdos.
 \\Uma mais valia é o facto de a aplicação MOVE-ME se encontrar também desenvolvida para este sistema operativo, sendo assim mais fácil a integração.
-\\A versão base escolhida será 2.2 pois mais de 98\% dos dispositivos possuem esta versão ou superior e esta versão oferece as funcionalidades necessárias. Ver Tabela~\ref{tab:android}.
+\\A versão base escolhida será 2.2 (Froyo) pois mais de 98\% dos dispositivos possuem esta versão ou superior e esta versão oferece as funcionalidades necessárias. Ver Tabela~\ref{tab:android}.
 
 \begin{table}[t]
   \centering
-  \caption{Distribuição de dispositivos ativos por versão do sistema operativo Android (1 de maio de 2013)}
+  \caption{Distribuição de dispositivos ativos por versão do sistema operativo Android (1 de maio de 2013)\cite{dashboards}}
 \begin{tabular}{p{20mm} p{45mm} p{10mm} p{20mm} }
 	\hline
 \textbf{Versão} & \textbf{Nome de Código} & \textbf{API} & \textbf{Distribuição}\\
@@ -71,24 +70,15 @@ Para a base de dados de suporte, a utilizar pela aplicação no telemóvel do pa
 \\O que difere o motor SQLite de outras implementações SQL é o facto de não necessitar de um processo externo de servidor. A leitura e escrita é feita diretamente para ficheiros no disco. Uma base de dados SQL completa, com múltiplas tabelas, índices, gatilhos, vistas, etc. é contida num único ficheiro local. O formato da base de dados é multi-plataforma, permitindo transmissão de ficheiros entre sistemas 32-bit e 64-bit, ou entre sistemas com outras arquiteturas.
 \\SQLite é uma biblioteca compacta, mesmo com todas as funcionalidades ativas, a biblioteca ocupa menos de 350kB. Para além disso pode ser corrida em ambientes com pouca memória, tornando-a a escolha ideal para dispositivos móveis. Obviamente, existe um balanço entre utilização de memória e velocidade, embora a performance seja normalmente bastante boa mesmo em ambientes com pouca memória.\cite{sqlite}
 
-\subsection{Microsoft .NET Framework 4}
+\subsection{Microsoft .NET Framework 3.5}
 
 O .NET Framework é o modelo de programação abrangente e consistente da Microsoft para criar aplicações que têm experiências de utilizador agradáveis, comunicações totalmente integradas e seguras e a capacidade de modelar um intervalo de processos de negócio.
 \\Inclui uma larga biblioteca e proporciona interoperabilidade de linguagens entre várias linguagens de programação. Os programas desenvolvidos para a .NET Framework são executados num ambiente de software, conhecido como \textit{Common Language Runtime} (CLR), uma máquina virtual de aplicações que oferece serviços tais como segurança, gestão de memória, tratamento de exceções.
 \\A biblioteca base oferece interface com utilizador, acesso a dados, ligação a bases de dados, criptografia, desenvolvimento de aplicações \web, algoritmos numéricos, comunicação em rede, etc.
 
-\subsection{MySQL}
+\subsection{Oracle Database XE}
 
-A base de dados do servidor assentará sobre a tecnologia MySQL por ser bastante poderosa e muito utilizada a nível mundial, dispondo de licença gratuita e, por ter uma política de código aberto, gozar de uma comunidade dedicada, bem como de documentação altamente informativa, através das quais é relativamente fácil aprender e obter soluções para eventuais problemas que possam surgir. As principais vantagens são as seguintes:
-\begin{itemize}
-\item Portabilidade (suporta praticamente qualquer plataforma atual);
-\item Compatibilidade (existem drivers .NET e módulos de interface para diversas linguagens de programação, como Delphi, Java, C/C++, C\#, Visual Basic, Python, Perl, PHP, ASP e Ruby);
-\item Excelente desempenho e estabilidade;
-\item Pouco exigente quanto a recursos de hardware;
-\item Facilidade de uso;
-\item Replicação facilmente configurável;
-\item Interfaces gráficas (MySQL Toolkit) de fácil utilização cedidas pela MySQL Inc.
-\end{itemize}
+A base de dados do servidor assentará sobre a tecnologia Oracle XE (eXpress Edition) por ser bastante poderosa (apesar de algumas limitações) e muito utilizada a nível mundial, dispondo de licença gratuita e gozar de uma comunidade dedicada, bem como de documentação altamente informativa, através das quais é relativamente fácil aprender e obter soluções para eventuais problemas que possam surgir.
 
 \section{Resumo e Conclusões}
 

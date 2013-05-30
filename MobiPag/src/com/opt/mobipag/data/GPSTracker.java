@@ -9,26 +9,16 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.IBinder;
 
+import com.opt.mobipag.R;
+
 public class GPSTracker extends Service implements LocationListener {
 
     private final Context mContext;
 
-    // flag for GPS status
-    boolean isGPSEnabled = false;
-
-    // flag for network status
-    boolean isNetworkEnabled = false;
-
-    Location location = null; // location
-
-    // The minimum distance to change Updates in meters
-    private static final long MIN_DISTANCE_CHANGE_FOR_UPDATES = 1; // 1 meter
-
-    // The minimum time between updates in milliseconds
-    private static final long MIN_TIME_BW_UPDATES = 1000; // 1 second
+    private Location location = null; // location
 
     // Declaring a Location Manager
-    protected LocationManager locationManager;
+    private LocationManager locationManager;
 
     public GPSTracker(Context context) {
         this.mContext = context;
@@ -41,29 +31,29 @@ public class GPSTracker extends Service implements LocationListener {
                     .getSystemService(LOCATION_SERVICE);
 
             // getting GPS status
-            isGPSEnabled = locationManager
+            boolean GPSEnabled = locationManager
                     .isProviderEnabled(LocationManager.GPS_PROVIDER);
 
             // getting network status
-            isNetworkEnabled = locationManager
+            boolean networkEnabled = locationManager
                     .isProviderEnabled(LocationManager.NETWORK_PROVIDER);
 
-            if (isGPSEnabled || isNetworkEnabled) {
+            if (GPSEnabled || networkEnabled) {
                 // First get location from Network Provider
-                if (isNetworkEnabled) {
+                if (networkEnabled) {
                     locationManager.requestLocationUpdates(
                             LocationManager.NETWORK_PROVIDER,
-                            MIN_TIME_BW_UPDATES,
-                            MIN_DISTANCE_CHANGE_FOR_UPDATES, this);
+                            getResources().getInteger(R.integer.MIN_TIME_BW_UPDATES),
+                            getResources().getInteger(R.integer.MIN_DISTANCE_CHANGE_FOR_UPDATES), this);
                     location = locationManager
                             .getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
                 }
                 // if GPS Enabled get lat/long using GPS Services
-                if (isGPSEnabled) {
+                if (GPSEnabled) {
                     locationManager.requestLocationUpdates(
                             LocationManager.GPS_PROVIDER,
-                            MIN_TIME_BW_UPDATES,
-                            MIN_DISTANCE_CHANGE_FOR_UPDATES, this);
+                            getResources().getInteger(R.integer.MIN_TIME_BW_UPDATES),
+                            getResources().getInteger(R.integer.MIN_DISTANCE_CHANGE_FOR_UPDATES), this);
                     Location temp = locationManager
                             .getLastKnownLocation(LocationManager.GPS_PROVIDER);
                     if(location!=null && temp.getAccuracy()<location.getAccuracy())
