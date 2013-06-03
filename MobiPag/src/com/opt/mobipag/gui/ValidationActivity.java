@@ -673,12 +673,33 @@ public class ValidationActivity extends Activity {
         protected Boolean doInBackground(String... arg0) {
             String param = null;
 
+            String firstPath;
+            String firstStop;
+            if(arg0[5].equals("true")){
+                firstPath = arg0[3];
+                firstStop = arg0[4];
+            }
+            else{
+                datasource2.open();
+                Occasional o = datasource2.getActiveOccasional(user.getId());
+                datasource2.close();
+
+                datasource7.open();
+                firstPath = datasource7.getLineById(o.getValidacoes().get(0).getIdLine()).getPathcode();
+                datasource7.close();
+                datasource6.open();
+                firstStop = datasource6.getStopById(o.getValidacoes().get(0).getIdStop()).getCodsms();
+                datasource6.close();
+            }
+
             try {
                 param = "email=" + URLEncoder.encode(arg0[0], "UTF-8") +
                         "&ticketType=" + URLEncoder.encode(arg0[1], "UTF-8") +
                         "&ticketName=" + URLEncoder.encode(arg0[2], "UTF-8") +
                         "&path=" + URLEncoder.encode(arg0[3], "UTF-8") +
                         "&stop=" + URLEncoder.encode(arg0[4], "UTF-8") +
+                        "&firstPath=" + URLEncoder.encode(firstPath, "UTF-8") +
+                        "&firstStop=" + URLEncoder.encode(firstStop, "UTF-8") +
                         "&IsNewValidation=" + URLEncoder.encode(arg0[5], "UTF-8") +
                         "&publicKey=" + URLEncoder.encode("temp", "UTF-8");
             } catch (UnsupportedEncodingException e1) {

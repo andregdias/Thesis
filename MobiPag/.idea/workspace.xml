@@ -21,19 +21,23 @@
       <config />
     </shared>
   </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="MobiPag" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" name="Default" comment="changed to Android Studio">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Relatório/chapter2.tex" afterPath="$PROJECT_DIR$/../Relatório/chapter2.tex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Relatório/chapter3.aux" afterPath="$PROJECT_DIR$/../Relatório/chapter3.aux" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Relatório/chapter3.tex" afterPath="$PROJECT_DIR$/../Relatório/chapter3.tex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Relatório/appendix1.aux" afterPath="$PROJECT_DIR$/../Relatório/appendix1.aux" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Relatório/appendix1.tex" afterPath="$PROJECT_DIR$/../Relatório/appendix1.tex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Relatório/appendix2.aux" afterPath="$PROJECT_DIR$/../Relatório/appendix2.aux" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Relatório/appendix2.tex" afterPath="$PROJECT_DIR$/../Relatório/appendix2.tex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Relatório/chapter4.aux" afterPath="$PROJECT_DIR$/../Relatório/chapter4.aux" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Relatório/chapter4.tex" afterPath="$PROJECT_DIR$/../Relatório/chapter4.tex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Relatório/chapter5.aux" afterPath="$PROJECT_DIR$/../Relatório/chapter5.aux" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Relatório/mieic.pdf" afterPath="$PROJECT_DIR$/../Relatório/mieic.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Relatório/refs.bib" afterPath="$PROJECT_DIR$/../Relatório/refs.bib" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Relatório/mieic.tex" afterPath="$PROJECT_DIR$/../Relatório/mieic.tex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/opt/mobipag/data/GPSTracker.java" afterPath="$PROJECT_DIR$/src/com/opt/mobipag/data/GPSTracker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/opt/mobipag/data/OutlineTextView.java" afterPath="$PROJECT_DIR$/src/com/opt/mobipag/data/OutlineTextView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/opt/mobipag/gui/RevisorActivity.java" afterPath="$PROJECT_DIR$/src/com/opt/mobipag/gui/RevisorActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/opt/mobipag/data/Utils.java" afterPath="$PROJECT_DIR$/src/com/opt/mobipag/data/Utils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/opt/mobipag/gui/ValidationActivity.java" afterPath="$PROJECT_DIR$/src/com/opt/mobipag/gui/ValidationActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/config.xml" afterPath="$PROJECT_DIR$/res/values/config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/settings.xml" afterPath="$PROJECT_DIR$/res/layout/settings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AndanteMobile.iws" />
@@ -54,16 +58,16 @@
     <file path="/RevisorActivity.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369910027751" ignored="false" />
     <file path="/TicketBalanceActivity.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1368752544503" ignored="false" />
     <file path="/TicketValidationActivity.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369417818412" ignored="false" />
-    <file path="/ValidationActivity.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369773655849" ignored="false" />
+    <file path="/ValidationActivity.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1370249242135" ignored="false" />
     <file path="/fragment.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369754160733" ignored="false" />
-    <file path="/a.dummy" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369412533815" ignored="false" />
+    <file path="/a.dummy" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1370248892359" ignored="false" />
     <file path="/SignatureDataSource.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1368754183485" ignored="false" />
     <file path="/OccasionalDataSource.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1368754220302" ignored="false" />
     <file path="/TravelTimer.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369774225848" ignored="false" />
     <file path="/WebServiceHandler.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369755031961" ignored="false" />
     <file path="/DatePickerFragment.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369410715212" ignored="false" />
     <file path="/MultiSpinner.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1368754974250" ignored="false" />
-    <file path="/Dummy.txt" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369909367820" ignored="false" />
+    <file path="/Dummy.txt" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1370248803965" ignored="false" />
     <file path="/a.xml" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369753992645" ignored="false" />
     <file path="$PROJECT_DIR$/gen/pt/up/fe/andantemobile/R.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369321110961" ignored="false" />
     <file path="/SettingsActivity.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369410773193" ignored="false" />
@@ -101,7 +105,7 @@
     <file path="$PROJECT_DIR$/src/com/opt/mobipag/database/UserDataSource.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369754278718" ignored="false" />
     <file path="$PROJECT_DIR$/src/com/opt/mobipag/database/TicketDataSource.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369754278718" ignored="false" />
     <file path="$PROJECT_DIR$/src/com/opt/mobipag/database/ZoneDataSource.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369754278718" ignored="false" />
-    <file path="/GPSTracker.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369910247465" ignored="false" />
+    <file path="/GPSTracker.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1370249716956" ignored="false" />
     <file path="/OutlineTextView.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369770223358" ignored="false" />
     <file path="/settings.xml" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369909430731" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -123,7 +127,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -160,7 +163,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -169,7 +172,107 @@
     <favorites_list name="AndanteMobile" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="ValidationActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/ValidationActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="707" column="0" selection-start="32656" selection-end="32656" vertical-scroll-proportion="0.34034166">
+              <folding>
+                <element signature="e#3746#3771#0" expanded="true" />
+                <element signature="e#8156#8181#0" expanded="true" />
+                <element signature="e#8897#8932#0" expanded="true" />
+                <element signature="e#9368#9396#0" expanded="true" />
+                <element signature="e#10232#10264#0" expanded="true" />
+                <element signature="e#10720#10748#0" expanded="true" />
+                <element signature="e#10809#10837#0" expanded="true" />
+                <element signature="e#11083#11111#0" expanded="true" />
+                <element signature="e#11351#11379#0" expanded="true" />
+                <element signature="e#11804#11832#0" expanded="true" />
+                <element signature="e#13071#13097#0" expanded="true" />
+                <element signature="e#13098#13129#0" expanded="true" />
+                <element signature="e#15428#15454#0" expanded="true" />
+                <element signature="e#15455#15489#0" expanded="true" />
+                <element signature="e#24499#24527#0" expanded="true" />
+                <element signature="e#24548#24571#0" expanded="true" />
+                <element signature="e#24620#24648#0" expanded="true" />
+                <element signature="e#24669#24692#0" expanded="true" />
+                <element signature="e#24767#24795#0" expanded="true" />
+                <element signature="e#24816#24839#0" expanded="true" />
+                <element signature="e#24888#24916#0" expanded="true" />
+                <element signature="e#24937#24960#0" expanded="true" />
+                <element signature="e#25055#25083#0" expanded="true" />
+                <element signature="e#25790#25817#0" expanded="true" />
+                <element signature="e#25835#25859#0" expanded="true" />
+                <element signature="e#25877#25902#0" expanded="true" />
+                <element signature="e#25957#25984#0" expanded="true" />
+                <element signature="e#26002#26026#0" expanded="true" />
+                <element signature="e#26044#26069#0" expanded="true" />
+                <element signature="e#26172#26199#0" expanded="true" />
+                <element signature="e#26217#26241#0" expanded="true" />
+                <element signature="e#26259#26283#0" expanded="true" />
+                <element signature="e#26338#26365#0" expanded="true" />
+                <element signature="e#26383#26407#0" expanded="true" />
+                <element signature="e#26425#26449#0" expanded="true" />
+                <element signature="e#26612#26639#0" expanded="true" />
+                <element signature="e#26657#26681#0" expanded="true" />
+                <element signature="e#26699#26724#0" expanded="true" />
+                <element signature="e#26779#26806#0" expanded="true" />
+                <element signature="e#26824#26848#0" expanded="true" />
+                <element signature="e#26866#26891#0" expanded="true" />
+                <element signature="e#26994#27021#0" expanded="true" />
+                <element signature="e#27039#27063#0" expanded="true" />
+                <element signature="e#27081#27105#0" expanded="true" />
+                <element signature="e#27160#27187#0" expanded="true" />
+                <element signature="e#27205#27229#0" expanded="true" />
+                <element signature="e#27247#27271#0" expanded="true" />
+                <element signature="e#27391#27420#0" expanded="true" />
+                <element signature="e#27771#27805#0" expanded="true" />
+                <element signature="e#28235#28259#0" expanded="true" />
+                <element signature="e#28271#28300#0" expanded="true" />
+                <element signature="e#29540#29564#0" expanded="true" />
+                <element signature="e#29576#29601#0" expanded="true" />
+                <element signature="e#32872#32898#0" expanded="true" />
+                <element signature="e#32899#32928#0" expanded="true" />
+                <element signature="e#33555#33590#0" expanded="true" />
+                <element signature="e#33756#33798#0" expanded="true" />
+                <element signature="e#33964#33999#0" expanded="true" />
+                <element signature="e#34169#34203#0" expanded="true" />
+                <element signature="e#35228#35257#0" expanded="true" />
+                <element signature="e#36079#36103#0" expanded="true" />
+                <element signature="e#36104#36129#0" expanded="true" />
+                <element signature="e#38653#38677#0" expanded="true" />
+                <element signature="e#38689#38715#0" expanded="true" />
+                <element signature="e#38774#38803#0" expanded="true" />
+                <element signature="e#40729#40752#0" expanded="true" />
+                <element signature="e#40927#40950#0" expanded="true" />
+                <element signature="e#41909#41933#0" expanded="true" />
+                <element signature="e#41945#41974#0" expanded="true" />
+                <element signature="e#43903#43929#0" expanded="true" />
+                <element signature="e#43941#43970#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegisterActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/RegisterActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="378" column="18" selection-start="15598" selection-end="15598" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GPSTracker.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/data/GPSTracker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="58" column="28" selection-start="2078" selection-end="2078" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -190,19 +293,19 @@
         <option value="$PROJECT_DIR$/src/com/opt/mobipag/gui/ManualStopSelector.java" />
         <option value="$PROJECT_DIR$/src/com/opt/mobipag/gui/TicketValidationActivity.java" />
         <option value="$PROJECT_DIR$/src/com/opt/mobipag/data/WebServiceHandler.java" />
-        <option value="$PROJECT_DIR$/src/com/opt/mobipag/gui/ValidationActivity.java" />
         <option value="$PROJECT_DIR$/src/com/opt/mobipag/data/TravelTimer.java" />
         <option value="$PROJECT_DIR$/res/layout/loginpin.xml" />
         <option value="$PROJECT_DIR$/res/layout/about.xml" />
         <option value="$PROJECT_DIR$/src/com/opt/mobipag/gui/AboutActivity.java" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/com/opt/mobipag/gui/RevisorActivity.java" />
-        <option value="$PROJECT_DIR$/res/values/config.xml" />
         <option value="$PROJECT_DIR$/src/com/opt/mobipag/data/OutlineTextView.java" />
         <option value="$PROJECT_DIR$/src/com/opt/mobipag/data/Utils.java" />
         <option value="$PROJECT_DIR$/res/layout/settings.xml" />
-        <option value="$PROJECT_DIR$/src/com/opt/mobipag/data/GPSTracker.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/res/values/config.xml" />
+        <option value="$PROJECT_DIR$/src/com/opt/mobipag/data/GPSTracker.java" />
+        <option value="$PROJECT_DIR$/src/com/opt/mobipag/gui/ValidationActivity.java" />
       </list>
     </option>
   </component>
@@ -258,6 +361,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -390,7 +494,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -592,11 +695,13 @@
       <workItem from="1369835401365" duration="540000" />
       <workItem from="1369909309641" duration="30000" />
       <workItem from="1369909365037" duration="3249000" />
+      <workItem from="1370051015057" duration="7000" />
+      <workItem from="1370248803429" duration="1078000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70722000" />
+    <option name="totallyTimeSpent" value="71807000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -620,10 +725,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283046" sideWeight="0.6009975" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32793018" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38528678" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -633,13 +737,12 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32604167" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45511222" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32820514" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32793018" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24813233" sideWeight="0.6717949" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27833572" sideWeight="0.6009975" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3990025" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32294264" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27833572" sideWeight="0.5448878" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32294264" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.6717949" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -647,7 +750,9 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.6717949" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283046" sideWeight="0.6009975" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917705" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3990025" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -712,26 +817,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/layout/about.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="36" selection-start="836" selection-end="836" vertical-scroll-proportion="0.42313117" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/AboutActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="59" selection-start="541" selection-end="541" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/ValidationActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="742" column="60" selection-start="34402" selection-end="34446" vertical-scroll-proportion="0.01965924">
-          <folding />
-        </state>
+        <state line="17" column="59" selection-start="541" selection-end="541" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/loginpin.xml">
@@ -753,44 +841,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gen/com/opt/mobipag/BuildConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="19" selection-start="125" selection-end="125" vertical-scroll-proportion="0.09911894">
-          <folding />
-        </state>
+        <state line="5" column="19" selection-start="125" selection-end="125" vertical-scroll-proportion="0.09911894" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/RevisorActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="154" column="84" selection-start="5263" selection-end="5263" vertical-scroll-proportion="0.53741497">
-          <folding />
-        </state>
+        <state line="154" column="84" selection-start="5263" selection-end="5263" vertical-scroll-proportion="0.53741497" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/project.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="546" selection-end="546" vertical-scroll-proportion="0.46255508">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="53" selection-start="445" selection-end="445" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="14" column="0" selection-start="546" selection-end="546" vertical-scroll-proportion="0.46255508" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/data/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="20" selection-start="758" selection-end="758" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="25" column="20" selection-start="758" selection-end="758" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/HelpActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="267" selection-end="267" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="11" column="13" selection-start="267" selection-end="267" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/settings.xml">
@@ -803,27 +874,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/data/GPSTracker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="478" selection-end="478" vertical-scroll-proportion="0.5947136">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/data/OutlineTextView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="22" selection-start="435" selection-end="435" vertical-scroll-proportion="0.42951542">
-          <folding />
-        </state>
+        <state line="17" column="22" selection-start="435" selection-end="435" vertical-scroll-proportion="0.42951542" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/data/TravelTimer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="16" selection-start="2931" selection-end="2939" vertical-scroll-proportion="0.5330396">
-          <folding />
-        </state>
+        <state line="78" column="16" selection-start="2931" selection-end="2939" vertical-scroll-proportion="0.5330396" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
@@ -832,6 +890,106 @@
           <folding>
             <element signature="e#778#796#0" expanded="true" />
             <element signature="e#911#929#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="38" selection-start="336" selection-end="336" vertical-scroll-proportion="0.33007336">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/data/GPSTracker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="28" selection-start="2078" selection-end="2078" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/RegisterActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="378" column="18" selection-start="15598" selection-end="15598" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/ValidationActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="707" column="0" selection-start="32656" selection-end="32656" vertical-scroll-proportion="0.34034166">
+          <folding>
+            <element signature="e#3746#3771#0" expanded="true" />
+            <element signature="e#8156#8181#0" expanded="true" />
+            <element signature="e#8897#8932#0" expanded="true" />
+            <element signature="e#9368#9396#0" expanded="true" />
+            <element signature="e#10232#10264#0" expanded="true" />
+            <element signature="e#10720#10748#0" expanded="true" />
+            <element signature="e#10809#10837#0" expanded="true" />
+            <element signature="e#11083#11111#0" expanded="true" />
+            <element signature="e#11351#11379#0" expanded="true" />
+            <element signature="e#11804#11832#0" expanded="true" />
+            <element signature="e#13071#13097#0" expanded="true" />
+            <element signature="e#13098#13129#0" expanded="true" />
+            <element signature="e#15428#15454#0" expanded="true" />
+            <element signature="e#15455#15489#0" expanded="true" />
+            <element signature="e#24499#24527#0" expanded="true" />
+            <element signature="e#24548#24571#0" expanded="true" />
+            <element signature="e#24620#24648#0" expanded="true" />
+            <element signature="e#24669#24692#0" expanded="true" />
+            <element signature="e#24767#24795#0" expanded="true" />
+            <element signature="e#24816#24839#0" expanded="true" />
+            <element signature="e#24888#24916#0" expanded="true" />
+            <element signature="e#24937#24960#0" expanded="true" />
+            <element signature="e#25055#25083#0" expanded="true" />
+            <element signature="e#25790#25817#0" expanded="true" />
+            <element signature="e#25835#25859#0" expanded="true" />
+            <element signature="e#25877#25902#0" expanded="true" />
+            <element signature="e#25957#25984#0" expanded="true" />
+            <element signature="e#26002#26026#0" expanded="true" />
+            <element signature="e#26044#26069#0" expanded="true" />
+            <element signature="e#26172#26199#0" expanded="true" />
+            <element signature="e#26217#26241#0" expanded="true" />
+            <element signature="e#26259#26283#0" expanded="true" />
+            <element signature="e#26338#26365#0" expanded="true" />
+            <element signature="e#26383#26407#0" expanded="true" />
+            <element signature="e#26425#26449#0" expanded="true" />
+            <element signature="e#26612#26639#0" expanded="true" />
+            <element signature="e#26657#26681#0" expanded="true" />
+            <element signature="e#26699#26724#0" expanded="true" />
+            <element signature="e#26779#26806#0" expanded="true" />
+            <element signature="e#26824#26848#0" expanded="true" />
+            <element signature="e#26866#26891#0" expanded="true" />
+            <element signature="e#26994#27021#0" expanded="true" />
+            <element signature="e#27039#27063#0" expanded="true" />
+            <element signature="e#27081#27105#0" expanded="true" />
+            <element signature="e#27160#27187#0" expanded="true" />
+            <element signature="e#27205#27229#0" expanded="true" />
+            <element signature="e#27247#27271#0" expanded="true" />
+            <element signature="e#27391#27420#0" expanded="true" />
+            <element signature="e#27771#27805#0" expanded="true" />
+            <element signature="e#28235#28259#0" expanded="true" />
+            <element signature="e#28271#28300#0" expanded="true" />
+            <element signature="e#29540#29564#0" expanded="true" />
+            <element signature="e#29576#29601#0" expanded="true" />
+            <element signature="e#32872#32898#0" expanded="true" />
+            <element signature="e#32899#32928#0" expanded="true" />
+            <element signature="e#33555#33590#0" expanded="true" />
+            <element signature="e#33756#33798#0" expanded="true" />
+            <element signature="e#33964#33999#0" expanded="true" />
+            <element signature="e#34169#34203#0" expanded="true" />
+            <element signature="e#35228#35257#0" expanded="true" />
+            <element signature="e#36079#36103#0" expanded="true" />
+            <element signature="e#36104#36129#0" expanded="true" />
+            <element signature="e#38653#38677#0" expanded="true" />
+            <element signature="e#38689#38715#0" expanded="true" />
+            <element signature="e#38774#38803#0" expanded="true" />
+            <element signature="e#40729#40752#0" expanded="true" />
+            <element signature="e#40927#40950#0" expanded="true" />
+            <element signature="e#41909#41933#0" expanded="true" />
+            <element signature="e#41945#41974#0" expanded="true" />
+            <element signature="e#43903#43929#0" expanded="true" />
+            <element signature="e#43941#43970#0" expanded="true" />
           </folding>
         </state>
       </provider>

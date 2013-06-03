@@ -1,12 +1,81 @@
-\chapter{Planeamento (Parte 1)} \label{gantt1}
+\chapter{Especificação de Requisitos Funcionais} \label{rer}
 
-O período apresentado refere-se aos meses de novembro de 2012 a fevereiro de 2013, coincidindo com a Unidade Curricular EIC0087 - Preparação da Dissertação.
+\section{Descrição Detalhada}
 
-\begin{figure}[t]
-  \begin{center}
-    \leavevmode
-    \includegraphics[height=23cm]{gantt_part1}
-    \caption{Planeamento da primeira fase da dissertação}
-    \label{fig:gantt1}
-  \end{center}
-\end{figure}
+\subsection{O sistema deve permitir o registo de um novo utilizador}
+O sistema deve ter funcionalidade de registo, permitindo a utilizadores que não possuam registo no sistema fazê-lo, podendo posteriormente utilizar a sua conta pessoal para aceder ao sistema.
+
+\subsection{O sistema deve permitir a autenticação de um utilizador já registado}
+O sistema deve permitir aos utilizadores registados, a autenticação usando credenciais de acesso, para acesso às funcionalidades do sistema.
+\subsection{O sistema deve permitir a um utilizador autenticado alterar os seus dados pessoais}
+O sistema deve permitir aos utilizadores autenticados, alterar os seus dados pessoais, introduzidos aquando do seu registo.
+\subsection{O sistema deve permitir a um utilizador autenticado terminar a sessão ativa}
+O sistema deve permitir aos utilizadores autenticados, terminar a sessão.
+
+\subsection{O sistema deve permitir a compra de títulos por utilizadores autenticados}
+O sistema deve permitir aos utilizadores autenticados, a compra de títulos de viagem, consoante as configurações indicadas e o saldo disponível na carteira virtual. O sistema deve apresentar os vários tipos de título existentes (e respetivos preços), bem como permitir a compra de mais do que um título.
+
+\subsection{O sistema deve utilizar os fornecedores de localização do dispositivo móvel para identificar a paragem onde o utilizador autenticado se encontra}
+O sistema deve tirar partido das capacidades de localização do dispositivo Android para automaticamente detetar a posição do utilizador e listar as paragens mais próximas.
+
+\subsection{O sistema deve permitir ao utilizador autenticado a escolha manual da paragem de entrada}
+O sistema deve apresentar a lista completa de paragens, para seleção manual por parte do utilizador, quando não é possível detetar a posição atual através do dispositivo Android.
+
+\subsection{O sistema deve listar as linhas e respetivos sentidos que passam na paragem selecionada pelo utilizador autenticado}
+Após seleção da paragem desejada, o sistema deve listar todas as linhas de transportes públicos que param na paragem selecionada.
+
+\subsection{O sistema deve permitir ao utilizador autenticado escolher o título a validar, apresentando todos os títulos disponíveis que se adequem à paragem e linha selecionadas}
+O sistema deve permitir escolher o título de viagem a validar, de entre os disponíveis na carteira de títulos.
+
+\subsection{O sistema deve permitir ao utilizador autenticado efetuar a validação do título escolhido, apresentando a paragem limite até à qual pode viajar}
+Após a seleção de paragem, linha e título, o sistema deve permitir a validação da viagem, passando o título a estar ativo e não podendo ser utilizado novamente, no caso de ser um título ocasional.
+
+\subsection{O sistema deve permitir a mudança de linha (transbordo), quando existir um título válido}
+O sistema deve permitir a realização de transbordo aos utilizadores autenticados que possuam um título validado e ainda dentro do limite de tempo.
+
+\subsection{O sistema deve permitir a confirmação da validade do título em utilização, por parte do revisor}
+O sistema deve permitir a confirmação da validade do título ativo após indicações do revisor autorizado. Esta confirmação será feita no dispositivo do utilizador.
+
+\subsection{O sistema deve permitir a consulta do estado atual do título validado}
+Tendo um título de viagem validado, o sistema deve permitir ao utilizador consultar o estado atual do título. Isto inclui a paragem de entrada, a linha escolhida, o tempo restante e, em caso de transbordo, as linhas e paragens de transbordo.
+
+\subsection{O sistema deve permitir o acesso ao histórico de operações efetuadas pelo utilizador autenticado}
+O sistema deve permitir ao utilizador, a visualização do histórico de operações efetuadas, sejam carregamentos de conta, compra de títulos Ocasionais, Andante 24 ou Assinatura Mensal.
+
+\subsection{O sistema deve permitir o acesso ao histórico de validações realizadas pelo utilizador autenticado}
+O sistema deve permitir ao utilizador, a visualização do histórico de validações de títulos.
+
+\subsection{O sistema deve permitir a consulta do saldo de títulos disponíveis}
+O sistema deve permitir ao utilizador, a consulta do saldo atual de títulos, discriminado por tipos de títulos.
+
+\subsection{O sistema deve permitir a consulta de saldo da carteira virtual}
+O sistema deve permitir ao utilizador, a consulta do saldo atual da carteira virtual.
+
+\begin{table}[t]
+  \centering
+  \caption{Requisitos Funcionais: Descrição, Prioridade e Dependências}
+\begin{tabular}{p{10mm} p{85mm} p{15mm} p{25mm} }
+	\hline
+\textbf{Código} & \textbf{Descrição} & \textbf{Prioridade} & \textbf{Dependências}\\
+	\hline
+	\hline
+	RF01 & O sistema deve permitir o registo de um novo utilizador & Alta & -\\\hline
+	RF02 & O sistema deve permitir a autenticação de um utilizador já registado & Alta & RF01\\\hline
+	RF03 & O sistema deve permitir a um utilizador autenticado alterar os seus dados pessoais & Baixa & RF02\\\hline
+	RF04 & O sistema deve permitir a um utilizador autenticado terminar a sessão ativa & Baixa & RF02\\\hline
+	RF05 & O sistema deve permitir a compra de títulos por utilizadores autenticados & Alta & RF02\\\hline
+	RF06 & O sistema deve utilizar os fornecedores de localização do dispositivo móvel para identificar a paragem onde o utilizador autenticado se encontra & Alta & RF02\\\hline
+	RF07 & O sistema deve permitir ao utilizador autenticado a escolha manual da paragem de entrada & Alta & RF02\\\hline
+	RF08 & O sistema deve listar as linhas e respetivos sentidos que passam na paragem selecionada pelo utilizador autenticado & Alta & RF02\\\hline
+	RF09 & O sistema deve permitir ao utilizador autenticado escolher o título a validar, apresentando todos os títulos disponíveis que se adequem à paragem e linha selecionadas & Alta & RF02\\\hline
+	RF10 & O sistema deve permitir ao utilizador autenticado efetuar a validação do título escolhido, apresentando a paragem limite até à qual pode viajar & Alta & RF02, RF06, RF07, RF08, RF09\\\hline
+	RF11 & O sistema deve permitir a mudança de linha (transbordo), quando existir um título válido & Média & RF02, RF10\\\hline
+	RF12 & O sistema deve permitir a confirmação da validade do título em utilização, por parte do revisor & Alta & RF02, RF10\\\hline
+	RF13 & O sistema deve permitir a consulta do estado atual do título validado & Média & RF02, RF10\\\hline
+	RF14 & O sistema deve permitir o acesso ao histórico de operações efetuadas pelo utilizador autenticado & Baixa & RF02\\\hline
+	RF15 & O sistema deve permitir o acesso ao histórico de validações realizadas pelo utilizador autenticado & Baixa & RF02, RF10\\\hline
+	RF16 & O sistema deve permitir a consulta do saldo de títulos disponíveis & Média & RF02, RF05\\\hline
+	RF17 & O sistema deve permitir a consulta de saldo da carteira virtual & Média & RF02\\\hline
+\end{tabular}
+  \label{tab:android}
+\end{table}

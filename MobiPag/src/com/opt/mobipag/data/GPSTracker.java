@@ -38,13 +38,16 @@ public class GPSTracker extends Service implements LocationListener {
             boolean networkEnabled = locationManager
                     .isProviderEnabled(LocationManager.NETWORK_PROVIDER);
 
+            int MIN_TIME_BW_UPDATES = 1000;
+            int MIN_DISTANCE_CHANGE_FOR_UPDATES = 1;
+
             if (GPSEnabled || networkEnabled) {
                 // First get location from Network Provider
                 if (networkEnabled) {
                     locationManager.requestLocationUpdates(
                             LocationManager.NETWORK_PROVIDER,
-                            getResources().getInteger(R.integer.MIN_TIME_BW_UPDATES),
-                            getResources().getInteger(R.integer.MIN_DISTANCE_CHANGE_FOR_UPDATES), this);
+                            MIN_TIME_BW_UPDATES,
+                            MIN_DISTANCE_CHANGE_FOR_UPDATES, this);
                     location = locationManager
                             .getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
                 }
@@ -52,8 +55,8 @@ public class GPSTracker extends Service implements LocationListener {
                 if (GPSEnabled) {
                     locationManager.requestLocationUpdates(
                             LocationManager.GPS_PROVIDER,
-                            getResources().getInteger(R.integer.MIN_TIME_BW_UPDATES),
-                            getResources().getInteger(R.integer.MIN_DISTANCE_CHANGE_FOR_UPDATES), this);
+                            MIN_TIME_BW_UPDATES,
+                            MIN_DISTANCE_CHANGE_FOR_UPDATES, this);
                     Location temp = locationManager
                             .getLastKnownLocation(LocationManager.GPS_PROVIDER);
                     if(location!=null && temp.getAccuracy()<location.getAccuracy())
