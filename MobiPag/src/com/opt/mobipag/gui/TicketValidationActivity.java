@@ -234,7 +234,7 @@ public class TicketValidationActivity extends Activity {
         int len = 25;
         if (s.length() <= len)
             return s;
-        return s.substring(0, len) + "…";
+        return s.substring(0, len) + getString(R.string.reticencias);
     }
 
     class GetTickets extends AsyncTask<String, Integer, Boolean> {

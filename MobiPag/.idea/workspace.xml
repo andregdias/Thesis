@@ -23,7 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" name="Default" comment="changed to Android Studio">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/opt/mobipag/gui/ValidationActivity.java" afterPath="$PROJECT_DIR$/src/com/opt/mobipag/gui/ValidationActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/opt/mobipag/gui/AboutActivity.java" afterPath="$PROJECT_DIR$/src/com/opt/mobipag/gui/AboutActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/opt/mobipag/database/LineDataSource.java" afterPath="$PROJECT_DIR$/src/com/opt/mobipag/database/LineDataSource.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/opt/mobipag/gui/TicketValidationActivity.java" afterPath="$PROJECT_DIR$/src/com/opt/mobipag/gui/TicketValidationActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/config.xml" afterPath="$PROJECT_DIR$/res/values/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AndanteMobile.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,7 +48,7 @@
     <file path="/RegisterActivity.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1368752031579" ignored="false" />
     <file path="/RevisorActivity.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369910027751" ignored="false" />
     <file path="/TicketBalanceActivity.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1368752544503" ignored="false" />
-    <file path="/TicketValidationActivity.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369417818412" ignored="false" />
+    <file path="/TicketValidationActivity.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1370256505734" ignored="false" />
     <file path="/ValidationActivity.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1370255286647" ignored="false" />
     <file path="/fragment.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369754160733" ignored="false" />
     <file path="/a.dummy" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1370248892359" ignored="false" />
@@ -52,7 +58,7 @@
     <file path="/WebServiceHandler.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369755031961" ignored="false" />
     <file path="/DatePickerFragment.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369410715212" ignored="false" />
     <file path="/MultiSpinner.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1368754974250" ignored="false" />
-    <file path="/Dummy.txt" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1370248803965" ignored="false" />
+    <file path="/Dummy.txt" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1370263516024" ignored="false" />
     <file path="/a.xml" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369753992645" ignored="false" />
     <file path="$PROJECT_DIR$/gen/pt/up/fe/andantemobile/R.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369321110961" ignored="false" />
     <file path="/SettingsActivity.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369410773193" ignored="false" />
@@ -77,22 +83,15 @@
     <file path="$PROJECT_DIR$/gen/pt/up/fe/mobipag/BuildConfig.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369410185542" ignored="false" />
     <file path="$PROJECT_DIR$/gen/pt/up/fe/mobipag/Manifest.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369410176739" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369911146051" ignored="false" />
-    <file path="/config.xml" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369910196017" ignored="false" />
+    <file path="/config.xml" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1370256488559" ignored="false" />
     <file path="/about.xml" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369776550325" ignored="false" />
-    <file path="/AboutActivity.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369776583413" ignored="false" />
+    <file path="/AboutActivity.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1370257036099" ignored="false" />
     <file path="/a.groovy" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369754222199" ignored="false" />
     <file path="/sample.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369753985676" ignored="false" />
-    <file path="$PROJECT_DIR$/src/com/opt/mobipag/database/HistoryDataSource.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369754278718" ignored="false" />
-    <file path="$PROJECT_DIR$/src/com/opt/mobipag/database/LineDataSource.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369754278718" ignored="false" />
-    <file path="$PROJECT_DIR$/src/com/opt/mobipag/database/StopDataSource.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369754278718" ignored="false" />
-    <file path="$PROJECT_DIR$/src/com/opt/mobipag/database/OccasionalDataSource.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369754278718" ignored="false" />
-    <file path="$PROJECT_DIR$/src/com/opt/mobipag/database/SignatureDataSource.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369754278718" ignored="false" />
-    <file path="$PROJECT_DIR$/src/com/opt/mobipag/database/UserDataSource.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369754278718" ignored="false" />
-    <file path="$PROJECT_DIR$/src/com/opt/mobipag/database/TicketDataSource.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369754278718" ignored="false" />
-    <file path="$PROJECT_DIR$/src/com/opt/mobipag/database/ZoneDataSource.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369754278718" ignored="false" />
     <file path="/GPSTracker.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1370249716956" ignored="false" />
     <file path="/OutlineTextView.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369770223358" ignored="false" />
     <file path="/settings.xml" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1369909430731" ignored="false" />
+    <file path="/LineDataSource.java" changelist="6eeaa2a2-9c0d-40ff-ade1-8b8e2ef2e97a" time="1370266524205" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,6 +111,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -148,7 +148,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -158,100 +157,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ValidationActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ValidationActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/ValidationActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="707" column="0" selection-start="32706" selection-end="32706" vertical-scroll-proportion="0.49242425">
-              <folding>
-                <element signature="e#3746#3771#0" expanded="true" />
-                <element signature="e#8156#8181#0" expanded="true" />
-                <element signature="e#8897#8932#0" expanded="true" />
-                <element signature="e#9368#9396#0" expanded="true" />
-                <element signature="e#10232#10264#0" expanded="true" />
-                <element signature="e#10720#10748#0" expanded="true" />
-                <element signature="e#10809#10837#0" expanded="true" />
-                <element signature="e#11083#11111#0" expanded="true" />
-                <element signature="e#11351#11379#0" expanded="true" />
-                <element signature="e#11804#11832#0" expanded="true" />
-                <element signature="e#13071#13097#0" expanded="true" />
-                <element signature="e#13098#13129#0" expanded="true" />
-                <element signature="e#15428#15454#0" expanded="true" />
-                <element signature="e#15455#15489#0" expanded="true" />
-                <element signature="e#24499#24527#0" expanded="true" />
-                <element signature="e#24548#24571#0" expanded="true" />
-                <element signature="e#24620#24648#0" expanded="true" />
-                <element signature="e#24669#24692#0" expanded="true" />
-                <element signature="e#24767#24795#0" expanded="true" />
-                <element signature="e#24816#24839#0" expanded="true" />
-                <element signature="e#24888#24916#0" expanded="true" />
-                <element signature="e#24937#24960#0" expanded="true" />
-                <element signature="e#25055#25083#0" expanded="true" />
-                <element signature="e#25790#25817#0" expanded="true" />
-                <element signature="e#25835#25859#0" expanded="true" />
-                <element signature="e#25877#25902#0" expanded="true" />
-                <element signature="e#25957#25984#0" expanded="true" />
-                <element signature="e#26002#26026#0" expanded="true" />
-                <element signature="e#26044#26069#0" expanded="true" />
-                <element signature="e#26172#26199#0" expanded="true" />
-                <element signature="e#26217#26241#0" expanded="true" />
-                <element signature="e#26259#26283#0" expanded="true" />
-                <element signature="e#26338#26365#0" expanded="true" />
-                <element signature="e#26383#26407#0" expanded="true" />
-                <element signature="e#26425#26449#0" expanded="true" />
-                <element signature="e#26612#26639#0" expanded="true" />
-                <element signature="e#26657#26681#0" expanded="true" />
-                <element signature="e#26699#26724#0" expanded="true" />
-                <element signature="e#26779#26806#0" expanded="true" />
-                <element signature="e#26824#26848#0" expanded="true" />
-                <element signature="e#26866#26891#0" expanded="true" />
-                <element signature="e#26994#27021#0" expanded="true" />
-                <element signature="e#27039#27063#0" expanded="true" />
-                <element signature="e#27081#27105#0" expanded="true" />
-                <element signature="e#27160#27187#0" expanded="true" />
-                <element signature="e#27205#27229#0" expanded="true" />
-                <element signature="e#27247#27271#0" expanded="true" />
-                <element signature="e#27391#27420#0" expanded="true" />
-                <element signature="e#27771#27805#0" expanded="true" />
-                <element signature="e#28235#28259#0" expanded="true" />
-                <element signature="e#28271#28300#0" expanded="true" />
-                <element signature="e#29540#29564#0" expanded="true" />
-                <element signature="e#29576#29601#0" expanded="true" />
-                <element signature="e#32922#32948#0" expanded="true" />
-                <element signature="e#32949#32978#0" expanded="true" />
-                <element signature="e#33605#33640#0" expanded="true" />
-                <element signature="e#33806#33848#0" expanded="true" />
-                <element signature="e#34014#34049#0" expanded="true" />
-                <element signature="e#34219#34253#0" expanded="true" />
-                <element signature="e#35278#35307#0" expanded="true" />
-                <element signature="e#36129#36153#0" expanded="true" />
-                <element signature="e#36154#36179#0" expanded="true" />
-                <element signature="e#38703#38727#0" expanded="true" />
-                <element signature="e#38739#38765#0" expanded="true" />
-                <element signature="e#38824#38853#0" expanded="true" />
-                <element signature="e#40779#40802#0" expanded="true" />
-                <element signature="e#40977#41000#0" expanded="true" />
-                <element signature="e#41959#41983#0" expanded="true" />
-                <element signature="e#41995#42024#0" expanded="true" />
-                <element signature="e#43953#43979#0" expanded="true" />
-                <element signature="e#43991#44020#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegisterActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/RegisterActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="378" column="18" selection-start="15598" selection-end="15598" vertical-scroll-proportion="0.0">
+            <state line="658" column="56" selection-start="30559" selection-end="30569" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GPSTracker.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/data/GPSTracker.java">
+      <file leaf-file-name="TicketValidationActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/TicketValidationActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="28" selection-start="2078" selection-end="2078" vertical-scroll-proportion="0.0">
+            <state line="236" column="41" selection-start="8445" selection-end="8445" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AboutActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/AboutActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="12" selection-start="831" selection-end="851" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SQLiteHelper.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/database/SQLiteHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="154" column="27" selection-start="8640" selection-end="8655" vertical-scroll-proportion="1.871345">
               <folding />
             </state>
           </provider>
@@ -275,22 +211,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/opt/mobipag/gui/ManualStopSelector.java" />
-        <option value="$PROJECT_DIR$/src/com/opt/mobipag/gui/TicketValidationActivity.java" />
         <option value="$PROJECT_DIR$/src/com/opt/mobipag/data/WebServiceHandler.java" />
         <option value="$PROJECT_DIR$/src/com/opt/mobipag/data/TravelTimer.java" />
         <option value="$PROJECT_DIR$/res/layout/loginpin.xml" />
         <option value="$PROJECT_DIR$/res/layout/about.xml" />
-        <option value="$PROJECT_DIR$/src/com/opt/mobipag/gui/AboutActivity.java" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/com/opt/mobipag/gui/RevisorActivity.java" />
         <option value="$PROJECT_DIR$/src/com/opt/mobipag/data/OutlineTextView.java" />
         <option value="$PROJECT_DIR$/src/com/opt/mobipag/data/Utils.java" />
         <option value="$PROJECT_DIR$/res/layout/settings.xml" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/res/values/config.xml" />
         <option value="$PROJECT_DIR$/src/com/opt/mobipag/data/GPSTracker.java" />
         <option value="$PROJECT_DIR$/src/com/opt/mobipag/gui/ValidationActivity.java" />
+        <option value="$PROJECT_DIR$/res/values/config.xml" />
+        <option value="$PROJECT_DIR$/src/com/opt/mobipag/gui/TicketValidationActivity.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/com/opt/mobipag/gui/AboutActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/opt/mobipag/database/LineDataSource.java" />
       </list>
     </option>
   </component>
@@ -346,6 +282,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -402,6 +339,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="mobipag" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -479,7 +420,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -495,11 +435,11 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Galaxy_Nexus_2.2" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="true" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Android Application.MobiPag">
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
@@ -681,12 +621,17 @@
       <workItem from="1369909309641" duration="30000" />
       <workItem from="1369909365037" duration="3249000" />
       <workItem from="1370051015057" duration="7000" />
-      <workItem from="1370248803429" duration="2416000" />
+      <workItem from="1370248803429" duration="2435000" />
+      <workItem from="1370255767947" duration="645000" />
+      <workItem from="1370256436158" duration="70000" />
+      <workItem from="1370256538295" duration="18000" />
+      <workItem from="1370256753172" duration="381000" />
+      <workItem from="1370263514418" duration="2428000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73145000" />
+    <option name="totallyTimeSpent" value="76706000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -714,19 +659,18 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32793018" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32711443" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38528678" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4276808" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24605452" sideWeight="0.42643392" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24605452" sideWeight="0.42643392" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32604167" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.45511222" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45273632" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32793018" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24813233" sideWeight="0.6717949" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24748924" sideWeight="0.6728856" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27833572" sideWeight="0.5448878" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27833572" sideWeight="0.6728856" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32294264" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.6717949" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -736,6 +680,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.6717949" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283046" sideWeight="0.6009975" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32604167" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32917705" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3990025" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -802,33 +747,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/AboutActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="59" selection-start="541" selection-end="541" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/loginpin.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="45" selection-start="1488" selection-end="1488" vertical-scroll-proportion="0.75967956">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="170" column="175" selection-start="11416" selection-end="11416" vertical-scroll-proportion="0.17431192">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gen/com/opt/mobipag/BuildConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="19" selection-start="125" selection-end="125" vertical-scroll-proportion="0.09911894" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/RevisorActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="154" column="84" selection-start="5263" selection-end="5263" vertical-scroll-proportion="0.53741497" />
@@ -850,13 +768,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/settings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="179" column="0" selection-start="7806" selection-end="8190" vertical-scroll-proportion="-1.925926" />
+      </provider>
       <provider editor-type-id="android-designer">
         <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="179" column="0" selection-start="7806" selection-end="8190" vertical-scroll-proportion="-1.925926">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/data/OutlineTextView.java">
@@ -867,23 +783,6 @@
     <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/data/TravelTimer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="78" column="16" selection-start="2931" selection-end="2939" vertical-scroll-proportion="0.5330396" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="0" selection-start="5365" selection-end="5365" vertical-scroll-proportion="4.162996">
-          <folding>
-            <element signature="e#778#796#0" expanded="true" />
-            <element signature="e#911#929#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="38" selection-start="336" selection-end="336" vertical-scroll-proportion="0.33007336">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/data/GPSTracker.java">
@@ -900,82 +799,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="32" selection-start="188" selection-end="188" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="34" selection-start="212" selection-end="212" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/AboutActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="12" selection-start="831" selection-end="851" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/TicketValidationActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="236" column="41" selection-start="8445" selection-end="8445" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/database/LineDataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="41" selection-start="1168" selection-end="1168" vertical-scroll-proportion="0.31384015">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/gui/ValidationActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="707" column="0" selection-start="32706" selection-end="32706" vertical-scroll-proportion="0.49242425">
-          <folding>
-            <element signature="e#3746#3771#0" expanded="true" />
-            <element signature="e#8156#8181#0" expanded="true" />
-            <element signature="e#8897#8932#0" expanded="true" />
-            <element signature="e#9368#9396#0" expanded="true" />
-            <element signature="e#10232#10264#0" expanded="true" />
-            <element signature="e#10720#10748#0" expanded="true" />
-            <element signature="e#10809#10837#0" expanded="true" />
-            <element signature="e#11083#11111#0" expanded="true" />
-            <element signature="e#11351#11379#0" expanded="true" />
-            <element signature="e#11804#11832#0" expanded="true" />
-            <element signature="e#13071#13097#0" expanded="true" />
-            <element signature="e#13098#13129#0" expanded="true" />
-            <element signature="e#15428#15454#0" expanded="true" />
-            <element signature="e#15455#15489#0" expanded="true" />
-            <element signature="e#24499#24527#0" expanded="true" />
-            <element signature="e#24548#24571#0" expanded="true" />
-            <element signature="e#24620#24648#0" expanded="true" />
-            <element signature="e#24669#24692#0" expanded="true" />
-            <element signature="e#24767#24795#0" expanded="true" />
-            <element signature="e#24816#24839#0" expanded="true" />
-            <element signature="e#24888#24916#0" expanded="true" />
-            <element signature="e#24937#24960#0" expanded="true" />
-            <element signature="e#25055#25083#0" expanded="true" />
-            <element signature="e#25790#25817#0" expanded="true" />
-            <element signature="e#25835#25859#0" expanded="true" />
-            <element signature="e#25877#25902#0" expanded="true" />
-            <element signature="e#25957#25984#0" expanded="true" />
-            <element signature="e#26002#26026#0" expanded="true" />
-            <element signature="e#26044#26069#0" expanded="true" />
-            <element signature="e#26172#26199#0" expanded="true" />
-            <element signature="e#26217#26241#0" expanded="true" />
-            <element signature="e#26259#26283#0" expanded="true" />
-            <element signature="e#26338#26365#0" expanded="true" />
-            <element signature="e#26383#26407#0" expanded="true" />
-            <element signature="e#26425#26449#0" expanded="true" />
-            <element signature="e#26612#26639#0" expanded="true" />
-            <element signature="e#26657#26681#0" expanded="true" />
-            <element signature="e#26699#26724#0" expanded="true" />
-            <element signature="e#26779#26806#0" expanded="true" />
-            <element signature="e#26824#26848#0" expanded="true" />
-            <element signature="e#26866#26891#0" expanded="true" />
-            <element signature="e#26994#27021#0" expanded="true" />
-            <element signature="e#27039#27063#0" expanded="true" />
-            <element signature="e#27081#27105#0" expanded="true" />
-            <element signature="e#27160#27187#0" expanded="true" />
-            <element signature="e#27205#27229#0" expanded="true" />
-            <element signature="e#27247#27271#0" expanded="true" />
-            <element signature="e#27391#27420#0" expanded="true" />
-            <element signature="e#27771#27805#0" expanded="true" />
-            <element signature="e#28235#28259#0" expanded="true" />
-            <element signature="e#28271#28300#0" expanded="true" />
-            <element signature="e#29540#29564#0" expanded="true" />
-            <element signature="e#29576#29601#0" expanded="true" />
-            <element signature="e#32922#32948#0" expanded="true" />
-            <element signature="e#32949#32978#0" expanded="true" />
-            <element signature="e#33605#33640#0" expanded="true" />
-            <element signature="e#33806#33848#0" expanded="true" />
-            <element signature="e#34014#34049#0" expanded="true" />
-            <element signature="e#34219#34253#0" expanded="true" />
-            <element signature="e#35278#35307#0" expanded="true" />
-            <element signature="e#36129#36153#0" expanded="true" />
-            <element signature="e#36154#36179#0" expanded="true" />
-            <element signature="e#38703#38727#0" expanded="true" />
-            <element signature="e#38739#38765#0" expanded="true" />
-            <element signature="e#38824#38853#0" expanded="true" />
-            <element signature="e#40779#40802#0" expanded="true" />
-            <element signature="e#40977#41000#0" expanded="true" />
-            <element signature="e#41959#41983#0" expanded="true" />
-            <element signature="e#41995#42024#0" expanded="true" />
-            <element signature="e#43953#43979#0" expanded="true" />
-            <element signature="e#43991#44020#0" expanded="true" />
-          </folding>
+        <state line="658" column="56" selection-start="30559" selection-end="30569" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/opt/mobipag/database/SQLiteHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="154" column="27" selection-start="8640" selection-end="8655" vertical-scroll-proportion="1.871345">
+          <folding />
         </state>
       </provider>
     </entry>

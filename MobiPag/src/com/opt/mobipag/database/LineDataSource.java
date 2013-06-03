@@ -30,7 +30,7 @@ public class LineDataSource {
     }
 
     public long createLine(String code, String name, String pathcode) {
-        Line l = getLineByDescriptor(code);
+        Line l = getLineByPathCode(pathcode);
         if (l != null)
             return l.getId();
 
@@ -41,6 +41,15 @@ public class LineDataSource {
 
         return database.insert(SQLiteHelper.TABLE_LINES, null, values);
 
+    }
+
+    public Line getLineByPathCode(String descriptor) {
+        Cursor c = database.query(SQLiteHelper.TABLE_LINES, allColumns, SQLiteHelper.COLUMN_PATHCODE + " =?", new String[]{descriptor}, null, null, null);
+        Line l = null;
+        if (c.moveToFirst())
+            l = cursorToLine(c);
+        c.close();
+        return l;
     }
 
     public Line getLineByDescriptor(String descriptor) {

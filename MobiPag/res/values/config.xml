@@ -2,8 +2,8 @@
 <resources>
     <string name="app_name">MobiPag STCP</string>
     <string name="filename_user">active_user</string>
-    <string name="version">1.3</string>
 
+    <string name="reticencias">…</string>
 
     <string name="stop_radius">80</string>
     <integer name="revisor_background_alpha">60</integer>
