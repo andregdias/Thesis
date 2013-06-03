@@ -685,10 +685,10 @@ public class ValidationActivity extends Activity {
                 datasource2.close();
 
                 datasource7.open();
-                firstPath = datasource7.getLineById(o.getValidacoes().get(0).getIdLine()).getPathcode();
+                firstPath = datasource7.getLineById(o.getValidacoes().get(o.getValidacoes().size()-1).getIdLine()).getPathcode();
                 datasource7.close();
                 datasource6.open();
-                firstStop = datasource6.getStopById(o.getValidacoes().get(0).getIdStop()).getCodsms();
+                firstStop = datasource6.getStopById(o.getValidacoes().get(o.getValidacoes().size()-1).getIdStop()).getCodsms();
                 datasource6.close();
             }
 
