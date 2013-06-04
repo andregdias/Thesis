@@ -92,165 +92,168 @@ public class ValidationActivity extends Activity {
             setResult(3);
             finish();
         }
+        else{
 
-        gpstracker = new GPSTracker(this);
-        l = gpstracker.getLocation();
+            gpstracker = new GPSTracker(this);
+            l = gpstracker.getLocation();
 
-        dialog = ProgressDialog.show(this, "", getText(R.string.loading), true);
-        dialog.setCancelable(true);
-        dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
-            public void onCancel(DialogInterface dialog) {
-                finish();
-            }
-        });
+            dialog = ProgressDialog.show(this, "", getText(R.string.loading), true);
+            dialog.setCancelable(true);
+            dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+                public void onCancel(DialogInterface dialog) {
+                    finish();
+                }
+            });
 
-        email = getIntent().getStringExtra("USER_EMAIL");
+            email = getIntent().getStringExtra("USER_EMAIL");
 
-        datasource4.open();
-        datasource4.deleteAll();
-        datasource4.close();
-        new GetTickets().execute(email);
+            datasource4.open();
+            datasource4.deleteAll();
+            datasource4.close();
+            new GetTickets().execute(email);
 
-        spStops = (MySpinner) findViewById(R.id.sp_estacaoEntrada);
-        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, paragens);
-        adapter.setDropDownViewResource(R.layout.multiline_spinner_dropdown_item);
-        spStops.setAdapter(adapter);
-        spStops.setOnItemSelectedListener(new OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                stopid = position;
-                if (paragens.get(position) != null) {
-                    if (position < paragens2.size())
-                        paragem = paragens2.get(position);
-                    if (position == paragens2.size()) {
-                        linhas.clear();
-                        linhas_names.clear();
-                        spLinhas.setEnabled(false);
-                        adapterLinhas.notifyDataSetChanged();
-                        Intent myIntent = new Intent(parentView.getContext(), ManualStopSelector.class);
-                        startActivityForResult(myIntent, 0);
-                        lineid = -1;
-                    } else {
+            spStops = (MySpinner) findViewById(R.id.sp_estacaoEntrada);
+            adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, paragens);
+            adapter.setDropDownViewResource(R.layout.multiline_spinner_dropdown_item);
+            spStops.setAdapter(adapter);
+            spStops.setOnItemSelectedListener(new OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                    stopid = position;
+                    if (paragens.get(position) != null) {
+                        if (position < paragens2.size())
+                            paragem = paragens2.get(position);
+                        if (position == paragens2.size()) {
+                            linhas.clear();
+                            linhas_names.clear();
+                            spLinhas.setEnabled(false);
+                            adapterLinhas.notifyDataSetChanged();
+                            Intent myIntent = new Intent(parentView.getContext(), ManualStopSelector.class);
+                            startActivityForResult(myIntent, 0);
+                            lineid = -1;
+                        } else {
+                            dialog.show();
+                            new RetrieveLines().execute(paragens2.get(position));
+                            spLinhas.setAdapter(adapterLinhas);
+                        }
+                    } else
+                        stopid = -1;
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parentView) {
+                }
+            });
+
+            spLinhas = (MySpinner) findViewById(R.id.sp_Lines);
+            adapterLinhas = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, linhas_names);
+            adapterLinhas.setDropDownViewResource(R.layout.multiline_spinner_dropdown_item);
+            spLinhas.setAdapter(adapterLinhas);
+            spLinhas.setEnabled(false);
+            spLinhas.setOnItemSelectedListener(new OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                    lineid = position;
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parentView) {
+                }
+
+            });
+
+            datasource3.open();
+            user = datasource3.getUserByEmail(email);
+            datasource3.close();
+
+
+            adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, titulosWithSig);
+            adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            adapter3 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, titulosWithoutSig);
+            adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            spZones = (Spinner) findViewById(R.id.sp_Titulo);
+            spZones.setAdapter(adapter2);
+            spZones.setOnItemSelectedListener(new OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                    updateFields(s, position);
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parentView) {
+                }
+            });
+
+            m_Alerter = new AlertDialog.Builder(this).create();
+            m_Alerter.setButton("OK", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                    finish();
+                }
+            });
+
+            ImageButton b_Reload = (ImageButton) findViewById(R.id.reload);
+            //			int h = spStops.getHeight();
+            //			b_Reload.setLayoutParams(new LayoutParams(h, h));
+            b_Reload.setOnClickListener(new ImageButton.OnClickListener() {
+                public void onClick(View view) {
+                    Context c = view.getContext();
+                    if (c != null) {
+                        dialog = ProgressDialog.show(c, "", getText(R.string.loading), true);
+                        dialog.setCancelable(true);
+                        dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+                            public void onCancel(DialogInterface dialog) {
+                                finish();
+                            }
+                        });
+                        l = gpstracker.getLocation();
+                        new RetrieveStops().execute();
+                    }
+                }
+            });
+
+            Button b_Validate = (Button) findViewById(R.id.b_ValidateTrip);
+            b_Validate.setOnClickListener(new Button.OnClickListener() {
+                public void onClick(View view) {
+                    if(!spZones.isEnabled()){
+                        Toast.makeText(c, getText(R.string.noTitleBesidesSig), Toast.LENGTH_LONG).show();
+                    }
+                    else if (stopid != -1 && lineid != -1) {
+                        gpstracker.stopUsingGPS();
+                        dialog.setCancelable(false);
                         dialog.show();
-                        new RetrieveLines().execute(paragens2.get(position));
-                        spLinhas.setAdapter(adapterLinhas);
-                    }
-                } else
-                    stopid = -1;
-            }
+                        c = view.getContext();
+                        String[] ss = title.split(" ");
+                        String ticketType = null, ticketName = null;
 
-            @Override
-            public void onNothingSelected(AdapterView<?> parentView) {
-            }
-        });
-
-        spLinhas = (MySpinner) findViewById(R.id.sp_Lines);
-        adapterLinhas = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, linhas_names);
-        adapterLinhas.setDropDownViewResource(R.layout.multiline_spinner_dropdown_item);
-        spLinhas.setAdapter(adapterLinhas);
-        spLinhas.setEnabled(false);
-        spLinhas.setOnItemSelectedListener(new OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                lineid = position;
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parentView) {
-            }
-
-        });
-
-        datasource3.open();
-        user = datasource3.getUserByEmail(email);
-        datasource3.close();
-
-
-        adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, titulosWithSig);
-        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        adapter3 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, titulosWithoutSig);
-        adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spZones = (Spinner) findViewById(R.id.sp_Titulo);
-        spZones.setAdapter(adapter2);
-        spZones.setOnItemSelectedListener(new OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                updateFields(s, position);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parentView) {
-            }
-        });
-
-        m_Alerter = new AlertDialog.Builder(this).create();
-        m_Alerter.setButton("OK", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                finish();
-            }
-        });
-
-        ImageButton b_Reload = (ImageButton) findViewById(R.id.reload);
-        //			int h = spStops.getHeight();
-        //			b_Reload.setLayoutParams(new LayoutParams(h, h));
-        b_Reload.setOnClickListener(new ImageButton.OnClickListener() {
-            public void onClick(View view) {
-                Context c = view.getContext();
-                if (c != null) {
-                    dialog = ProgressDialog.show(c, "", getText(R.string.loading), true);
-                    dialog.setCancelable(true);
-                    dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
-                        public void onCancel(DialogInterface dialog) {
-                            finish();
-                        }
-                    });
-                    l = gpstracker.getLocation();
-                    new RetrieveStops().execute();
-                }
-            }
-        });
-
-        Button b_Validate = (Button) findViewById(R.id.b_ValidateTrip);
-        b_Validate.setOnClickListener(new Button.OnClickListener() {
-            public void onClick(View view) {
-                if(!spZones.isEnabled()){
-                    Toast.makeText(c, getText(R.string.noTitleBesidesSig), Toast.LENGTH_LONG).show();
-                }
-                else if (stopid != -1 && lineid != -1) {
-                    gpstracker.stopUsingGPS();
-                    dialog.setCancelable(false);
-                    dialog.show();
-                    c = view.getContext();
-                    String[] ss = title.split(" ");
-                    String ticketType = null, ticketName = null;
-
-                    if (!title.contains(getText(R.string.assinatura))) {
-                        if (ss.length == 3) {
-                            ticketType = ss[0] + ss[1];
-                            ticketName = ss[2];
-                        } else if (ss.length == 2) {
+                        if (!title.contains(getText(R.string.assinatura))) {
+                            if (ss.length == 3) {
+                                ticketType = ss[0] + ss[1];
+                                ticketName = ss[2];
+                            } else if (ss.length == 2) {
+                                ticketType = ss[0];
+                                ticketName = ss[1];
+                            }
+                        } else {
                             ticketType = ss[0];
-                            ticketName = ss[1];
+                            ticketName = "Z" + (ss.length - 1);
                         }
-                    } else {
-                        ticketType = ss[0];
-                        ticketName = "Z" + (ss.length - 1);
-                    }
 
-                    String newVal = "true";
-                    if (oc != null && titleid == oc.getId())
-                        newVal = "false";
-                    new Validate().execute(email, ticketType, ticketName, linhas.get(lineid).getPathcode(), paragens2.get(stopid), newVal);
-                } else {
-                    Toast.makeText(c, getText(R.string.selectStopLine), Toast.LENGTH_SHORT).show();
+                        String newVal = "true";
+                        if (oc != null && titleid == oc.getId())
+                            newVal = "false";
+                        new Validate().execute(email, ticketType, ticketName, linhas.get(lineid).getPathcode(), paragens2.get(stopid), newVal);
+                    } else {
+                        Toast.makeText(c, getText(R.string.selectStopLine), Toast.LENGTH_SHORT).show();
+                    }
                 }
-            }
-        });
+            });
+        }
 
     }
 
     public void onDestroy(){
-        gpstracker.stopUsingGPS();
+        if(gpstracker!=null)
+            gpstracker.stopUsingGPS();
         super.onDestroy();
     }
 

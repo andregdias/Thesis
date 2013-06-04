@@ -113,6 +113,7 @@
     <string name="consultar_validacoes">Histórico de Validações</string>
     <string name="consultar_validacoes_occ">Ocasionais e Andante 24</string>
     <string name="consultar_validacoes_sig">Assinatura Mensal (</string>
+    <string name="consultar_num_valid">"Validações: "</string>
 
     <!--Consulta Operações Conta-->
     <string name="consultar_movimentos">Movimentos</string>

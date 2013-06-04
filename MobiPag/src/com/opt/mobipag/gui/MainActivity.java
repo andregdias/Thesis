@@ -71,7 +71,7 @@ public class MainActivity extends Activity {
                     email = readFile(getText(R.string.filename_user).toString());
                     Intent myIntent = new Intent(view.getContext(), ValidationActivity.class);
                     myIntent.putExtra("USER_EMAIL", email);
-                    startActivity(myIntent);
+                    startActivityForResult(myIntent, 0);
                 }
             });
 

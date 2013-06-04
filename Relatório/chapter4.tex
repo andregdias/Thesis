@@ -1,71 +1,57 @@
-\chapter{Implementação}\label{chap:implement}
+\chapter{Sistema Andante}\label{chap:andante}
 
 \section*{}
 
-Neste capítulo é especificado de forma detalhada o desenvolvimento e implementação do protótipo desenvolvido, bem como as suas principais características. Pretende-se apresentar as várias fase de desenvolvimento e, em cada uma delas, o trabalho realizado e as conclusões retiradas, tendo em vista uma melhoria constante do produto final.
+Neste capítulo é detalhado o sistema Andante, utilizado nos transportes públicos de passageiros da Área Metropolitana do Porto, permitindo contextualizar os conceitos e modalidades utilizados na aplicação.
+\\O Andante é um título que permite viajar em diversos transportes públicos, de diferentes operadores, sendo o preço calculado baseado no trajeto a efetuar e não no modo de transporte utilizado ou o número de embarques realizados.
+\\Os operadores aderentes ao sistema Andante são: Metro do Porto, STCP - Sociedade de Transportes Coletivos do Porto, CP - Comboios de Portugal, Resende, Espírito Santo, Maia Transportes, Valpi, Gondomarense, MGC Transportes, Nogueira da Costa e Auto-Viação Pacense. 
 
-\section{Especificação de Requisitos}
+\section{Modalidades}
 
-Para desenvolver uma aplicação que se adequasse às necessidades reais dos utilizadores e das entidades envolvidas, foi necessário analisar o sistema de bilhética atual e perceber quais as ações fundamentais para uma implementação eficaz. Para além disso, foi também necessário avaliar quais as principais funcionalidades que trariam valor ao serem implementadas e que tirariam o máximo proveito das capacidades dos dispositivos móveis. Em anexo encontra-se a especificação detalhada dos requisitos funcionais. Ver Anexo~\ref{rer}.
+Os títulos Andante dividem-se em dois grandes grupos: Ocasionais e Assinaturas.
 
-\subsection{Requisitos Funcionais}
+\subsection{Ocasionais}
 
-Começando pelos requisitos relacionados com a utilização de autenticação de utilizadores, salvaguardando assim os dados pessoais e permitindo a segurança das operações efetuadas, definiram-se como requisitos funcionais os seguintes:
-\begin{itemize}
-\item O sistema deve permitir o registo de um novo utilizador;
-\item O sistema deve permitir a autenticação de um utilizador já registado;
-\item O sistema deve permitir a um utilizador autenticado alterar os seus dados pessoais;
-\item O sistema deve permitir a um utilizador autenticado terminar a sessão ativa.
-\end{itemize}
+Os títulos ocasionais estão disponíveis em duas alternativas: Título de Viagem e Andante 24. Tanto uma como outra utilizam o cartão azul, em papel, que não é personalizado e como tal permite a utilização por mais do que uma pessoa, desde que não seja em simultâneo.
 
-Os requisitos funcionais relacionados com o funcionamento de um sistema de bilhética são os seguintes:
-\begin{itemize}
-\item O sistema deve permitir a compra de títulos por utilizadores autenticados;
-\item O sistema deve utilizar os fornecedores de localização do dispositivo móvel para identificar a paragem onde o utilizador autenticado se encontra;
-\item O sistema deve permitir ao utilizador autenticado a escolha manual da paragem de entrada;
-\item O sistema deve listar as linhas e respetivos sentidos que passam na paragem selecionada pelo utilizador autenticado;
-\item O sistema deve permitir ao utilizador autenticado escolher o título a validar, apresentando todos os títulos disponíveis que se adequem à paragem e linha selecionadas;
-\item O sistema deve permitir ao utilizador autenticado efetuar a validação do título escolhido, apresentando a paragem limite até à qual pode viajar;
-\item O sistema deve permitir a mudança de linha (transbordo), quando existir um título válido;
-\item O sistema deve permitir a confirmação da validade do título em utilização, por parte do revisor.
-\end{itemize}
+\subsubsection{Título de Viagem}
 
-Por fim, os requisitos funcionais relacionados com a visualização de informação por parte do utilizador:
-\begin{itemize}
-\item O sistema deve permitir a consulta do estado atual do título validado;
-\item O sistema deve permitir o acesso ao histórico de operações efetuadas pelo utilizador autenticado;
-\item O sistema deve permitir o acesso ao histórico de validações realizadas pelo utilizador autenticado;
-\item O sistema deve permitir a consulta do saldo de títulos disponíveis;
-\item O sistema deve permitir a consulta de saldo da carteira virtual.
-\end{itemize}
+Permite viajar durante um determinado período de tempo consoante o número de zonas compradas (Z2 – 2 anéis de zonas; Z3 – 3 anéis de zonas; e assim sucessivamente).
+\\O mínimo de tempo que um título de viagem permite andar é de 1 hora. Este tempo de viagem aumenta à medida que cresce o número de zonas carregadas.
 
-\subsection{Requisitos Não Funcionais}
+\subsubsection{Andante 24}
 
-Para além dos requisitos acima especificados, foram também delineadas algumas características que a aplicação deve conter:
-\begin{itemize}
-\item Comunicação - É necessário uma ligação à rede com um acesso estável e com uma largura de banda mínima que permita a plena utilização de todas as funcionalidades disponíveis;\item Eficiência - Uma normal utilização do sistema requer inúmeros acessos simultâneos à aplicação e, consequentemente, à sua base de dados. Logo, é fulcral que a aplicação esteja estruturada para que a informação seja acedida e apresentada em tempos de resposta mínimos, de modo a que o utilizador veja satisfeitos os seus propósitos de manipulação de informação;\item Fiabilidade - O sistema deverá garantir a integridade dos dados submetidos;\item Manutenção - O sistema deverá permitir uma fácil manutenção e adição de novas funcionalidades;\item Segurança - O sistema deve estar devidamente protegido para que não haja a possibilidade de acessos indevidos a dados confidenciais dos utilizadores.
-\item Usabilidade - Pretende-se que a interface da aplicação seja intuitiva e de fácil utilização, para que o utilizador não perca muito tempo no processo de aprendizagem do manuseamento da mesma. É importante também que o número de cliques para execução das ações seja o menor possível, reduzindo assim o tempo de execução. O sistema deverá, também, oferecer mensagens de erro claras e ajuda contextual;\item Compatibilidade - O sistema deverá funcionar perfeitamente em dispositivos Android com verão 2.2 (API 8) ou superior. Para além disso, o sistema deverá ter uma integração coerente com a aplicação MOVE-ME.
-\end{itemize}
+O funcionamento do Andante 24 é semelhante ao título de viagem, com a diferença de independentemente do número de zonas carregadas, permitir viajar durante as vinte e quatro horas seguintes à primeira validação.
 
-\section{Mais uma Secção}
+\subsection{Assinaturas}
 
+As assinaturas permitem ao utilizador viajar dentro das zonas previamente selecionadas durante o período equivalente ao mês de calendário. Ao contrário dos títulos ocasionais, é necessário especificar quais as zonas pretendidas e a assinatura é apenas válida nessas zonas. O cartão da assinatura é o dourado, em plástico, e para além de fotografia inclui também o nome do utilizador, tornando-o de uso pessoal e intransmissível.
+\\As assinaturas têm tarifas especiais para jovens, estudantes, reformados, seniores e beneficiários de ação social.
 
-%\begin{lstlisting}[float,language=Java, label=src:mapreduce, caption=Example map and reduce functions for word counting]
-%map(String key, String value): 
-%// key: document name 
-%// value: document contents 
-%for each word w in value:
-%EmitIntermediate(w, "1");
-%
-%reduce(String key, Iterator values):
-%// key: a word 
-%// values: a list of counts 
-%int result = 0;
-%for each v in values: 
-%result += ParseInt(v);
-%
-%Emit(AsString(result))
-%\end{lstlisting}
+\section{Zonamento}
 
+A rede de transportes públicos da Área Metropolitana do Porto está divida por zonas. Cada zona é constituída por uma letra e um número. As zonas estão agrupadas em três grandes grupos (Norte, Centro e Sul) e a inicial desse grupo serve para identificar a zona (N, C, S). Dentro de cada grupo as zonas são depois numeradas sequencialmente. Pode ver-se na Figura~\ref{fig:zonas} o zonamento Andante.
+\\Este mapa é especialmente importante para perceber o número de zonas a carregar num título ocasional. Por exemplo, com um título Z2, entrando na zona C1 (centro do Porto), é possível viajar dentro dessa zona e em todas as que lhe sejam adjacentes (C2, C6 e S8). Por outro lado, usando um título Z3, pode viajar-se também até ao segundo anel de adjacência (C3, C5, C7, C8, C9, S1, S2, S7, S9). Ver Figura~\ref{fig:zonas_c1}.
+
+\begin{figure}[t]
+  \begin{center}
+    \leavevmode
+    \includegraphics[scale=0.375]{zonas}
+    \caption{Zonamento Andante}
+    \label{fig:zonas}
+  \end{center}
+\end{figure}
+
+\begin{figure}[t]
+  \begin{center}
+    \leavevmode
+    \includegraphics[scale=0.5]{zonas_c1}
+    \caption{Cálculo de número de zonas Andante \cite{calczonas}}
+    \label{fig:zonas_c1}
+  \end{center}
+\end{figure}
 
 \section{Resumo ou Conclusões}
+
+O sistema Andante traz aos transportes públicos da Área Metropolitana do Porto a comodidade e rapidez de utilizar apenas um só método de bilhética, permitindo aos operadores ter um sistema standard e familiar para o utilizador.
+\\No entanto, muitas vezes os utilizadores ocasionais (turistas, por exemplo) têm alguma dificuldade em perceber o funcionamento do sistema Andante devido à sua complexidade, nomeadamente ao cálculo de zonas necessárias para efetuar determinada viagem. Sendo que uma viagem poderá necessitar de número de zonas diferentes consoante o sentido em que é feito, devido ao facto de os percursos de ida e volta nem sempre coincidirem.
