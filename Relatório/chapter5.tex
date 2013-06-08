@@ -71,7 +71,7 @@ Os títulos são a componente central da aplicação, sendo que é através dele
 
 \subsubsection{Ocasional}
 
-Em termos concetuais, o conceito ocasional engloba tanto os títulos ocasionais como os títulos Andante 24, por se basearem no mesmo princípio: uso limitado durante um determinado período de tempo e pelo número de zonas estipulado na tipologia do título. A única diferença prende-se com o facto de num título ocasional, o tempo de viagem ser calculado em função da tipologia e num título Andante 24, ser sempre de vinte e quatro horas.
+Em termos concetuais, o conceito ocasional engloba tanto os títulos de viagem como os títulos Andante 24, por se basearem no mesmo princípio: uso limitado durante um determinado período de tempo e pelo número de zonas estipulado na tipologia do título. A única diferença prende-se com o facto de num título ocasional, o tempo de viagem ser calculado em função da tipologia e num título Andante 24, ser sempre de vinte e quatro horas.
 \\Para além dos atributos herdados, é também necessário saber o número de zonas permitidas durante a utilização do título.
 
 \subsubsection{Assinatura}
@@ -108,7 +108,7 @@ A aplicação baseia-se numa arquitetura Servidor-Cliente tradicional, com utili
   \end{center}
 \end{figure}
 
-\section{Casos de Uso}
+\section{Principais Casos de Uso}
 
 \subsection{Compra}
 
@@ -129,22 +129,102 @@ Para poder viajar nos veículos de transportes públicos, o utilizador deve proc
 É importante também aceder ao estado atual da carteira de títulos e da carteira virtual. Muitas vezes os utilizadores deparam-se com o problema de estarem em casa e não saberem se têm títulos carregados para poder efetuar uma viagem, tendo de se deslocarem a um posto de venda para efetuar essa verificação. Isso muitas vezes implica a perda do veículo desejado ou alterações no planeamento diário.
 \\A aplicação permite ao utilizador consultar em qualquer altura quais os títulos que tem disponíveis, bem como as operações que efetuou (carregamentos, compras, etc.). Para além disso permite-lhe ainda visualizar o histórico de validações efetuadas, separando os títulos ocasionais da assinatura, porque normalmente existe uma discrepância no número de validações dum tipo e doutro sendo mais fácil a visualização em separado.
 
-%\begin{lstlisting}[float,language=Java, label=src:mapreduce, caption=Example map and reduce functions for word counting]
-%map(String key, String value): 
-%// key: document name 
-%// value: document contents 
-%for each word w in value:
-%EmitIntermediate(w, "1");
-%
-%reduce(String key, Iterator values):
-%// key: a word 
-%// values: a list of counts 
-%int result = 0;
-%for each v in values: 
-%result += ParseInt(v);
-%
-%Emit(AsString(result))
-%\end{lstlisting}
+\section{API}
 
+A API utilizada na aplicação pode ser dividida em dois grupos: um especificamente desenvolvido para a aplicação e outro que é constituído por serviços que já são utilizados pela aplicação MOVE-ME. Para uma descrição detalhada da API ver Anexo~\ref{api}.
+
+\subsection{API Comum}
+
+\subsubsection{GetAllLinesPathsByStop}
+
+Este serviço permite obter a listagem de linhas e respetivos trajetos que passam numa determinada paragem. Uma linha pode ter um ou mais trajetos. É utilizado quando o utilizador escolhe a paragem de entrada.
+
+\subsubsection{GetAllNearStops}
+
+Este serviço permite obter a listagem de paragens encontradas num determinado raio centrado nas coordenadas especificadas. É utilizado para obter as paragens mais próximas da localização atual do utilizador, quando este inicia o processo de validação.
+
+\subsubsection{LoadStopsByWord}
+
+Este serviço permite obter a listagem de paragens que contenham determinada palavra no nome ou no código SMS. É utilizado quando o utilizador seleciona manualmente a paragem de entrada.
+
+\subsubsection{GetAllProvidersName}
+
+Este serviço permite obter a listagem completa de operadores de transportes públicos que operam no sistema Andante. É utilizado quando o utilizador seleciona manualmente a paragem de entrada.
+
+\subsubsection{GetAllLinesByProvider}
+
+Este serviço permite obter a listagem completa de linhas que um determinado operador tem. É utilizado quando o utilizador seleciona manualmente a paragem de entrada.
+
+\subsubsection{GetAllStopsByLine}
+
+Este serviço permite obter a listagem completa de paragens que constituem determinada linha (em todos os trajetos da linha). É utilizado quando o utilizador seleciona manualmente a paragem de entrada.
+
+\subsection{API Específica}
+
+\subsubsection{login}
+
+Este serviço permite verificar os dados de login introduzidos e confirmar/rejeitar a autenticação do utilizador. É utilizado quando o utilizador se autentica na aplicação quando esta não tem nenhuma conta ativa.
+
+\subsubsection{newUser}
+
+Este serviço permite criar um novo utilizador, verificando a existência do email, o elemento único identificativo. É utilizado quando o utilizador se regista na aplicação.
+
+\subsubsection{addTicket}
+
+Este serviço permite adicionar títulos ocasionais à conta de um determinado utilizador. É utilizado quando o utilizador compra títulos ocasionais.
+
+\subsubsection{addSignature}
+
+Este serviço permite adicionar uma assinatura mensal à conta de um determinado utilizador. É utilizado quando o utilizador compra assinatura mensal.
+
+\subsubsection{addMoneyUser}
+
+Este serviço permite adicionar saldo à carteira virtual. É utilizado quando a conta é carregada.
+
+\subsubsection{editUser}
+
+Este serviço permite editar os dados pessoais do utilizador. É utilizado quando o utilizador altera os seus dados pessoais nas definições da aplicação.
+
+\subsubsection{validate}
+
+Este serviço permite validar um título da carteira de títulos. É utilizado após a seleção da paragem de entrada, da linha e trajeto e do título a validar.
+
+\subsubsection{getPrices}
+
+Este serviço permite obter a listagem de preços das várias modalidades do sistema Andante. É utilizado quando o utilizador procede à compra de títulos.
+
+\subsubsection{getUser}
+
+Este serviço permite obter a informação pessoal de um determinado utilizador. É utilizado quando o utilizador pretende alterar os seus dados pessoais.
+
+\subsubsection{getTickets}
+
+Este serviço permite obter a listagem de títulos disponíveis de um determinado utilizador. É utilizado quando o utilizador pretende proceder a uma validação, ver o saldo atual de títulos ou proceder à compra dos mesmos.
+
+\subsubsection{getAccountMovements}
+
+Este serviço permite obter as transações efetuadas por um determinado utilizador. É utilizado quando o utilizador pretende consultar o histórico de operações realizadas na sua conta.
+
+\subsubsection{getAccountValidations}
+
+Este serviço permite obter a listagem de validações de um determinado utilizador. É utilizado quando o utilizador pretende consultar o histórico de validações da sua assinatura ou dos títulos ocasionais.
+
+\subsubsection{getStopZone}
+
+Este serviço permite saber qual a zona Andante de determinada paragem. É utilizado para saber se é possível utilizar a assinatura na paragem selecionada.
+
+\section{MobiPag STCP}
+
+Por estar inserida na iniciativa nacional Pagamentos Móveis - MobiPag \cite{cedt} e por a STCP ser a operadora de transportes públicos que está envolvida no desenvolvimento da aplicação, esta tomou a denominação MobiPag STCP, não sendo este o nome final. Uma possível denominação será Andante Mobile, baseando-se no facto de a aplicação pretender apresentar-se como um substituto (opcional) do cartão Andante.
+Nesta secção é ilustrada e detalhada a organização e dinâmica da aplicação. Na Figura~\ref{fig:appflow} é ilustrada a sequência das atividades que constituem a aplicação.
+
+\begin{figure}[t]
+  \begin{center}
+    \leavevmode
+    \includegraphics[scale=0.7]{appflow}
+    \caption{Diagrama de Atividades}
+    \label{fig:appflow}
+  \end{center}
+\end{figure}
 
 \section{Resumo ou Conclusões}

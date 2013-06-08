@@ -1,87 +1,62 @@
-\chapter{Pagamentos Móveis para Transportes Públicos no Porto}\label{chap:chap3}
+\chapter{Sistema Andante}\label{chap:andante}
 
 \section*{}
 
-O objetivo deste projeto é remover a necessidade de um elemento físico (cartão) nos pagamentos e validações em transportes públicos na Área Metropolitana do Porto, com a implementação de um sistema de pagamento e validação remoto via Internet, utilizando dispositivos móveis com o sistema operativo Android. Para além disso pretende-se recolher informação relativa às infraestruturas mais utilizadas neste âmbito, estudar as principais funcionalidades e operações existentes para implementação na aplicação e desenvolver soluções apropriadas para os problemas existentes.
+Neste capítulo é detalhado o sistema Andante, utilizado nos transportes públicos de passageiros da Área Metropolitana do Porto, permitindo contextualizar os conceitos e modalidades utilizados na aplicação.
+\\O Andante é um título que permite viajar em diversos transportes públicos, de diferentes operadores, sendo o preço calculado baseado no trajeto a efetuar e não no modo de transporte utilizado ou o número de embarques realizados.
+\\Os operadores aderentes ao sistema Andante são: Metro do Porto, STCP - Sociedade de Transportes Coletivos do Porto, CP - Comboios de Portugal, Resende, Espírito Santo, Maia Transportes, Valpi, Gondomarense, MGC Transportes, Nogueira da Costa e Auto-Viação Pacense. 
 
-\section{Introdução}
-O modelo de utilização baseia-se no sistema atual, com algumas alterações:
-\begin{itemize}
-\item Carregamento de saldo feito através de pré-carregamento de uma carteira, através de diversas modalidades de pagamento (MB Phone, PayPal, cartão de crédito/débito, etc.);
-\item Compra de títulos de viagem com o saldo disponível na carteira virtual, e posterior ativação dos títulos aquando da entrada no veículo (localização via GPS ou ativação manual por parte do passageiro). Sempre que houver transbordo, o passageiro deve validar novamente o título;
-\item Revisão feita pelo agente autorizado tendo em conta o ecrã de verificação gerado no dispositivo do utilizador, contendo informação pertinente tal como o histórico de validações, contendo data/hora, paragem de entrada e linha de entrada, a descrição do título em uso, número sequencial e símbolos de controlo.
-\end{itemize}
+\section{Modalidades}
 
-Este modelo de pagamento e utilização requer um Sistema de Informação complexo e com necessidade de sincronismo e registo de operações em tempo real, sem ocorrência de falhas. É necessário criar também um compromisso entre segurança e conveniência/usabilidade.\\Atualmente são vários os métodos de pagamento disponíveis no mercado, desde o bilhete tradicional em papel ao sistema Andante, baseado em RFID. No entanto, há ainda uma oportunidade por explorar. Tendo em conta que o telemóvel é cada vez mais um objeto indispensável no dia-a-dia dos seres humanos, tirar partido das suas funcionalidades para viajar em transportes públicos é uma solução bastante conveniente para os utilizadores.
-\\Como principais requisitos funcionais, este sistema dispõe de funcionalidades de carregamento da carteira virtual, compra e validação (entrada e saída (opcional)) de títulos de viagem, verificação da validade por parte do revisor; sendo estas as necessidades de um sistema tradicional de transportes públicos.\cite{Buttyan2009}
-\\Pretende-se que o projeto permita, numa fase posterior, uma integração com a aplicação MOVE-ME já existente no mercado, servindo como uma implementação de funcionalidades extra da mesma e também que seja possível por parte do administrador, a recolha, processamento e análise de informações relativas às viagens dos utilizadores.
+Os títulos Andante dividem-se em dois grandes grupos: Ocasionais e Assinaturas.
 
-\section{Arquitetura}
+\subsection{Ocasionais}
 
-O sistema é composto por três componentes fundamentais. A componente servidor (\emph{Server}) que pode ser considerado o centro do sistema, uma vez que é este que disponibiliza os vários serviços, com a qual as outras componentes interagem remotamente. A componente cliente (\emph{Client}), a qual permite ao passageiro interagir diretamente com os serviços disponibilizados. Finalmente, a componente revisor (\emph{Conductor}), a qual permite aos revisores fiscalizar os passageiros que usam este sistema. De referir que, nesta fase, estas duas últimas componentes estão integradas na mesma aplicação, no telemóvel do passageiro, removendo a necessidade de os revisores andarem equipados com dispositivos apropriados.\\Esta arquitetura segue a típica arquitetura cliente/servidor.
+Os títulos ocasionais estão disponíveis em duas alternativas: Título de Viagem e Andante 24. Tanto uma como outra utilizam o cartão azul, em papel, que não é personalizado e como tal permite a utilização por mais do que uma pessoa, desde que não seja em simultâneo.
 
-\subsection{Cliente (Client)}
-Esta componente é a interface que permitirá aos utilizadores desta plataforma interagir com a mesma. Essa interação será conseguida através do uso de um telemóvel com sistema operativo Android para aceder à aplicação. As principais capacidades desta componente são:
-\begin{itemize}
-\item Compra de títulos por zonas, permitindo a compra de mais do que um título;
-\item Capacidade de armazenamento de títulos de viagem para uso posterior, sendo que os títulos podem ser de diferentes tipologias (diferente número de zonas, diferente modalidade);
-\item Validação um título de viagem, escolhendo o título desejado para utilização, sendo feita a comunicação com o servidor e recebendo a confirmação do mesmo;
-\item Visualização do saldo da carteira virtual e dos títulos adquiridos;
-\item Visualização do histórico de operações;
-\item Visualização do histórico de validações de títulos.
-\end{itemize}
+\subsubsection{Título de Viagem}
 
-\subsection{Revisor (Conductor)}Esta componente é a que permite aos revisores visualizarem a validade dos títulos de viagem em utilização pelos passageiros. Consiste num módulo da aplicação no telemóvel do passageiro que exibe informação detalhada relativa ao título de viagem ativo.\subsection{Servidor (Server)}Esta componente irá disponibilizar serviços para os outros componentes da arquitetura. O funcionamento correto desta componente será assegurado por três subcomponentes:
-\begin{itemize}\item Base de dados – Toda a informação que seja necessária guardar será guardada numa base de dados, acessível apenas localmente;\item Página \web – Esta subcomponente proporcionará um painel de controlo para que o responsável pela administração da plataforma possa gerir todos os aspetos do sistema e ao mesmo tempo será também uma interface que lhe permitirá seguir o progresso dos passageiros;\item Serviço \web – A maioria da lógica do sistema será processada por esta componente e funcionará como intermediário entre a componente cliente/revisor e a base de dados central.
-\end{itemize}
+Permite viajar durante um determinado período de tempo consoante o número de zonas compradas (Z2 – 2 anéis de zonas; Z3 – 3 anéis de zonas; e assim sucessivamente).
+\\O mínimo de tempo que um título de viagem permite andar é de 1 hora. Este tempo de viagem aumenta à medida que cresce o número de zonas carregadas.
 
-\section{Tecnologias}
+\subsubsection{Andante 24}
 
-\subsection{Android}
+O funcionamento do Andante 24 é semelhante ao título de viagem, com a diferença de independentemente do número de zonas carregadas, permitir viajar durante as vinte e quatro horas seguintes à primeira validação.
 
-A escolha sobre o sistema operativo recaiu sobre o Android por ser a plataforma móvel mais popular no mundo. Com um dispositivo Android, os utilizadores podem usar todos os serviços Google a que estão habituados, para além de mais de 600 mil aplicações e jogos disponíveis na loja virtual Google Play, sendo que muitas das aplicações são gratuitas. Para além disso é possível obter milhões de músicas e livros e também milhares de filmes. Os dispositivos Android são melhorados constantemente com lançamentos de atualizações e novas funcionalidades com bastante frequência. Proporcionam também aos utilizadores uma experiência única e personalização de conteúdos.
-\\Uma mais valia é o facto de a aplicação MOVE-ME se encontrar também desenvolvida para este sistema operativo, sendo assim mais fácil a integração.
-\\A versão base escolhida será 2.2 (Froyo) pois mais de 98\% dos dispositivos possuem esta versão ou superior e esta versão oferece as funcionalidades necessárias. Ver Tabela~\ref{tab:android}.
+\subsubsection{Andante Tour}
 
-\begin{table}[t]
-  \centering
-  \caption{Distribuição de dispositivos ativos por versão do sistema operativo Android (3 de junho de 2013)\cite{dashboards}}
-\begin{tabular}{p{20mm} p{45mm} p{10mm} p{20mm} }
-	\hline
-\textbf{Versão} & \textbf{Nome de Código} & \textbf{API} & \textbf{Distribuição}\\
-	\hline
-	\hline
-	1.6 & Donut & 4 & 0.1\%\\\hline
-	2.1 & Eclair & 7 & 1.5\%\\\hline
-	2.2 & Froyo & 8 & 3.2\%\\\hline
-	2.3-2.3.2 & \multirow{2}{*}{Gingerbread} & 9 & 0.1\%\\
-	2.3.3-2.3.7 & & 10 & 36.4\%\\\hline
-	3.2 & Honeycomb & 13 & 0.1\%\\\hline
-	4.0.3-4.0.4 & Ice Cream Sandwich & 15 & 25.6\%\\\hline
-	4.1.x & \multirow{2}{*}{Jelly Bean} & 16 & 29.0\%\\
-	4.2.x & & 17 & 4.0\%\\\hline
-\end{tabular}
-  \label{tab:android}
-\end{table}
+Título de transporte vocacionado para o segmento de turistas, confere acesso a toda a rede Andante permitindo um número ilimitado de viagens durante 24 horas (Andante Tour 1) ou 72 horas (Andante Tour 3) consecutivas após a primeira validação.\\O cartão Andante Tour não é recarregável.
 
-\subsection{SQLite}
 
-Para a base de dados de suporte, a utilizar pela aplicação no telemóvel do passageiro, foi escolhida a tecnologia SQLite que é uma biblioteca que implementa um motor de base de dados SQL auto-contido, sem servidor e sem configuração. O código da biblioteca é público e, portanto, gratuito para qualquer uso, comercial ou privado. SQLite é atualmente usado em milhares de aplicações, incluindo projetos de elevada complexidade.
-\\O que difere o motor SQLite de outras implementações SQL é o facto de não necessitar de um processo externo de servidor. A leitura e escrita é feita diretamente para ficheiros no disco. Uma base de dados SQL completa, com múltiplas tabelas, índices, gatilhos, vistas, etc. é contida num único ficheiro local. O formato da base de dados é multi-plataforma, permitindo transmissão de ficheiros entre sistemas 32-bit e 64-bit, ou entre sistemas com outras arquiteturas.
-\\SQLite é uma biblioteca compacta, mesmo com todas as funcionalidades ativas, a biblioteca ocupa menos de 350kB. Para além disso pode ser corrida em ambientes com pouca memória, tornando-a a escolha ideal para dispositivos móveis. Obviamente, existe um balanço entre utilização de memória e velocidade, embora a performance seja normalmente bastante boa mesmo em ambientes com pouca memória.\cite{sqlite}
+\subsection{Assinaturas}
 
-\subsection{Microsoft .NET Framework 3.5}
+As assinaturas permitem ao utilizador viajar dentro das zonas previamente selecionadas durante o período equivalente ao mês de calendário. Ao contrário dos títulos ocasionais, é necessário especificar quais as zonas pretendidas e a assinatura é apenas válida nessas zonas. O cartão da assinatura é o dourado, em plástico, e para além de fotografia inclui também o nome do utilizador, tornando-o de uso pessoal e intransmissível.
+\\As assinaturas têm tarifas especiais para jovens, estudantes, reformados, pensionistas, seniores e beneficiários de ação social.
 
-O .NET Framework é o modelo de programação abrangente e consistente da Microsoft para criar aplicações que têm experiências de utilizador agradáveis, comunicações totalmente integradas e seguras e a capacidade de modelar um intervalo de processos de negócio.
-\\Inclui uma larga biblioteca e proporciona interoperabilidade de linguagens entre várias linguagens de programação. Os programas desenvolvidos para a .NET Framework são executados num ambiente de software, conhecido como \textit{Common Language Runtime} (CLR), uma máquina virtual de aplicações que oferece serviços tais como segurança, gestão de memória, tratamento de exceções.
-\\A biblioteca base oferece interface com utilizador, acesso a dados, ligação a bases de dados, criptografia, desenvolvimento de aplicações \web, algoritmos numéricos, comunicação em rede, etc.
+\section{Zonamento}
 
-\subsection{Oracle Database XE}
+A rede de transportes públicos da Área Metropolitana do Porto está divida por zonas. Cada zona é constituída por uma letra e um número. As zonas estão agrupadas em três grandes grupos (Norte, Centro e Sul) e a inicial desse grupo serve para identificar a zona (N, C, S). Dentro de cada grupo as zonas são depois numeradas sequencialmente. Pode ver-se na Figura~\ref{fig:zonas} o zonamento Andante.
+\\Este mapa é especialmente importante para perceber o número de zonas a carregar num título ocasional. Por exemplo, com um título Z2, entrando na zona C1 (centro do Porto), é possível viajar dentro dessa zona e em todas as que lhe sejam adjacentes (C2, C6 e S8). Por outro lado, usando um título Z3, pode viajar-se também até ao segundo anel de adjacência (C3, C5, C7, C8, C9, S1, S2, S7, S9). Ver Figura~\ref{fig:zonas_c1}.
 
-A base de dados do servidor assentará sobre a tecnologia Oracle XE (eXpress Edition) por ser bastante poderosa (apesar de algumas limitações) e muito utilizada a nível mundial, dispondo de licença gratuita e gozar de uma comunidade dedicada, bem como de documentação altamente informativa, através das quais é relativamente fácil aprender e obter soluções para eventuais problemas que possam surgir.
+\begin{figure}[t]
+  \begin{center}
+    \leavevmode
+    \includegraphics[scale=0.375]{zonas}
+    \caption{Zonamento Andante}
+    \label{fig:zonas}
+  \end{center}
+\end{figure}
 
-\section{Resumo e Conclusões}
+\begin{figure}[t]
+  \begin{center}
+    \leavevmode
+    \includegraphics[scale=0.5]{zonas_c1}
+    \caption{Cálculo de número de zonas Andante \cite{calczonas}}
+    \label{fig:zonas_c1}
+  \end{center}
+\end{figure}
 
-Com este projeto, pretende-se proporcionar aos operadores de transportes públicos da Área Metropolitana do Porto um novo serviço que lhes trará valor e fará aumentar a satisfação dos seus utilizadores. Para além disso, permitir-lhes-á aceder a informação estatística sobre os padrões de utilização dos passageiros e assim fazer possíveis alterações de modo a melhorar o funcionamento da rede.
-\\Por outro lado, irá permitir reduzir custos de manutenção, nomeadamente na emissão de cartões, na manutenção das máquinas de venda automática, que passam a ter uma afluência menor e consequentemente um menor desgaste; e sem quaisquer custos de implementação visto que não há necessidade de infraestruturas adicionais às já existentes.
-\\Para o cliente, será uma melhoria a nível de comodidade e facilidade de execução das operações que, em muitos casos, são realizadas diariamente. Para além disso, poderá fazê-lo em qualquer altura e em qualquer lugar, não necessitando de se deslocar às máquinas de venda automática ou aos pontos de atendimento. 
+\section{Resumo ou Conclusões}
+
+O sistema Andante traz aos transportes públicos da Área Metropolitana do Porto a comodidade e rapidez de utilizar apenas um só método de bilhética, permitindo aos operadores ter um sistema standard e familiar para o utilizador.
+\\No entanto, muitas vezes os utilizadores ocasionais (turistas, por exemplo) têm alguma dificuldade em perceber o funcionamento do sistema Andante devido à sua complexidade, nomeadamente ao cálculo de zonas necessárias para efetuar determinada viagem. Sendo que uma viagem poderá necessitar de número de zonas diferentes consoante o sentido em que é feito, devido ao facto de os percursos de ida e volta nem sempre coincidirem.

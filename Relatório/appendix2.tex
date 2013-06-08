@@ -1,12 +1,386 @@
-\chapter{Planeamento (Parte 1)} \label{gantt1}
+\chapter{Especificação da API} \label{api}
 
-O período apresentado refere-se aos meses de novembro de 2012 a fevereiro de 2013, coincidindo com a Unidade Curricular EIC0087 - Preparação da Dissertação.
+\section{Descrição Detalhada}
 
-\begin{figure}[t]
-  \begin{center}
-    \leavevmode
-    \includegraphics[height=23cm]{gantt_part1}
-    \caption{Planeamento da primeira fase da dissertação}
-    \label{fig:gantt1}
-  \end{center}
-\end{figure}
+\subsection{API Comum}
+
+\subsubsection{GetAllLinesPathsByStop}
+
+Este serviço permite obter a listagem de linhas e respetivos trajetos que passam numa determinada paragem. Uma linha pode ter um ou mais trajetos. É utilizado quando o utilizador escolhe a paragem de entrada.
+\newline
+~\\Parâmetros:
+\begin{itemize}
+\item stop - código SMS da paragem.
+\end{itemize}
+
+~\\Resultado (Lista de elementos):
+\begin{itemize}
+\item GoPathCode - Código do trajeto;
+\item GoTerminal - Nome do destino;
+\item LineCode - Código da linha;
+\item LineName - Nome da linha (número e denominação).
+\end{itemize}
+
+\subsubsection{GetAllNearStops}
+
+Este serviço permite obter a listagem de paragens encontradas num determinado raio centrado nas coordenadas especificadas. É utilizado para obter as paragens mais próximas da localização atual do utilizador, quando este inicia o processo de validação.
+\newline
+~\\Parâmetros:
+\begin{itemize}
+\item latitude - latitude do centro;
+\item longitude - longitude do centro;
+\item radius - raio de inclusão.
+\end{itemize}
+
+~\\Resultado (Lista de elementos):
+\begin{itemize}
+\item code - código SMS da paragem;
+\item coordX - latitude da paragem;
+\item coordY - longitude da paragem;
+\item name - Nome da paragem;
+\item provider - Operador da paragem.
+\end{itemize}
+
+\subsubsection{LoadStopsByWord}
+
+Este serviço permite obter a listagem de paragens que contenham determinada palavra no nome ou no código SMS. É utilizado quando o utilizador seleciona manualmente a paragem de entrada.
+\newline
+~\\Parâmetros:
+\begin{itemize}
+\item word - palavra a pesquisar.
+\end{itemize}
+
+~\\Resultado (Lista de elementos):
+\begin{itemize}
+\item code - código SMS da paragem;
+\item coordX - latitude da paragem;
+\item coordY - longitude da paragem;
+\item name - Nome da paragem;
+\item provider - Operador da paragem.
+\end{itemize}
+
+\subsubsection{GetAllProvidersName}
+
+Este serviço permite obter a listagem completa de operadores de transportes públicos que operam no sistema Andante. É utilizado quando o utilizador seleciona manualmente a paragem de entrada.
+\newline
+~\\Resultado (Lista de Strings):
+\begin{itemize}
+\item nomes dos operadores.
+\end{itemize}
+
+\subsubsection{GetAllLinesByProvider}
+
+Este serviço permite obter a listagem completa de linhas que um determinado operador tem. É utilizado quando o utilizador seleciona manualmente a paragem de entrada.
+\newline
+~\\Parâmetros:
+\begin{itemize}
+\item provider - Nome do operador.
+\end{itemize}
+
+~\\Resultado (Lista de Strings):
+\begin{itemize}
+\item códigos das linhas.
+\end{itemize}
+
+\subsubsection{GetAllStopsByLine}
+
+Este serviço permite obter a listagem completa de paragens que constituem determinada linha (em todos os trajetos da linha). É utilizado quando o utilizador seleciona manualmente a paragem de entrada.
+\newline
+~\\Parâmetros:
+\begin{itemize}
+\item line - código da linha.
+\end{itemize}
+
+~\\Resultado (Lista de elementos):
+\begin{itemize}
+\item code - código SMS da paragem;
+\item coordX - latitude da paragem;
+\item coordY - longitude da paragem;
+\item name - Nome da paragem;
+\item provider - Operador da paragem.
+\end{itemize}
+
+\subsection{API Específica}
+
+\subsubsection{login}
+
+Este serviço permite verificar os dados de login introduzidos e confirmar/rejeitar a autenticação do utilizador. É utilizado quando o utilizador se autentica na aplicação quando esta não tem nenhuma conta ativa.
+\newline
+~\\Parâmetros:
+\begin{itemize}
+\item email - email do utilizador;
+\item password - password do utilizador.
+\end{itemize}
+
+~\\Resultado:
+\begin{itemize}
+\item Code - código da operação:
+\subitem 2100 - Operação realizada com sucesso;
+\subitem 2101 - Email inexistente;
+\subitem 2102 - Password e email não coincidem.
+\end{itemize}
+
+\subsubsection{newUser}
+
+Este serviço permite criar um novo utilizador, verificando a existência do email, o elemento único identificativo. É utilizado quando o utilizador se regista na aplicação.
+\newline
+~\\Parâmetros:
+\begin{itemize}
+\item email - email do utilizador;
+\item password - password do utilizador;
+\item pin - pin do utilizador;
+\item name - nome do utilizador;
+\item address - morada do utilizador;
+\item mobile - número de telemóvel do utilizador;
+\item NIF - Número de Informação Fiscal do utilizador;
+\item birthDate - data de nascimento do utilizador;
+\item maxAmount - valor máximo para operações sem necessidade de introduzir pin.
+\end{itemize}
+
+~\\Resultado:
+\begin{itemize}
+\item Code - código da operação:
+\subitem 3000 - Operação realizada com sucesso;
+\subitem 3001 - Email já existente.
+\end{itemize}
+
+\subsubsection{addTicket}
+
+Este serviço permite adicionar títulos ocasionais à conta de um determinado utilizador. É utilizado quando o utilizador compra títulos ocasionais.
+\newline
+~\\Parâmetros:
+\begin{itemize}
+\item email - email do utilizador;
+\item type - tipo do título;
+\item name - tipologia do título;
+\item amount - quantidade a adicionar.
+\end{itemize}
+
+~\\Resultado:
+\begin{itemize}
+\item Code - código da operação:
+\subitem 4000 - Operação realizada com sucesso;
+\subitem 4001 - Email inexistente;
+\subitem 4002 - Saldo insuficiente.
+\end{itemize}
+
+\subsubsection{addSignature}
+
+Este serviço permite adicionar uma assinatura mensal à conta de um determinado utilizador. É utilizado quando o utilizador compra assinatura mensal.
+\newline
+~\\Parâmetros:
+\begin{itemize}
+\item email - email do utilizador;
+\item zones - lista de zonas a adicionar.
+\end{itemize}
+
+~\\Resultado:
+\begin{itemize}
+\item Code - código da operação:
+\subitem 5000 - Operação realizada com sucesso;
+\subitem 5001 - Email inexistente;
+\subitem 5002 - Saldo insuficiente.
+\end{itemize}
+
+
+\subsubsection{addMoneyUser}
+
+Este serviço permite adicionar saldo à carteira virtual. É utilizado quando a conta é carregada.
+\newline
+~\\Parâmetros:
+\begin{itemize}
+\item email - email do utilizador;
+\item amountToAdd - quantidade a adicionar.
+\end{itemize}
+
+~\\Resultado:
+\begin{itemize}
+\item Code - código da operação:
+\subitem 6000 - Operação realizada com sucesso;
+\subitem 6001 - Email inexistente.
+\end{itemize}
+
+\subsubsection{editUser}
+
+Este serviço permite editar os dados pessoais do utilizador. É utilizado quando o utilizador altera os seus dados pessoais nas definições da aplicação.
+\newline
+~\\Parâmetros:
+\begin{itemize}
+\item email - email do utilizador;
+\item password - password do utilizador;
+\item pin - pin do utilizador;
+\item name - nome do utilizador;
+\item address - morada do utilizador;
+\item mobile - número de telemóvel do utilizador;
+\item NIF - Número de Informação Fiscal do utilizador;
+\item birthDate - data de nascimento do utilizador;
+\item maxAmount - valor máximo para operações sem necessidade de introduzir pin.
+\end{itemize}
+
+~\\Resultado:
+\begin{itemize}
+\item Code - código da operação:
+\subitem 3200 - Operação realizada com sucesso;
+\subitem 3201 - Email inexistente.
+\end{itemize}
+
+\subsubsection{validate}
+
+Este serviço permite validar um título da carteira de títulos. É utilizado após a seleção da paragem de entrada, da linha e trajeto e do título a validar.
+\newline
+~\\Parâmetros:
+\begin{itemize}
+\item email - email do utilizador;
+\item ticketType - tipo do título;
+\item ticketName - tipologia do título;
+\item path - trajeto de entrada;
+\item stop - paragem de entrada;
+\item firstPath - trajeto inicial;
+\item firstStop - paragem inicial;
+\item isNewValidation - indicação de nova validação ou transbordo.
+\end{itemize}
+
+~\\Resultado:
+\begin{itemize}
+\item Code - código da operação:
+\subitem 4200 - Operação realizada com sucesso;
+\subitem 4002 - Título inexistente;
+\subitem 4004 - Email inexistente.
+\item Validation - dados da validação:
+\subitem email - email do utilizador;
+\subitem lastAllowedStopName - última paragem permitida;
+\subitem originStop - paragem inicial;
+\subitem path - trajeto de entrada;
+\subitem seq - número sequencial;
+\subitem ticketName - tipologia do título (Z2, Z3, etc.);
+\subitem ticketType - tipo do título (Ocasional, Andante 24 ou Assinatura);
+\subitem when - data da validação.
+\end{itemize}
+
+\subsubsection{getPrices}
+
+Este serviço permite obter a listagem de preços das várias modalidades do sistema Andante. É utilizado quando o utilizador procede à compra de títulos.
+\newline
+~\\Resultado:
+\begin{itemize}
+\item Code - código da operação:
+\subitem 3260 - Operação realizada com sucesso.
+\item TicketList - lista de títulos:
+\subitem Id - identificador do título;
+\subitem Name - tipologia do título (Z2, Z3, etc.);
+\subitem Price - preço do título;
+\subitem Type - tipo do título (Ocasional, Andante 24 ou Assinatura).
+\end{itemize}
+
+\subsubsection{getUser}
+
+Este serviço permite obter a informação pessoal de um determinado utilizador. É utilizado quando o utilizador pretende alterar os seus dados pessoais.
+\newline
+~\\Parâmetros:
+\begin{itemize}
+\item email - email do utilizador.
+\end{itemize}
+
+~\\Resultado:
+\begin{itemize}
+\item Code - código da operação:
+\subitem 3250 - Operação realizada com sucesso;
+\subitem 3251 - Email inexistente.
+\item UserInfo - informação do utilizador:
+\subitem email - email do utilizador;
+\subitem password - password do utilizador;
+\subitem pin - pin do utilizador;
+\subitem name - nome do utilizador;
+\subitem address - morada do utilizador;
+\subitem mobile - número de telemóvel do utilizador;
+\subitem NIF - Número de Informação Fiscal do utilizador;
+\subitem birthDate - data de nascimento do utilizador;
+\subitem maxAmount - valor máximo para operações sem necessidade de introduzir pin.
+\end{itemize}
+
+\subsubsection{getTickets}
+
+Este serviço permite obter a listagem de títulos disponíveis de um determinado utilizador. É utilizado quando o utilizador pretende proceder a uma validação, ver o saldo atual de títulos ou proceder à compra dos mesmos.
+\newline
+~\\Parâmetros:
+\begin{itemize}
+\item email - email do utilizador.
+\end{itemize}
+
+~\\Resultado:
+\begin{itemize}
+\item Code - código da operação:
+\subitem 4100 - Operação realizada com sucesso;
+\subitem 4102 - Email inexistente.
+\item ListTickets - lista de títulos:
+\subitem Amount - identificador do título;
+\subitem Name - tipologia do título (Z2, Z3, etc.);
+\subitem SigMonth - mês da assinatura (no caso de ser assinatura, 0 nos outros);
+\subitem SigYear - ano da assinatura (no caso de ser assinatura, 0 nos outros);
+\subitem SigZones - zonas da assinatura (no caso de ser assinatura, null nos outros);
+\subitem Type - tipo do título (Ocasional, Andante 24 ou Assinatura).
+\end{itemize}
+
+\subsubsection{getAccountMovements}
+
+Este serviço permite obter as transações efetuadas por um determinado utilizador. É utilizado quando o utilizador pretende consultar o histórico de operações realizadas na sua conta.
+\newline
+~\\Parâmetros:
+\begin{itemize}
+\item email - email do utilizador.
+\end{itemize}
+
+~\\Resultado:
+\begin{itemize}
+\item Code - código da operação:
+\subitem 4150 - Operação realizada com sucesso;
+\subitem 4152 - Email inexistente.
+\item ListAccountMovements - Lista de operações:
+\subitem amount - valor da operação;
+\subitem reason - descritivo da operação (carregamento, compra, etc.);
+\subitem timeStamp - data da operação.
+\end{itemize}
+
+
+\subsubsection{getAccountValidations}
+
+Este serviço permite obter a listagem de validações de um determinado utilizador. É utilizado quando o utilizador pretende consultar o histórico de validações da sua assinatura ou dos títulos ocasionais.
+\newline
+~\\Parâmetros:
+\begin{itemize}
+\item email - email do utilizador.
+\end{itemize}
+
+~\\Resultado:
+\begin{itemize}
+\item Code - código da operação:
+\subitem 4150 - Operação realizada com sucesso;
+\subitem 4152 - Email inexistente.
+\item ListAccountValidations - Lista de validações:
+\subitem Id - número sequencial;
+\subitem PathCode - código do trajeto;
+\subitem Signature - indicação de assinatura ou título ocasional;
+\subitem StopCode - código da paragem;
+\subitem TicketName - tipologia do título (Z2, Z3, etc.);
+\subitem TicketType - tipo do título (Ocasional, Andante 24 ou Assinatura);
+\subitem TimeStamp - data da validação;
+\subitem isNewValidation - indicação de nova validação ou transbordo.
+\end{itemize}
+
+\subsubsection{getStopZone}
+
+Este serviço permite saber qual a zona Andante de determinada paragem. É utilizado para saber se é possível utilizar a assinatura na paragem selecionada.
+\newline
+~\\Parâmetros:
+\begin{itemize}
+\item pathCode - código do trajeto;
+\item stopCode - código da paragem.
+\end{itemize}
+
+~\\Resultado:
+\begin{itemize}
+\item Code - código da operação:
+\subitem 1050 - Operação realizada com sucesso;
+\subitem 1051 - Operação sem sucesso.
+\item Zona da paragem.
+\end{itemize}
