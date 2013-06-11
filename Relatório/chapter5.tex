@@ -216,7 +216,7 @@ Este serviço permite saber qual a zona Andante de determinada paragem. É utili
 \section{MobiPag STCP}
 
 Por estar inserida na iniciativa nacional Pagamentos Móveis - MobiPag \cite{cedt} e por a STCP ser a operadora de transportes públicos que está envolvida no desenvolvimento da aplicação, esta tomou a denominação MobiPag STCP, não sendo este o nome final. Uma possível denominação será Andante Mobile, baseando-se no facto de a aplicação pretender apresentar-se como um substituto (opcional) do cartão Andante.
-Nesta secção é ilustrada e detalhada a organização e dinâmica da aplicação. Na Figura~\ref{fig:appflow} é ilustrada a sequência das atividades que constituem a aplicação.
+Nesta secção é ilustrada e detalhada a organização e dinâmica da aplicação. Na Figura~\ref{fig:appflow} é ilustrada a sequência das atividades que constituem a aplicação. A atividade HelpActivity pode ser chamada em qualquer uma das outras atividades, pelo que se optou (por questões de melhor visibilidade) por não incluir as indicações de sequência.
 
 \begin{figure}[t]
   \begin{center}
@@ -227,4 +227,243 @@ Nesta secção é ilustrada e detalhada a organização e dinâmica da aplicaç�
   \end{center}
 \end{figure}
 
-\section{Resumo ou Conclusões}
+\subsection{Menu Principal}
+
+Este menu é a base da aplicação e serve de lançamento para todas as funcionalidades da mesma. É este o menu a que se acede quando se inicia a aplicação, após autenticação do utilizador. Ver Figura~\ref{fig:menu_principal}.
+
+\begin{figure}[t]
+  \begin{center}
+    \leavevmode
+    \includegraphics[scale=0.45]{menu_principal}
+    \caption{Menu Principal}
+    \label{fig:menu_principal}
+  \end{center}
+\end{figure}
+
+\subsection{Menu Validação}
+
+Este menu permite efetuar a validação de um título disponível em saldo, para uma determinada paragem e linha. Através dos serviços de localização do dispositivo móvel (GPS e redes móveis), a aplicação tenta calcular a posição atual do utilizador e listar-lhe as paragens que se encontram mais próximas. Caso não seja possível efetuar a localização do utilizador ou esta se encontre errada, o utilizador pode optar por efetuar uma seleção manual da paragem de entrada. Ver Figura~\ref{fig:menu_validacao}. Após a validação, surge no ecrã uma mensagem de confirmação, indicando a paragem até à qual o utilizador pode viajar com o título que selecionou, tal como se pode ver na Figura~\ref{fig:confirm_validacao}.
+
+\begin{figure}[ht]
+\begin{minipage}[b]{0.45\linewidth}
+\centering
+\includegraphics[width=\textwidth]{menu_validacao}
+    \caption{Menu Validação}
+    \label{fig:menu_validacao}
+\end{minipage}
+\hspace{0.5cm}
+\begin{minipage}[b]{0.45\linewidth}
+\centering
+    \includegraphics[width=\textwidth]{confirm_validacao}
+    \caption{Confirmação Validação}
+    \label{fig:confirm_validacao}
+\end{minipage}
+\end{figure}
+
+\subsection{Menu Seleção Manual}
+
+Este menu serve para selecionar manualmente a paragem de entrada quando não é possível fazê-lo de forma automática através dos serviços de localização do dispositivo móvel. A sequência de escolha é: Operador, Linha, Paragem. Ver Figura~\ref{fig:menu_manual}.
+
+\subsection{Menu Compra}
+
+Este menu permite ao utilizador iniciar o processo de compra de novos títulos. Para além de apresentar as várias opções de compra, permite também verificar quais os títulos atuais existentes. Deste modo, é fácil verificar se é necessário comprar determinado tipo de título ou se já existe em saldo. Ver Figura~\ref{fig:menu_compra}.
+
+\begin{figure}[ht]
+\begin{minipage}[b]{0.45\linewidth}
+\centering
+\includegraphics[width=\textwidth]{menu_manual}
+    \caption{Menu Seleção Manual}
+    \label{fig:menu_manual}
+\end{minipage}
+\hspace{0.5cm}
+\begin{minipage}[b]{0.45\linewidth}
+\centering
+    \includegraphics[width=\textwidth]{menu_compra}
+    \caption{Menu Compra}
+    \label{fig:menu_compra}
+\end{minipage}
+\end{figure}
+
+\subsection{Menu Compra Ocasionais}
+
+Este menu permite ao utilizador comprar títulos ocasionais (títulos de viagem ou Andante 24, conforme a seleção no menu anterior), selecionando o número de zonas pretendido, a quantidade (1, 2, 5, 10+1 grátis) e confirmando os dados da compra no menu seguinte. Ver Figura~\ref{fig:menu_compra_oc} e Figura~\ref{fig:confirm_compra_oc}.
+
+\begin{figure}[ht]
+\begin{minipage}[b]{0.45\linewidth}
+\centering
+\includegraphics[width=\textwidth]{menu_compra_oc}
+    \caption{Menu Compra Ocasionais}
+    \label{fig:menu_compra_oc}
+\end{minipage}
+\hspace{0.5cm}
+\begin{minipage}[b]{0.45\linewidth}
+\centering
+    \includegraphics[width=\textwidth]{confirm_compra_oc}
+    \caption{Confirm. Compra Ocasionais}
+    \label{fig:confirm_compra_oc}
+\end{minipage}
+\end{figure}
+
+\subsection{Menu Compra Assinatura}
+
+Este menu permite ao utilizador comprar uma assinatura mensal, selecionando as zonas pretendidas e confirmando os dados da compra no menu seguinte. Ver Figura~\ref{fig:menu_compra_as} e Figura~\ref{fig:confirm_compra_as}.
+
+\begin{figure}[ht]
+\begin{minipage}[b]{0.45\linewidth}
+\centering
+\includegraphics[width=\textwidth]{menu_compra_as}
+    \caption{Menu Compra Assinatura}
+    \label{fig:menu_compra_as}
+\end{minipage}
+\hspace{0.5cm}
+\begin{minipage}[b]{0.45\linewidth}
+\centering
+    \includegraphics[width=\textwidth]{confirm_compra_as}
+    \caption{Confirm. Compra Assinatura}
+    \label{fig:confirm_compra_as}
+\end{minipage}
+\end{figure}
+
+\subsection{Menu Consulta}
+
+Este menu é onde o utilizador pode consultar os dados operacionais da sua conta. Para além de consultar o saldo atual de títulos, pode também consultar o histórico de operações realizadas na conta, e também as validações efetuadas com os seus títulos. Ver Figura~\ref{fig:menu_consulta}.
+
+\subsection{Menu Saldo Títulos}
+
+Este menu permite visualizar o saldo atual de títulos. Neste menu são listados todos os títulos disponíveis para uso imediato, não sendo listada a assinatura do mês seguinte (caso já tenha sido comprada) porque não pode ser usada durante o mês corrente. Ver Figura~\ref{fig:menu_consulta_saldo}.
+
+\begin{figure}[ht]
+\begin{minipage}[b]{0.45\linewidth}
+\centering
+\includegraphics[width=\textwidth]{menu_consulta}
+    \caption{Menu Consulta}
+    \label{fig:menu_consulta}
+\end{minipage}
+\hspace{0.5cm}
+\begin{minipage}[b]{0.45\linewidth}
+\centering
+    \includegraphics[width=\textwidth]{menu_consulta_saldo}
+    \caption{Menu Saldo Títulos}
+    \label{fig:menu_consulta_saldo}
+\end{minipage}
+\end{figure}
+
+\subsection{Menu Operações de Conta}
+
+Este menu permite ao utilizador verificar as operações efetuadas na sua conta, quer sejam carregamentos da conta como compras de títulos. Ver Figura~\ref{fig:menu_operacoes}.
+
+\subsection{Menu Histórico Validações}
+
+Este menu mostra as validações efetuadas pelo utilizador, tanto em títulos ocasionais como na assinatura mensal, conforme a escolha no menu anterior. Ver Figura~\ref{fig:menu_historico} e Figura~\ref{fig:menu_historico2}.
+
+\begin{figure}[ht]
+\begin{minipage}[b]{0.31\linewidth}
+\centering
+\includegraphics[width=\textwidth]{menu_operacoes}
+    \caption{Menu Operações de Conta}
+    \label{fig:menu_operacoes}
+\end{minipage}
+\hspace{0.25cm}
+\begin{minipage}[b]{0.31\linewidth}
+\centering
+    \includegraphics[width=\textwidth]{menu_historico}
+    \caption{Menu Histórico Validações Ocasionais}
+    \label{fig:menu_historico}
+\end{minipage}
+\hspace{0.25cm}
+\begin{minipage}[b]{0.31\linewidth}
+\centering
+    \includegraphics[width=\textwidth]{menu_historico2}
+    \caption{Menu Histórico Validações Assinatura}
+    \label{fig:menu_historico2}
+\end{minipage}
+\end{figure}
+
+\subsection{Menu Definições}
+
+Este menu permite alterar os dados pessoais do utilizador. Para além disso permite também fazer \emph{logout} da conta ativa. Ver Figura~\ref{fig:menu_definicoes}.
+
+\subsection{Menu Sobre}
+
+Este menu fornece informação relativa à autoria e desenvolvimento da aplicação MobiPag STCP, bem como a versão atual. Ver Figura~\ref{fig:menu_sobre}.
+
+\begin{figure}[ht]
+\begin{minipage}[b]{0.45\linewidth}
+\centering
+\includegraphics[width=\textwidth]{menu_definicoes}
+    \caption{Menu Definições}
+    \label{fig:menu_definicoes}
+\end{minipage}
+\hspace{0.5cm}
+\begin{minipage}[b]{0.45\linewidth}
+\centering
+    \includegraphics[width=\textwidth]{menu_sobre}
+    \caption{Menu Sobre}
+    \label{fig:menu_sobre}
+\end{minipage}
+\end{figure}
+
+\subsection{Menu PIN}
+
+Este menu aparece sempre que se inicia a aplicação e permite adicionar uma camada de segurança à aplicação. O PIN do utilizador é definido no registo e pode ser alterado nas Definições. Este método de autenticação surge quando já existe um utilizado com a conta autenticada na aplicação. Para além disso permite também fazer \emph{logout} da conta ativa. Ver Figura~\ref{fig:menu_login_pin}.
+
+\subsection{Menu Login}
+
+Este menu aparece quando não existe nenhuma conta autenticada na aplicação, permitindo efetuar \emph{login} com o conjunto email/palavra-passe ou então efetuar o registo de um novo utilizador. Ver Figura~\ref{fig:menu_login}.
+
+\begin{figure}[ht]
+\begin{minipage}[b]{0.45\linewidth}
+\centering
+\includegraphics[width=\textwidth]{menu_login_pin}
+    \caption{Menu PIN}
+    \label{fig:menu_login_pin}
+\end{minipage}
+\hspace{0.5cm}
+\begin{minipage}[b]{0.45\linewidth}
+\centering
+    \includegraphics[width=\textwidth]{menu_login}
+    \caption{Menu Login}
+    \label{fig:menu_login}
+\end{minipage}
+\end{figure}
+
+\subsection{Menu Revisor}
+
+Este menu serve para mostrar informação relativa ao título ativo, quando solicitada pelo revisor autorizado. No caso dos títulos ocasionais, esta informação inclui todas as validações efetuadas com o título em questão, contendo a data e hora, paragem e linha de entrada, bem como o número sequencial da validação. Para além disso, contém informação relativa ao título em uso. Ver Figura~\ref{fig:menu_revisor_oc}. No caso das assinaturas, apenas é apresentada a última validação, mas são apresentados alguns dados pessoais do utilizador, visto a assinatura ser de uso pessoal intransmissível. Para além da informação relativa à assinatura, está também presente o nome e Número de Informação Fiscal do utilizador e uma foto tipo passe. Ver Figura~\ref{fig:menu_revisor_as}.
+
+~\\Para acrescentar alguma segurança e fiabilidade a este menu, foi acrescentado um fundo que varia ao longo do tempo. Tendo como objetivo criar um impacto visual imediato, optou-se por utilizar o código ColorADD, seguidamente detalhado.
+
+\begin{figure}[ht]
+\begin{minipage}[b]{0.45\linewidth}
+\centering
+\includegraphics[width=\textwidth]{menu_revisor_oc}
+    \caption{Menu Revisor}
+    \label{fig:menu_revisor_oc}
+\end{minipage}
+\hspace{0.5cm}
+\begin{minipage}[b]{0.45\linewidth}
+\centering
+    \includegraphics[width=\textwidth]{menu_revisor_as}
+    \caption{Menu Revisor}
+    \label{fig:menu_revisor_as}
+\end{minipage}
+\end{figure}
+
+\subsubsection{ColorADD}
+
+O código ColorADD é uma inovação mundial, criada pelo designer Miguel Neiva, de um código de cores para daltónicos. Este sistema já se encontra em uso em transportes, hospitais, marcas de lápis, tintas ou cerâmicas. É a primeira ferramenta a procurar diminuir os efeitos de um constrangimento pouco visível: o Daltonismo. O Daltonismo, ou a cegueira da cor, é uma limitação que afeta 10\% da população mundial masculina – aproximadamente 350 milhões de pessoas em todo o mundo. Esta limitação, de condição hereditária, é transmitida através do cromossoma X e cria ao seu portador grandes constrangimentos ao nível da integração social e profissional.
+\\Desenvolvido com base nas três cores primárias representadas através de símbolos gráficos, o código ColorADD assenta no conceito de “adição de cores”, permitindo ao daltónico relacionar os símbolos e facilmente identificar toda a paleta. O Branco e o Preto surgem para orientar as tonalidades claras e escuras. O código torna-se num “jogo mental” simples e fácil de memorizar e aplicar em situações do dia-a-dia. \cite{coloradd}
+\\Para uma visualização completa das cores, ver Anexo~\ref{coloradd}.
+
+\subsection{Menu Ajuda}
+
+Este é um menu contextual, fornecendo informação acerca do menu atual. O objetivo é esclarecer, de forma clara, qualquer dúvida que possa surgir durante a utilização da aplicação. Ver Figura~\ref{fig:menu_ajuda}.
+
+\begin{figure}[t]
+  \begin{center}
+    \leavevmode
+    \includegraphics[scale=0.45]{menu_ajuda}
+    \caption{Menu Ajuda}
+    \label{fig:menu_ajuda}
+  \end{center}
+\end{figure}

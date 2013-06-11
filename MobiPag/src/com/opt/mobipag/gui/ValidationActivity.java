@@ -190,6 +190,7 @@ public class ValidationActivity extends Activity {
                     finish();
                 }
             });
+            m_Alerter.setCanceledOnTouchOutside(false);
 
             ImageButton b_Reload = (ImageButton) findViewById(R.id.reload);
             //			int h = spStops.getHeight();
