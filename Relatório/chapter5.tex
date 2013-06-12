@@ -44,8 +44,43 @@ Por fim, os requisitos funcionais relacionados com a visualização de informaç
 Para além dos requisitos acima especificados, foram também delineadas algumas características que a aplicação deve conter:
 \begin{itemize}
 \item Comunicação - É necessário uma ligação à rede com um acesso estável e com uma largura de banda mínima que permita a plena utilização de todas as funcionalidades disponíveis;\item Eficiência - Uma normal utilização do sistema requer inúmeros acessos simultâneos à aplicação e, consequentemente, à sua base de dados. Logo, é fulcral que a aplicação esteja estruturada para que a informação seja acedida e apresentada em tempos de resposta mínimos, de modo a que o utilizador veja satisfeitos os seus propósitos de manipulação de informação;\item Fiabilidade - O sistema deverá garantir a integridade dos dados submetidos;\item Manutenção - O sistema deverá permitir uma fácil manutenção e adição de novas funcionalidades;\item Segurança - O sistema deve estar devidamente protegido para que não haja a possibilidade de acessos indevidos a dados confidenciais dos utilizadores.
-\item Usabilidade - Pretende-se que a interface da aplicação seja intuitiva e de fácil utilização, para que o utilizador não perca muito tempo no processo de aprendizagem do manuseamento da mesma. É importante também que o número de cliques para execução das ações seja o menor possível, reduzindo assim o tempo de execução. O sistema deverá, também, oferecer mensagens de erro claras e ajuda contextual;\item Compatibilidade - O sistema deverá funcionar perfeitamente em dispositivos Android com verão 2.2 (API 8) ou superior. Para além disso, o sistema deverá ter uma integração coerente com a aplicação MOVE-ME.
+\item Usabilidade - Pretende-se que a interface da aplicação seja intuitiva e de fácil utilização, para que o utilizador não perca muito tempo no processo de aprendizagem do manuseamento da mesma. É importante também que o número de cliques para execução das ações seja o menor possível, reduzindo assim o tempo de execução. O sistema deverá, também, oferecer mensagens de erro claras e ajuda contextual;\item Compatibilidade - O sistema deverá funcionar perfeitamente em dispositivos Android com verão 2.2 (API 8) ou superior. Para além disso, o sistema deverá ter uma integração coerente com a aplicação MOVE-ME.
 \end{itemize}
+
+\section{Principais Casos de Uso}
+
+\subsection{Compra}
+
+O primeiro passo a realizar, tal como acontece hoje em dia, é a compra de títulos de viagem. Esta compra pode ser feita de forma simples, selecionando a modalidade desejada, configurando-a (número de zonas e quantidade no caso dos títulos Ocasionais e Andante 24; escolha de zonas no caso da Assinatura) e finalizando a compra após confirmação dos detalhes.
+\\Os preços utilizados são exatamente os mesmos em vigor nos postos de venda tradicionais e, tal como acontece atualmente, na compra de 10 títulos ocasionais ou Andante 24, é oferecido um título extra com a mesma tipologia.
+\\Baseado no sistema Andante, a assinatura pode ser comprada desde o dia 16 do mês anterior até ao dia 15 do mês corrente. Como tal, caso o utilizador não compre a assinatura até ao dia 15, terá de viajar o resto do mês com títulos ocasionais. Apenas poderá comprar a assinatura para o mês seguinte, tal como acontece nos postos de venda tradicionais.
+\\Para além de ser apresentado o saldo atual da carteira virtual, o utilizador consegue facilmente visualizar quais os títulos que tem disponíveis e saber assim se tem ou não necessidade de comprar um novo título.
+
+\subsection{Validação}
+
+Para poder viajar nos veículos de transportes públicos, o utilizador deve proceder à validação de um dos títulos disponíveis. Para tal deve, de antemão, garantir que possui o título necessário para a viagem que vai realizar.
+\\Antes de realizar a validação do título é necessário selecionar a paragem e linha de entrada. A aplicação tenta, de forma automática, calcular a posição do utilizador e apresentar as paragens encontradas num raio de 80 metros, permitindo assim uma margem de erro de cálculo. No entanto, caso não seja possível calcular a posição atual do utilizador ou esta seja errada, é possível uma introdução manual da paragem, escolhendo o operador, a linha e finalmente a paragem.
+\\Após a escolha da paragem, são listadas todas as linhas que param na paragem selecionada, permitindo ao utilizador escolher aquela onde vai entrar.
+\\Concluído o processo de validação, o utilizador pode viajar normalmente no veículo e será criada uma notificação no telemóvel que lhe indica o tempo restante e o título em uso. Para além disso, essa notificação permite aceder ao menu de fiscalização, caso solicitado pelo revisor.
+
+\subsection{Consulta}
+
+É importante também aceder ao estado atual da carteira de títulos e da carteira virtual. Muitas vezes os utilizadores deparam-se com o problema de estarem em casa e não saberem se têm títulos carregados para poder efetuar uma viagem, tendo de se deslocarem a um posto de venda para efetuar essa verificação. Isso muitas vezes implica a perda do veículo desejado ou alterações no planeamento diário.
+\\A aplicação permite ao utilizador consultar em qualquer altura quais os títulos que tem disponíveis, bem como as operações que efetuou (carregamentos, compras, etc.). Para além disso permite-lhe ainda visualizar o histórico de validações efetuadas, separando os títulos ocasionais da assinatura, porque normalmente existe uma discrepância no número de validações dum tipo e doutro sendo mais fácil a visualização em separado.
+
+\section{Arquitetura}
+
+A aplicação baseia-se numa arquitetura Servidor-Cliente tradicional, com utilização de uma base de dados de suporte local, mas que serve apenas para acelerar alguns processos, sendo sempre necessário comunicar ao servidor quaisquer alterações que sejam feitas.
+\\A aplicação comunica com o servidor através de ligação à Internet, utilizando serviços \web com API própria. Alguns dos serviços em utilização são os mesmos que se encontram na aplicação Move-Me pois fornecem informação pertinente para ambas as aplicações e também tendo em foco uma futura integração das duas. Ver Figura~\ref{fig:architecture}.
+
+\begin{figure}[t]
+  \begin{center}
+    \leavevmode
+    \includegraphics[scale=0.8]{architecture}
+    \caption{Arquitetura Servidor-Cliente}
+    \label{fig:architecture}
+  \end{center}
+\end{figure}
 
 \section{Modelo Concetual}
 
@@ -93,41 +128,6 @@ Partindo da designação de zona, do sistema Andante, é o conceito que permite 
 
 \subsection{Transação}
 Uma transação é uma operação efetuada na aplicação que envolva movimentos monetários. Isto envolve tanto o carregamento da carteira virtual, como a compra de títulos. Este conceito é fundamental para permitir ao utilizador visualizar o histórico de operações efetuadas na aplicação.
-
-\section{Arquitetura}
-
-A aplicação baseia-se numa arquitetura Servidor-Cliente tradicional, com utilização de uma base de dados de suporte local, mas que serve apenas para acelerar alguns processos, sendo sempre necessário comunicar ao servidor quaisquer alterações que sejam feitas.
-\\A aplicação comunica com o servidor através de ligação à Internet, utilizando serviços \web com API própria. Alguns dos serviços em utilização são os mesmos que se encontram na aplicação Move-Me pois fornecem informação pertinente para ambas as aplicações e também tendo em foco uma futura integração das duas. Ver Figura~\ref{fig:architecture}.
-
-\begin{figure}[t]
-  \begin{center}
-    \leavevmode
-    \includegraphics[scale=0.8]{architecture}
-    \caption{Arquitetura Servidor-Cliente}
-    \label{fig:architecture}
-  \end{center}
-\end{figure}
-
-\section{Principais Casos de Uso}
-
-\subsection{Compra}
-
-O primeiro passo a realizar, tal como acontece hoje em dia, é a compra de títulos de viagem. Esta compra pode ser feita de forma simples, selecionando a modalidade desejada, configurando-a (número de zonas e quantidade no caso dos títulos Ocasionais e Andante 24; escolha de zonas no caso da Assinatura) e finalizando a compra após confirmação dos detalhes.
-\\Os preços utilizados são exatamente os mesmos em vigor nos postos de venda tradicionais e, tal como acontece atualmente, na compra de 10 títulos ocasionais ou Andante 24, é oferecido um título extra com a mesma tipologia.
-\\Baseado no sistema Andante, a assinatura pode ser comprada desde o dia 16 do mês anterior até ao dia 15 do mês corrente. Como tal, caso o utilizador não compre a assinatura até ao dia 15, terá de viajar o resto do mês com títulos ocasionais. Apenas poderá comprar a assinatura para o mês seguinte, tal como acontece nos postos de venda tradicionais.
-\\Para além de ser apresentado o saldo atual da carteira virtual, o utilizador consegue facilmente visualizar quais os títulos que tem disponíveis e saber assim se tem ou não necessidade de comprar um novo título.
-
-\subsection{Validação}
-
-Para poder viajar nos veículos de transportes públicos, o utilizador deve proceder à validação de um dos títulos disponíveis. Para tal deve, de antemão, garantir que possui o título necessário para a viagem que vai realizar.
-\\Antes de realizar a validação do título é necessário selecionar a paragem e linha de entrada. A aplicação tenta, de forma automática, calcular a posição do utilizador e apresentar as paragens encontradas num raio de 80 metros, permitindo assim uma margem de erro de cálculo. No entanto, caso não seja possível calcular a posição atual do utilizador ou esta seja errada, é possível uma introdução manual da paragem, escolhendo o operador, a linha e finalmente a paragem.
-\\Após a escolha da paragem, são listadas todas as linhas que param na paragem selecionada, permitindo ao utilizador escolher aquela onde vai entrar.
-\\Concluído o processo de validação, o utilizador pode viajar normalmente no veículo e será criada uma notificação no telemóvel que lhe indica o tempo restante e o título em uso. Para além disso, essa notificação permite aceder ao menu de fiscalização, caso solicitado pelo revisor.
-
-\subsection{Consulta}
-
-É importante também aceder ao estado atual da carteira de títulos e da carteira virtual. Muitas vezes os utilizadores deparam-se com o problema de estarem em casa e não saberem se têm títulos carregados para poder efetuar uma viagem, tendo de se deslocarem a um posto de venda para efetuar essa verificação. Isso muitas vezes implica a perda do veículo desejado ou alterações no planeamento diário.
-\\A aplicação permite ao utilizador consultar em qualquer altura quais os títulos que tem disponíveis, bem como as operações que efetuou (carregamentos, compras, etc.). Para além disso permite-lhe ainda visualizar o histórico de validações efetuadas, separando os títulos ocasionais da assinatura, porque normalmente existe uma discrepância no número de validações dum tipo e doutro sendo mais fácil a visualização em separado.
 
 \section{API}
 
@@ -231,18 +231,82 @@ Nesta secção é ilustrada e detalhada a organização e dinâmica da aplicaç�
 
 Este menu é a base da aplicação e serve de lançamento para todas as funcionalidades da mesma. É este o menu a que se acede quando se inicia a aplicação, após autenticação do utilizador. Ver Figura~\ref{fig:menu_principal}.
 
+\subsection{Menu Validação}
+
+Este menu permite efetuar a validação de um título disponível em saldo, para uma determinada paragem e linha. Através dos serviços de localização do dispositivo móvel (GPS e redes móveis), a aplicação tenta calcular a posição atual do utilizador e listar-lhe as paragens que se encontram mais próximas. Caso não seja possível efetuar a localização do utilizador ou esta se encontre errada, o utilizador pode optar por efetuar uma seleção manual da paragem de entrada. Ver Figura~\ref{fig:menu_validacao}. Após a validação, surge no ecrã uma mensagem de confirmação, indicando a paragem até à qual o utilizador pode viajar com o título que selecionou, tal como se pode ver na Figura~\ref{fig:confirm_validacao}.
+
+\subsection{Menu Seleção Manual}
+
+Este menu serve para selecionar manualmente a paragem de entrada quando não é possível fazê-lo de forma automática através dos serviços de localização do dispositivo móvel. A sequência de escolha é: Operador, Linha, Paragem. Ver Figura~\ref{fig:menu_manual}.
+
+\subsection{Menu Compra}
+
+Este menu permite ao utilizador iniciar o processo de compra de novos títulos. Para além de apresentar as várias opções de compra, permite também verificar quais os títulos atuais existentes. Deste modo, é fácil verificar se é necessário comprar determinado tipo de título ou se já existe em saldo. Ver Figura~\ref{fig:menu_compra}.
+
+\subsection{Menu Compra Ocasionais}
+
+Este menu permite ao utilizador comprar títulos ocasionais (títulos de viagem ou Andante 24, conforme a seleção no menu anterior), selecionando o número de zonas pretendido, a quantidade (1, 2, 5, 10+1 grátis) e confirmando os dados da compra no menu seguinte. Ver Figura~\ref{fig:menu_compra_oc} e Figura~\ref{fig:confirm_compra_oc}.
+
+\subsection{Menu Compra Assinatura}
+
+Este menu permite ao utilizador comprar uma assinatura mensal, selecionando as zonas pretendidas e confirmando os dados da compra no menu seguinte. Ver Figura~\ref{fig:menu_compra_as} e Figura~\ref{fig:confirm_compra_as}.
+
+\subsection{Menu Consulta}
+
+Este menu é onde o utilizador pode consultar os dados operacionais da sua conta. Para além de consultar o saldo atual de títulos, pode também consultar o histórico de operações realizadas na conta, e também as validações efetuadas com os seus títulos. Ver Figura~\ref{fig:menu_consulta}.
+
+\subsection{Menu Saldo Títulos}
+
+Este menu permite visualizar o saldo atual de títulos. Neste menu são listados todos os títulos disponíveis para uso imediato, não sendo listada a assinatura do mês seguinte (caso já tenha sido comprada) porque não pode ser usada durante o mês corrente. Ver Figura~\ref{fig:menu_consulta_saldo}.
+
+\subsection{Menu Operações de Conta}
+
+Este menu permite ao utilizador verificar as operações efetuadas na sua conta, quer sejam carregamentos da conta como compras de títulos. Ver Figura~\ref{fig:menu_operacoes}.
+
+\subsection{Menu Histórico Validações}
+
+Este menu mostra as validações efetuadas pelo utilizador, tanto em títulos ocasionais como na assinatura mensal, conforme a escolha no menu anterior. Ver Figura~\ref{fig:menu_historico} e Figura~\ref{fig:menu_historico2}.
+
+\subsection{Menu Definições}
+
+Este menu permite alterar os dados pessoais do utilizador. Para além disso permite também fazer \emph{logout} da conta ativa. Ver Figura~\ref{fig:menu_definicoes}.
+
+\subsection{Menu Sobre}
+
+Este menu fornece informação relativa à autoria e desenvolvimento da aplicação MobiPag STCP, bem como a versão atual. Ver Figura~\ref{fig:menu_sobre}.
+
+\subsection{Menu PIN}
+
+Este menu aparece sempre que se inicia a aplicação e permite adicionar uma camada de segurança à aplicação. O PIN do utilizador é definido no registo e pode ser alterado nas Definições. Este método de autenticação surge quando já existe um utilizado com a conta autenticada na aplicação. Para além disso permite também fazer \emph{logout} da conta ativa. Ver Figura~\ref{fig:menu_login_pin}.
+
+\subsection{Menu Login}
+
+Este menu aparece quando não existe nenhuma conta autenticada na aplicação, permitindo efetuar \emph{login} com o conjunto email/palavra-passe ou então efetuar o registo de um novo utilizador. Ver Figura~\ref{fig:menu_login}.
+
+\subsection{Menu Revisor}
+
+Este menu serve para mostrar informação relativa ao título ativo, quando solicitada pelo revisor autorizado. No caso dos títulos ocasionais, esta informação inclui todas as validações efetuadas com o título em questão, contendo a data e hora, paragem e linha de entrada, bem como o número sequencial da validação. Para além disso, contém informação relativa ao título em uso. Ver Figura~\ref{fig:menu_revisor_oc}. No caso das assinaturas, apenas é apresentada a última validação, mas são apresentados alguns dados pessoais do utilizador, visto a assinatura ser de uso pessoal intransmissível. Para além da informação relativa à assinatura, está também presente o nome e Número de Informação Fiscal do utilizador e uma foto tipo passe. Ver Figura~\ref{fig:menu_revisor_as}.
+
+~\\Para acrescentar alguma segurança e fiabilidade a este menu, foi acrescentado um fundo que varia ao longo do tempo. Tendo como objetivo criar um impacto visual imediato, optou-se por utilizar o código ColorADD, seguidamente detalhado.
+
+\subsubsection{ColorADD}
+
+O código ColorADD é uma inovação mundial, criada pelo designer Miguel Neiva, de um código de cores para daltónicos. Este sistema já se encontra em uso em transportes, hospitais, marcas de lápis, tintas ou cerâmicas. É a primeira ferramenta a procurar diminuir os efeitos de um constrangimento pouco visível: o Daltonismo. O Daltonismo, ou a cegueira da cor, é uma limitação que afeta 10\% da população mundial masculina – aproximadamente 350 milhões de pessoas em todo o mundo. Esta limitação, de condição hereditária, é transmitida através do cromossoma X e cria ao seu portador grandes constrangimentos ao nível da integração social e profissional.
+\\Desenvolvido com base nas três cores primárias representadas através de símbolos gráficos, o código ColorADD assenta no conceito de “adição de cores”, permitindo ao daltónico relacionar os símbolos e facilmente identificar toda a paleta. O Branco e o Preto surgem para orientar as tonalidades claras e escuras. O código torna-se num “jogo mental” simples e fácil de memorizar e aplicar em situações do dia-a-dia. \cite{coloradd}
+\\Para uma visualização completa das cores, ver Anexo~\ref{coloradd}.
+
+\subsection{Menu Ajuda}
+
+Este é um menu contextual, fornecendo informação acerca do menu atual. O objetivo é esclarecer, de forma clara, qualquer dúvida que possa surgir durante a utilização da aplicação. Ver Figura~\ref{fig:menu_ajuda}.
+
 \begin{figure}[t]
   \begin{center}
     \leavevmode
-    \includegraphics[scale=0.45]{menu_principal}
+    \includegraphics[scale=0.40]{menu_principal}
     \caption{Menu Principal}
     \label{fig:menu_principal}
   \end{center}
 \end{figure}
-
-\subsection{Menu Validação}
-
-Este menu permite efetuar a validação de um título disponível em saldo, para uma determinada paragem e linha. Através dos serviços de localização do dispositivo móvel (GPS e redes móveis), a aplicação tenta calcular a posição atual do utilizador e listar-lhe as paragens que se encontram mais próximas. Caso não seja possível efetuar a localização do utilizador ou esta se encontre errada, o utilizador pode optar por efetuar uma seleção manual da paragem de entrada. Ver Figura~\ref{fig:menu_validacao}. Após a validação, surge no ecrã uma mensagem de confirmação, indicando a paragem até à qual o utilizador pode viajar com o título que selecionou, tal como se pode ver na Figura~\ref{fig:confirm_validacao}.
 
 \begin{figure}[ht]
 \begin{minipage}[b]{0.45\linewidth}
@@ -260,14 +324,6 @@ Este menu permite efetuar a validação de um título disponível em saldo, para
 \end{minipage}
 \end{figure}
 
-\subsection{Menu Seleção Manual}
-
-Este menu serve para selecionar manualmente a paragem de entrada quando não é possível fazê-lo de forma automática através dos serviços de localização do dispositivo móvel. A sequência de escolha é: Operador, Linha, Paragem. Ver Figura~\ref{fig:menu_manual}.
-
-\subsection{Menu Compra}
-
-Este menu permite ao utilizador iniciar o processo de compra de novos títulos. Para além de apresentar as várias opções de compra, permite também verificar quais os títulos atuais existentes. Deste modo, é fácil verificar se é necessário comprar determinado tipo de título ou se já existe em saldo. Ver Figura~\ref{fig:menu_compra}.
-
 \begin{figure}[ht]
 \begin{minipage}[b]{0.45\linewidth}
 \centering
@@ -283,10 +339,6 @@ Este menu permite ao utilizador iniciar o processo de compra de novos títulos. 
     \label{fig:menu_compra}
 \end{minipage}
 \end{figure}
-
-\subsection{Menu Compra Ocasionais}
-
-Este menu permite ao utilizador comprar títulos ocasionais (títulos de viagem ou Andante 24, conforme a seleção no menu anterior), selecionando o número de zonas pretendido, a quantidade (1, 2, 5, 10+1 grátis) e confirmando os dados da compra no menu seguinte. Ver Figura~\ref{fig:menu_compra_oc} e Figura~\ref{fig:confirm_compra_oc}.
 
 \begin{figure}[ht]
 \begin{minipage}[b]{0.45\linewidth}
@@ -304,10 +356,6 @@ Este menu permite ao utilizador comprar títulos ocasionais (títulos de viagem 
 \end{minipage}
 \end{figure}
 
-\subsection{Menu Compra Assinatura}
-
-Este menu permite ao utilizador comprar uma assinatura mensal, selecionando as zonas pretendidas e confirmando os dados da compra no menu seguinte. Ver Figura~\ref{fig:menu_compra_as} e Figura~\ref{fig:confirm_compra_as}.
-
 \begin{figure}[ht]
 \begin{minipage}[b]{0.45\linewidth}
 \centering
@@ -324,14 +372,6 @@ Este menu permite ao utilizador comprar uma assinatura mensal, selecionando as z
 \end{minipage}
 \end{figure}
 
-\subsection{Menu Consulta}
-
-Este menu é onde o utilizador pode consultar os dados operacionais da sua conta. Para além de consultar o saldo atual de títulos, pode também consultar o histórico de operações realizadas na conta, e também as validações efetuadas com os seus títulos. Ver Figura~\ref{fig:menu_consulta}.
-
-\subsection{Menu Saldo Títulos}
-
-Este menu permite visualizar o saldo atual de títulos. Neste menu são listados todos os títulos disponíveis para uso imediato, não sendo listada a assinatura do mês seguinte (caso já tenha sido comprada) porque não pode ser usada durante o mês corrente. Ver Figura~\ref{fig:menu_consulta_saldo}.
-
 \begin{figure}[ht]
 \begin{minipage}[b]{0.45\linewidth}
 \centering
@@ -347,14 +387,6 @@ Este menu permite visualizar o saldo atual de títulos. Neste menu são listados
     \label{fig:menu_consulta_saldo}
 \end{minipage}
 \end{figure}
-
-\subsection{Menu Operações de Conta}
-
-Este menu permite ao utilizador verificar as operações efetuadas na sua conta, quer sejam carregamentos da conta como compras de títulos. Ver Figura~\ref{fig:menu_operacoes}.
-
-\subsection{Menu Histórico Validações}
-
-Este menu mostra as validações efetuadas pelo utilizador, tanto em títulos ocasionais como na assinatura mensal, conforme a escolha no menu anterior. Ver Figura~\ref{fig:menu_historico} e Figura~\ref{fig:menu_historico2}.
 
 \begin{figure}[ht]
 \begin{minipage}[b]{0.31\linewidth}
@@ -379,14 +411,6 @@ Este menu mostra as validações efetuadas pelo utilizador, tanto em títulos oc
 \end{minipage}
 \end{figure}
 
-\subsection{Menu Definições}
-
-Este menu permite alterar os dados pessoais do utilizador. Para além disso permite também fazer \emph{logout} da conta ativa. Ver Figura~\ref{fig:menu_definicoes}.
-
-\subsection{Menu Sobre}
-
-Este menu fornece informação relativa à autoria e desenvolvimento da aplicação MobiPag STCP, bem como a versão atual. Ver Figura~\ref{fig:menu_sobre}.
-
 \begin{figure}[ht]
 \begin{minipage}[b]{0.45\linewidth}
 \centering
@@ -402,14 +426,6 @@ Este menu fornece informação relativa à autoria e desenvolvimento da aplicaç
     \label{fig:menu_sobre}
 \end{minipage}
 \end{figure}
-
-\subsection{Menu PIN}
-
-Este menu aparece sempre que se inicia a aplicação e permite adicionar uma camada de segurança à aplicação. O PIN do utilizador é definido no registo e pode ser alterado nas Definições. Este método de autenticação surge quando já existe um utilizado com a conta autenticada na aplicação. Para além disso permite também fazer \emph{logout} da conta ativa. Ver Figura~\ref{fig:menu_login_pin}.
-
-\subsection{Menu Login}
-
-Este menu aparece quando não existe nenhuma conta autenticada na aplicação, permitindo efetuar \emph{login} com o conjunto email/palavra-passe ou então efetuar o registo de um novo utilizador. Ver Figura~\ref{fig:menu_login}.
 
 \begin{figure}[ht]
 \begin{minipage}[b]{0.45\linewidth}
@@ -427,12 +443,6 @@ Este menu aparece quando não existe nenhuma conta autenticada na aplicação, p
 \end{minipage}
 \end{figure}
 
-\subsection{Menu Revisor}
-
-Este menu serve para mostrar informação relativa ao título ativo, quando solicitada pelo revisor autorizado. No caso dos títulos ocasionais, esta informação inclui todas as validações efetuadas com o título em questão, contendo a data e hora, paragem e linha de entrada, bem como o número sequencial da validação. Para além disso, contém informação relativa ao título em uso. Ver Figura~\ref{fig:menu_revisor_oc}. No caso das assinaturas, apenas é apresentada a última validação, mas são apresentados alguns dados pessoais do utilizador, visto a assinatura ser de uso pessoal intransmissível. Para além da informação relativa à assinatura, está também presente o nome e Número de Informação Fiscal do utilizador e uma foto tipo passe. Ver Figura~\ref{fig:menu_revisor_as}.
-
-~\\Para acrescentar alguma segurança e fiabilidade a este menu, foi acrescentado um fundo que varia ao longo do tempo. Tendo como objetivo criar um impacto visual imediato, optou-se por utilizar o código ColorADD, seguidamente detalhado.
-
 \begin{figure}[ht]
 \begin{minipage}[b]{0.45\linewidth}
 \centering
@@ -449,20 +459,10 @@ Este menu serve para mostrar informação relativa ao título ativo, quando soli
 \end{minipage}
 \end{figure}
 
-\subsubsection{ColorADD}
-
-O código ColorADD é uma inovação mundial, criada pelo designer Miguel Neiva, de um código de cores para daltónicos. Este sistema já se encontra em uso em transportes, hospitais, marcas de lápis, tintas ou cerâmicas. É a primeira ferramenta a procurar diminuir os efeitos de um constrangimento pouco visível: o Daltonismo. O Daltonismo, ou a cegueira da cor, é uma limitação que afeta 10\% da população mundial masculina – aproximadamente 350 milhões de pessoas em todo o mundo. Esta limitação, de condição hereditária, é transmitida através do cromossoma X e cria ao seu portador grandes constrangimentos ao nível da integração social e profissional.
-\\Desenvolvido com base nas três cores primárias representadas através de símbolos gráficos, o código ColorADD assenta no conceito de “adição de cores”, permitindo ao daltónico relacionar os símbolos e facilmente identificar toda a paleta. O Branco e o Preto surgem para orientar as tonalidades claras e escuras. O código torna-se num “jogo mental” simples e fácil de memorizar e aplicar em situações do dia-a-dia. \cite{coloradd}
-\\Para uma visualização completa das cores, ver Anexo~\ref{coloradd}.
-
-\subsection{Menu Ajuda}
-
-Este é um menu contextual, fornecendo informação acerca do menu atual. O objetivo é esclarecer, de forma clara, qualquer dúvida que possa surgir durante a utilização da aplicação. Ver Figura~\ref{fig:menu_ajuda}.
-
 \begin{figure}[t]
   \begin{center}
     \leavevmode
-    \includegraphics[scale=0.45]{menu_ajuda}
+    \includegraphics[scale=0.40]{menu_ajuda}
     \caption{Menu Ajuda}
     \label{fig:menu_ajuda}
   \end{center}

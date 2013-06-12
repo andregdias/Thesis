@@ -2,6 +2,65 @@
 
 \section*{}
 
-Neste capítulo é apresentado o plano de trabalho já realizado, que culmina com a elaboração deste relatório, e também o planeamento que será adotado a partir deste momento.
+Neste capítulo é apresentada a fase de testes, especificando as suas características e algumas conclusões obtidas.
 
 \section{Planeamento de Testes}
+
+Para efetuar os testes da aplicação, decidiu-se que estes seriam feitos em ambiente real, com utilizadores reais. Estes testes foram realizados no decorrer do quotidiano dos utilizadores, sendo feitos em paralelo com a utilização normal dos transportes públicos por eles realizada. Pretendeu-se com estes testes avaliar a relevância e perceção do conceito de bilhética móvel aplicado aos transportes públicos bem como analisar a usabilidade e consistência da aplicação de bilhética móvel desenvolvida.
+\\Os testes decorreram durante o período de 14 dias (duas semanas completas), entre os dias 5 e 18 de junho de 2013. O processo de seleção foi levado a cabo pela STCP, tentando obter o máximo de heterogeneidade em termos de vários fatores demográficos (género, idade, ocupação). Foram selecionados inicialmente 37 utilizadores para a realização dos testes.\cite{stcp}
+\\As condições de participação eram as seguintes:
+
+\begin{itemize}
+\item Possuir telemóvel com sistema operativo Android com versão 2.2 (Froyo) ou superior;
+\item Cumprir o período de testes delineado, do início ao fim;
+\item Carregar normalmente os cartões Andante e validá-los assim que se dê início a uma viagem. Em simultâneo, comprar os mesmos bilhetes através do telemóvel e validá-los antes do início de cada viagem. Isto significa que os utilizadores deverão utilizar os dois sistemas (cartão Andante e telemóvel) ao mesmo tempo;
+\item Os encargos com a compra de bilhetes através do sistema Andante ficam a cargo do utilizador. Relativamente à compra de bilhetes com o telemóvel não haverá qualquer encargo adicional pois ser-lhes-á fornecida uma conta fictícia com  \euro 70 para utilizarem em títulos de viagem;
+\item Cada utilizador deverá efetuar pelo menos 5 validações por semana. As validações do telemóvel deverão coincidir com as validações do cartão Andante que estiverem a utilizar, em termos de data, hora e local;
+\item Caso os utilizadores sejam fiscalizados pelos Fiscais da STCP deverão mostrar o bilhete Andante e o telemóvel. Se o bilhete Andante não estiver válido para a viagem em questão, os Fiscais efetuarão as diligências normais;
+\item Os utilizadores deverão estar disponíveis para responderem a um inquérito inicial e a uma entrevista no final dos testes.
+\end{itemize}
+
+\section{Inquérito Inicial}
+
+Com a realização do inquérito inicial pretendeu-se perceber o perfil dos utilizadores, a nível de utilização de dispositivos móveis, utilização de transportes públicos e confiança em pagamentos móveis. Dos 37 utilizadores selecionados, 26 responderam ao inquérito inicial, sendo 10 do sexo feminino e 16 do sexo masculino e com idades compreendidas entre os 21 e 68 anos e idade média a rondar os 34 anos.
+\\A maioria dos utilizadores possuem um \emph{smartphone} há 6 meses ou mais, sendo que apenas 3 o possuem há menos de 6 meses. A partir desta informação podemos concluir que são pessoas que têm alguma familiaridade com o uso e funcionamento dos \emph{smartphones}, facilitando a adaptação à aplicação.
+\\Em relação ao tipo de aplicações que utilizam com mais frequência, as redes sociais surgem, sem surpresa, em primeiro plano (21), sendo seguidas por transportes (13), jogos (13), música (16), navegação (19), fotos e vídeo (16) e meteorologia (17) em níveis semelhantes. Sendo que a maioria destas aplicações requer acesso à Internet, não se mostrou problemática a necessidade de aceder à Internet por parte da aplicação, visto que a maioria dos utilizadores possui plano de dados nos tarifários que utilizam.
+\\São todos utilizadores frequentes dos transportes públicos e na maior parte das vezes (92\%) realizam viagens urbanas, sendo o autocarro o meio de transporte mais utilizado por todos. Cerca de metade dos utilizadores efetuam transbordo intermodal (autocarro-metro; autocarro-comboio; etc.).
+\\A maior parte dos utilizadores compra os seus títulos nas máquinas de venda automática (18) ou através dos agentes Payshop e CTT (11) e rede multibanco (9) e utilizam tanto cartão multibanco (15) como dinheiro (11) para efetuar o pagamento. A maioria (23) compra assinatura mensal, devido ao facto de que com uma utilização frequente se apresenta como uma solução mais barata e também por possuírem descontos sociais.
+\\Os serviços adicionais que mais utilizam são a consulta de horários (25) e a consulta de mapas da rede de transportes (15), sendo o acesso a esta informação feito maioritariamente através da página \web dos operadores (23) mas também nas paragens e estações (18).
+
+~\\Em geral, são poucas as perdas ou extravios dos cartões Andante e é ainda complicado, em algumas situações, compreender o número de zonas necessárias para efetuar determinada viagem. Apesar de considerarem fácil a compra de títulos nas máquinas de venda automática, é frequente não terem dinheiro trocado para efetuar a compra dos títulos, sendo obrigados a realizar o pagamento com cartão multibanco. A necessidade de terem de se deslocar a uma loja física para renovar a assinatura mensal é vista com algum desagrado porque muitas vezes têm de fazer essa deslocação propositadamente, para além do inconveniente das filas existentes no início/final de cada mês.
+\\O sistema atual de validação não apresenta qualquer dificuldade e a capacidade de poder, a qualquer instante, saber o tempo restante do título de viagem atual seria uma mais-valia para o sistema Andante. Uma outra funcionalidade que consideram bastante útil é saber qual a paragem até à qual podem viajar com o título atual. Para além disso, a possibilidade de poderem carregar consigo títulos de diferentes tipologias (Z2, Z3, etc.) é vista com bons olhos, pois o sistema atual (ClickZ) não funciona na perfeição. Atualmente, é possível carregar diferentes tipologias no cartão mas é validado sempre o mais recente, isto é, um cartão com títulos Z2, após a compra de títulos Z3, apenas se pode voltar a usar os títulos Z2 quando todos os títulos Z3 tiverem sido gastos. Outras funcionalidades consideradas úteis seriam o acesso ao histórico de viagens e de compras de títulos.
+\\Um dado importante, já referenciado noutros estudos, é o facto de ser bastante mais provável deixarem o cartão Andante em casa do que o telemóvel.
+
+~\\Em relação à compra de títulos de viagem através do telemóvel, bem como à sua utilização quando o serviço estiver disponível, os utilizadores mostram-se bastante recetivos, considerando este método de pagamento útil e seguro, para além de não interferir com a utilização habitual do telemóvel nem com os seus estilos de vida. No entanto, têm algumas reticências no que toca aos problemas que possam surgir no caso de ficarem sem rede ou sem bateria, bem como falhas da aplicação e demonstram alguma preocupação com o facto de poderem cometer erros na compra dos títulos.
+
+~\\À semelhança da compra, em relação à validação de títulos de viagem através do telemóvel, bem como à sua utilização quando o serviço estiver disponível, os utilizadores mostram-se bastante recetivos, considerando este método de validação útil e seguro, para além de não interferir com a utilização habitual do telemóvel nem com os seus estilos de vida. No entanto, têm algumas reticências no que toca aos problemas que possam surgir no caso de ficarem sem rede ou sem bateria, bem como falhas que possam surgir na aplicação.
+
+~\\As principais vantagens apontadas ao sistema de bilhética móvel são o facto de poderem efetuar a compra de títulos em qualquer lugar, sem necessidade de deslocação a uma loja; a rapidez, comodidade e facilidade do sistema; não ter de carregar cartões físicos; não perder um veículo por ter de ir validar o título ao validador (no caso do Metro); não ter de esperar em filas para carregar a assinatura mensal no início/fim de cada mês; poder comprar títulos na hora, quando as lojas se encontram encerradas, por exemplo; não correr o risco de no ato de compra não possuir dinheiro para o fazer; poder gerir o saldo de títulos e utilizar em cada viagem o mais adequado.
+
+~\\Por outro lado, as principais desvantagens encontradas são o facto de poderem ficar sem bateria; haver falhas ou indisponibilidade do serviço; falta de rede móvel inviabilizar as operações.
+\section{Grupo Facebook}
+
+Para facilitar a comunicação com os participantes no teste da aplicação foi criado um grupo na rede social Facebook, onde os utilizadores foram incentivados a partilhar dúvidas e sugestões que fossem aparecendo ao longo dos testes. A ideia era que o grupo do Facebook fosse utilizado como uma comunidade ativa e participativa, através da qual todos se pudessem manifestar, expressando as suas dúvidas, colocando questões relevantes para os testes da aplicação ou apresentando sugestões de melhoria.
+\\Este método foi um sucesso, com uma participação bastante ativa por parte da maioria dos utilizadores, não só colocando questões e sugestões como também interagindo entre si, procurando solucionar problemas em comum ou ajudando em dificuldades pontuais. Para além de ter permitido obter \emph{feedback} em tempo real, criou um ambiente aberto e descontraído entre os participantes, levando a que estes não tivessem qualquer problema em partilhar as suas opiniões. O facto de ser uma rede social familiar e onde as pessoas passam grande parte do seu tempo, fez com que não houvesse dificuldade na utilização do grupo.
+\\Em futuras fases de teste, será sem dúvida uma metodologia a repetir dada a facilidade de utilização e o impacto positivo criado.
+
+\section{Sugestões}
+
+Em termos de usabilidade, estes testes foram bastante úteis para perceber onde estavam as falhas e onde se pode melhorar. Algumas das sugestões apontadas são:
+\begin{itemize}
+\item Incluir os descontos sociais na compra da assinatura mensal;
+\item Utilizar o Google Maps para melhor visualização das paragens;
+\item Poder guardar um histórico de paragens;
+\item Poder selecionar uma fotografia armazenada no telemóvel, removendo a necessidade de tirar a fotografia no momento do registo ou nas definições;
+\item Verificar os campos sensíveis através de dupla verificação, de modo a evitar erros de introdução;
+\item Traduzir a aplicação para outros idiomas (Inglês, Francês, etc.);
+\item Listar as paragens por diferentes ordens (alfabética ou por sentido da linha);
+\item Poder selecionar paragens favoritas;
+\item Poder recuperar ou alterar a password;
+\item Impor um limite de tentativas de autenticação via PIN;
+\item Pesquisar paragens por código SMS ou nome;
+\item Tornar o fundo do Menu Revisor mais legível;
+\item Adicionar o destino na escolha das linhas.
+\end{itemize}
