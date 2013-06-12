@@ -46,9 +46,27 @@ Para facilitar a comunicação com os participantes no teste da aplicação foi 
 \\Este método foi um sucesso, com uma participação bastante ativa por parte da maioria dos utilizadores, não só colocando questões e sugestões como também interagindo entre si, procurando solucionar problemas em comum ou ajudando em dificuldades pontuais. Para além de ter permitido obter \emph{feedback} em tempo real, criou um ambiente aberto e descontraído entre os participantes, levando a que estes não tivessem qualquer problema em partilhar as suas opiniões. O facto de ser uma rede social familiar e onde as pessoas passam grande parte do seu tempo, fez com que não houvesse dificuldade na utilização do grupo.
 \\Em futuras fases de teste, será sem dúvida uma metodologia a repetir dada a facilidade de utilização e o impacto positivo criado.
 
+\section{Testes MobiPag STCP}
+
+Dos 37 utilizadores selecionados, 26 deram início ao teste da aplicação MobiPag STCP nos seus dispositivos, tendo a mesma sido disponibilizada via Google Play, em modo de teste (apenas utilizadores autorizados podem descarregar e instalar a aplicação). O processo de instalação decorreu sem problemas, havendo apenas alguma confusão devido ao facto de a aplicação não poder ser instalada diretamente da aplicação Play Store, sendo necessária uma aceitação prévia por parte do utilizador.
+\\A aplicação foi disponibilizada dois dias antes do início dos testes, o que permitiu que os utilizadores efetuassem o registo e ambientação à aplicação de forma gradual e esclarecendo possíveis dúvidas. Devido a este facto, no dia em que os testes tiveram início, os utilizadores já estavam familiarizados com a aplicação e já sabiam como proceder nas várias ações a realizar.
+
+~\\O procedimento do teste era simples: replicar no dispositivo móvel as ações que efetuam no dia-a-dia. Comprar os mesmos títulos na aplicação que compram no sistema atual e, aquando da validação dos mesmos, efetuar também a sua validação no dispositivo móvel. Como se trata ainda de um protótipo, os títulos utilizados na aplicação são virtuais, não tendo qualquer valor legal, sendo por isso necessário validar obrigatoriamente os títulos reais, sob pena de incorrer em multa.
+
+%%%%%%% atualizar número de validações %%%%%%%
+~\\Durante o período de testes, os utilizadores realizaram cerca de 600 validações, em cerca de 170 paragens diferentes e cerca de 90 trajetos diferentes. Foram compradas 21 assinaturas mensais e realizadas cerca de 35 compras de um ou mais títulos de viagem ocasionais de várias tipologias. Apesar de a amostra ser pequena, foi possível obter algumas conclusões, nomeadamente a nível de alterações ao percurso habitual, que necessitam de ser previstas pela aplicação; paragens que não estão assinaladas na base de dados que suporta a aplicação; veículos que, por estarem a deslocar-se de/para a recolha, não possuem indicação do número da linha; paragens onde passam os dois sentidos da linha e portanto ser necessário especial cuidado na validação, sob pena de se validar no sentido contrário.
+
+~\\Os utilizadores conseguiram realizar todas as operações sem dificuldade, embora o processo de validação tenha sido o mais apontado como necessário a melhorar. 
+\\Em primeiro lugar, verificou-se que a localização através do GPS demora algum tempo e nem sempre as condições são as melhores. Já a localização através das redes móveis provou, em muitos casos, ser pouco precisa. Isto levou a que na maior parte dos casos fosse necessário recorrer à seleção manual das paragens (que estava pensada para ser utilizada apenas em casos pontuais), fazendo com que fosse necessário um passo extra no processo de validação.
+\\O facto de não haver um histórico ou listagem de favoritos de paragens, obrigou a que de cada vez que quisessem efetuar uma validação, os utilizadores fossem obrigados a percorrer a lista de operadores, seguidamente a lista de linhas e depois então a paragem que pretendiam. Isto consome, obviamente, tempo num processo que se pretende o mais rápido possível.
+\\Em algumas zonas onde a densidade de paragens é maior, nem sempre foi fácil para o utilizador identificar a paragem onde se encontrava. Em alguns casos de chegada à paragem ao mesmo tempo do que o veículo, não foi possível visualizar o código SMS da paragem e identificá-la de forma inequívoca.
+\\Um outro fator apontado foi o de atualmente não ser necessária nenhuma operação, basta encostar o cartão no validador e o título está ativado. Posto isto, todo o processo de validação no dispositivo móvel deve ser o mais simples possível e com menor número de interações possível. Alguns utilizadores sugeriram repensar o método de validação, recorrendo, por exemplo, a QR Codes ou NFC nos veículos ou paragens.
+
+~\\No que toca à fiscalização, não ocorreu nenhum problema, os fiscais estavam informados da ocorrência dos testes, fiscalizaram alguns dos utilizadores e obtiveram a informação necessária. Nesta fase de testes, a fiscalização é meramente visual, o que pode levar a alguns casos de fraude, sendo no futuro necessário acrescentar alguma segurança, por exemplo, dotando os fiscais com dispositivos de leitura e comunicação com o servidor.
+
 \section{Sugestões}
 
-Em termos de usabilidade, estes testes foram bastante úteis para perceber onde estavam as falhas e onde se pode melhorar. Algumas das sugestões apontadas são:
+Em termos de usabilidade, estes testes foram bastante úteis para perceber onde estavam as falhas e onde se pode melhorar. Os utilizadores foram bastante proativos e partilharam bastantes sugestões de funcionalidades ou melhorias que gostariam de ver implementadas. Algumas das sugestões apontadas são:
 \begin{itemize}
 \item Incluir os descontos sociais na compra da assinatura mensal;
 \item Utilizar o Google Maps para melhor visualização das paragens;
@@ -62,5 +80,12 @@ Em termos de usabilidade, estes testes foram bastante úteis para perceber onde 
 \item Impor um limite de tentativas de autenticação via PIN;
 \item Pesquisar paragens por código SMS ou nome;
 \item Tornar o fundo do Menu Revisor mais legível;
-\item Adicionar o destino na escolha das linhas.
+\item Adicionar o destino na escolha das linhas;
+\item Visualizar graficamente as zonas da assinatura no processo de compra;
+\item Criar uma alternativa de fiscalização para quando o dispositivo fica sem bateria.
+\item Facilitar o processo de validação através de QR Codes ou NFC;
+\item Fornecer informação de horários, disponível na aplicação MOVE-ME;
+\item Poder, de forma remota, fazer \emph{logout} da aplicação;
+\item Criar vários parâmetros de personalização, nas definições da aplicação;
+\item Possibilitar a renovação da assinatura mensal, não sendo necessário selecionar novamente as zonas incluídas na assinatura.
 \end{itemize}
