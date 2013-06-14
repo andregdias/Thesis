@@ -305,13 +305,18 @@ public class TicketValidationActivity extends Activity {
                 Boolean signature = j.getBoolean("Signature");
 
                 String date = j.getString("TimeStamp");
-                long mili = Utils.dateFromJSON(date);
-                date = Utils.parseDate(new Date(mili), true);
+                date = Utils.parseDate(date, true);
 
                 if (signature && s != null && sig != 0) {
                     getSigValidations(j, date);
                 } else if (sig == 0 && !signature) {
                     ticketId = getOccValidations(ticketId, i, j, date);
+                }
+
+                switch (i){
+                    case 0:
+                    case 1:
+                        addStop(j.getString("StopCode"),-1);
                 }
             }
         }
@@ -462,8 +467,10 @@ public class TicketValidationActivity extends Activity {
         private long addStop(String StopCode, long sid) {
             datasource8.open();
             Stop stop = datasource8.getStopByCodsms(StopCode);
-            if (stop != null)
+            if (stop != null){
                 sid = stop.getId();
+                datasource8.UpdateStop(stop.getCodsms());
+            }
             else {
                 JSONArray serviceResult5 = WebServiceHandler.RequestGETArray(getText(R.string.SERVER).toString()+getText(R.string.STOPWORDURL) + "?word=" + StopCode + "&username=MOBIPAG");
 

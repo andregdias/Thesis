@@ -66,6 +66,7 @@ class SQLiteHelper extends SQLiteOpenHelper {
     public static final String COLUMN_OPERATOR = "operator";
     public static final String COLUMN_COORDX = "coordx";
     public static final String COLUMN_COORDY = "coordy";
+    public static final String COLUMN_HISTORY = "history";
     //tabela Linhas
     public static final String TABLE_LINES = "lines";
     public static final String COLUMN_ID_LINE = "_id";
@@ -88,7 +89,7 @@ class SQLiteHelper extends SQLiteOpenHelper {
     public static final String COLUMN_AMOUNT = "amount";
     public static final String COLUMN_DETAILS2 = "details";
     private static final String DATABASE_NAME = "movepag.db";
-    private static final int DATABASE_VERSION = 25;
+    private static final int DATABASE_VERSION = 26;
     private static final String TABLE_PRICES_CREATE = "create table " + TABLE_PRICES +
             "(" + COLUMN_TYPE + " text primary key, " +
             COLUMN_PRICE_OCCASIONAL + " real not null, " +
@@ -147,6 +148,7 @@ class SQLiteHelper extends SQLiteOpenHelper {
             COLUMN_OPERATOR + " text not null, " +
             COLUMN_COORDX + " real not null, " +
             COLUMN_COORDY + " real not null, " +
+            COLUMN_HISTORY + " integer, " +
             "UNIQUE (" + COLUMN_CODSMS + "));";
     private static final String TABLE_LINES_CREATE = "create table " + TABLE_LINES +
             "(" + COLUMN_ID_LINE + " integer primary key autoincrement, " +

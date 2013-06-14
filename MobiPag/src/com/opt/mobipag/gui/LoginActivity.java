@@ -212,8 +212,7 @@ public class LoginActivity extends Activity {
                             if (dob.equals("null"))
                                 dob = null;
                             else {
-                                long mili = Utils.dateFromJSON(dob);
-                                dob = Utils.parseDate(new Date(mili), false);
+                                dob = Utils.parseDate(dob, false);
                             }
                             email = o.getString("Email");
                             maxAmount = o.getInt("MaxAmount");

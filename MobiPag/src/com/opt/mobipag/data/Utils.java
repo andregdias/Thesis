@@ -7,6 +7,7 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Base64;
+import android.view.Display;
 import android.view.Gravity;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.TableLayout;
@@ -66,17 +67,13 @@ public class Utils {
         return t;
     }
 
-    public static long dateFromJSON(String dob) {
+    public static String parseDate(String dob, Boolean full) {
         int pos = dob.indexOf("+");
-        return Long.parseLong(dob.substring(6, pos));
-    }
+        Date date = new Date(Long.parseLong(dob.substring(6, pos)));
 
-    public static String parseDate(Date date, Boolean full) {
         int y = date.getYear() + 1900;
         int m = date.getMonth() + 1;
         int d = date.getDate();
-        if (date.getTime() < 0)
-            d++;
         int h = date.getHours();
         int min = date.getMinutes();
         String dt = y + "/";
@@ -96,6 +93,30 @@ public class Utils {
         }
 
         return dt;
+    }
+
+    public static boolean bissexto(int theYear) {
+
+        if (theYear < 100) {
+            if (theYear > 40) {
+                theYear = theYear + 1900;
+            } else {
+                theYear = theYear + 2000;
+            }
+        }
+
+        if (theYear % 4 == 0) {
+            if (theYear % 100 != 0) {
+                return true;
+
+            } else if (theYear % 400 == 0) {
+                return true;
+            } else {
+                return false ;
+            }
+        } else {
+            return false ;
+        }
     }
 
     public static String currentDate() {
@@ -146,7 +167,7 @@ public class Utils {
         return (int) (date.getTime() - val.getTime()) / (1000 * 60);
     }
 
-    public static void populateTable(User user, SignatureDataSource datasource, OccasionalDataSource datasource2, TableLayout table, Context c) {
+    public static void populateTable(User user, SignatureDataSource datasource, OccasionalDataSource datasource2, TableLayout table, Context c, int width) {
         final Signature s = datasource.getSignature(user.getId(), true);
 
         int[] ocasional = new int[13];
@@ -191,6 +212,7 @@ public class Utils {
 
             t.setText(c.getText(R.string.buy_signature));
             t2.setText(s.getListZonas());
+            t2.setMaxWidth((int) Math.round(width * 0.50));
 
             r.addView(t);
             r.addView(t2);

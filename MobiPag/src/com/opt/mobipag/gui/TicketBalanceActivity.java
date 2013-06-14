@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TableLayout;
@@ -204,7 +205,9 @@ public class TicketBalanceActivity extends Activity {
                 datasource.open();
                 datasource2.open();
                 TableLayout table = (TableLayout) findViewById(R.id.tableTickets);
-                Utils.populateTable(user, datasource, datasource2, table, c);
+                Display display = getWindowManager().getDefaultDisplay();
+                int width = display.getWidth();
+                Utils.populateTable(user, datasource, datasource2, table, c, width);
                 datasource.close();
                 datasource2.close();
             }

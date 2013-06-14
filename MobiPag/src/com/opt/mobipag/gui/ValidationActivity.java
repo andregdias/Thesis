@@ -64,8 +64,9 @@ public class ValidationActivity extends Activity {
     private ArrayAdapter<String> adapterLinhas;
     private ArrayAdapter<String> adapter2;
     private ArrayAdapter<String> adapter3;
-    private String paragem;
-    private String linha = null;
+    private String paragem = "";
+    private String linha = "";
+    private String operador = "";
     private Signature s;
     private GPSTracker gpstracker;
 
@@ -309,6 +310,7 @@ public class ValidationActivity extends Activity {
                 String[] ss = s.split("%%");
                 paragem = ss[0];
                 linha = ss[1];
+                operador = ss[2];
 
                 dialog.show();
                 new RetrieveStopsByWord().execute(paragem);
@@ -394,8 +396,7 @@ public class ValidationActivity extends Activity {
                                 Boolean signature = j.getBoolean("Signature");
 
                                 String date = j.getString("TimeStamp");
-                                long mili = Utils.dateFromJSON(date);
-                                date = Utils.parseDate(new Date(mili), true);
+                                date = Utils.parseDate(date, true);
 
                                 if (signature)
                                     break;
@@ -609,8 +610,10 @@ public class ValidationActivity extends Activity {
         private long addStop(String StopCode, long sid) {
             datasource6.open();
             Stop stop = datasource6.getStopByCodsms(StopCode);
-            if (stop != null)
+            if (stop != null){
                 sid = stop.getId();
+                datasource6.UpdateStop(stop.getCodsms());
+            }
             else {
                 JSONArray serviceResult5 = WebServiceHandler.RequestGETArray(getText(R.string.SERVER).toString()+getText(R.string.STOPWORDURL) + "?word=" + StopCode + "&username=MOBIPAG");
 
@@ -855,6 +858,11 @@ public class ValidationActivity extends Activity {
                 stops.clear();
                 paragens.clear();
                 paragens2.clear();
+                datasource6.open();
+                Stop last = datasource6.getLastStop();
+                Stop second = datasource6.getSecondLastStop();
+                datasource6.close();
+
                 if (serviceResult != null) {
                     for (int i = 0; i < serviceResult.length(); i++) {
                         try {
@@ -879,13 +887,36 @@ public class ValidationActivity extends Activity {
                     });
 
                     for (Stop s : stops) {
-                        String[] cod = s.getCodsms().split("_");
-                        String name = s.getNome();
+                        if((last != null && !s.getCodsms().equals(last.getCodsms())) && (second!=null && !s.getCodsms().equals(second.getCodsms()))){
+                            String[] cod = s.getCodsms().split("_");
+                            String name = s.getNome();
+                            if (cod.length > 1)
+                                name += " [" + cod[1] + "]";
+                            name += "\n" + s.getOperador();
+                            paragens.add(name);
+                            paragens2.add(s.getCodsms());
+                        }
+                    }
+                }
+                if(last!=null){
+                    stops.add(0,last);
+                    String[] cod = last.getCodsms().split("_");
+                    String name = last.getNome();
+                    if (cod.length > 1)
+                        name += " [" + cod[1] + "]";
+                    name += "\n" + last.getOperador();
+                    paragens.add(0,name);
+                    paragens2.add(0,last.getCodsms());
+
+                    if(second!=null){
+                        stops.add(1,second);
+                        cod = second.getCodsms().split("_");
+                        name = second.getNome();
                         if (cod.length > 1)
                             name += " [" + cod[1] + "]";
-                        name += "\n" + s.getOperador();
-                        paragens.add(name);
-                        paragens2.add(s.getCodsms());
+                        name += "\n" + second.getOperador();
+                        paragens.add(1,name);
+                        paragens2.add(1,second.getCodsms());
                     }
                 }
                 paragens.add(getText(R.string.other).toString());
@@ -935,7 +966,8 @@ public class ValidationActivity extends Activity {
                 for (int i = 0; i < serviceResult.length(); i++) {
                     try {
                         JSONObject j = (JSONObject) serviceResult.get(i);
-                        stops.add(new Stop(-1, j.getString("name"), j.getString("code"), j.getString("provider"), j.getDouble("coordX"), j.getDouble("coordY")));
+                        if(j.getString("provider").equals(operador) && j.getString("code").equals(paragem))
+                            stops.add(new Stop(-1, j.getString("name"), j.getString("code"), j.getString("provider"), j.getDouble("coordX"), j.getDouble("coordY")));
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }

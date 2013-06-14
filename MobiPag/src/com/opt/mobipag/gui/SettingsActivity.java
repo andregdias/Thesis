@@ -372,8 +372,7 @@ public class SettingsActivity extends FragmentActivity implements OnDateSetListe
                 if (birthDate.equals("null"))
                     birthDate = null;
                 else {
-                    long mili = Utils.dateFromJSON(birthDate);
-                    birthDate = Utils.parseDate(new Date(mili), false);
+                    birthDate = Utils.parseDate(birthDate, false);
                 }
                 email = o.getString("Email");
                 maxAmount = o.getInt("MaxAmount");

@@ -259,19 +259,17 @@ public class AccountMovementsActivity extends Activity {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-                long mili = Utils.dateFromJSON(date);
-                Date d = new Date(mili);
                 if (reason.contains("BuySignature")) {
-                    buySigMovement(u, amount, reason, d);
+                    buySigMovement(u, amount, reason, date);
                 } else if (reason.contains("BuyTickets")) {
-                    buyOccMovements(u, amount, reason, d);
+                    buyOccMovements(u, amount, reason, date);
                 } else if (reason.contains("AddMoney")) {
-                    datasource2.createHist(u.getId(), Utils.parseDate(d, true), amount, "Carregamento de Conta");
+                    datasource2.createHist(u.getId(), Utils.parseDate(date, true), amount, "Carregamento de Conta");
                 }
             }
         }
 
-        private void buyOccMovements(User u, double amount, String reason, Date d) {
+        private void buyOccMovements(User u, double amount, String reason, String d) {
             String[] ss = reason.split(" ");
             String n = ss[1];
             String z = ss[3];
@@ -284,7 +282,7 @@ public class AccountMovementsActivity extends Activity {
             }
         }
 
-        private void buySigMovement(User u, double amount, String reason, Date d) {
+        private void buySigMovement(User u, double amount, String reason, String d) {
             String[] rr = reason.substring(13).split("\\*");
             String zone = rr[0].substring(0, rr[0].length() - 1);
 

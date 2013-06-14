@@ -7,7 +7,7 @@
 
     <string name="stop_radius">80</string>
     <integer name="revisor_background_alpha">60</integer>
-    <bool name="coloradd">true</bool>
+    <bool name="coloradd">false</bool>
 
     <string name="SERVERMP">http://move-me.mobi:35004/MobiPag/MobiPagService.svc/</string>
     <string name="SERVER">http://move-me.mobi:35004/MobileProxy/MobileService.svc/</string>

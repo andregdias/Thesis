@@ -39,6 +39,7 @@ public class ManualStopSelector extends Activity {
     private ProgressDialog dialog;
     private String paragem = "";
     private String linha = "";
+    private String operador = "";
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,12 +76,13 @@ public class ManualStopSelector extends Activity {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                 dialog.show();
+                operador = operadores.get(position);
                 new RetrieveLines().execute(operadores.get(position));
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> arg0) {
-
+                operador = operadores.get(spOperador.getSelectedItemPosition());
             }
         });
 
@@ -121,7 +123,7 @@ public class ManualStopSelector extends Activity {
         b_Confirmar.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String s = paragem + "%%" + linha;
+                String s = paragem + "%%" + linha + "%%" + operador;
                 Intent i = new Intent(s);
                 setResult(1, i);
                 finish();

@@ -75,7 +75,7 @@ public class SignatureDataSource {
                 " AND " + SQLiteHelper.TABLE_TICKETS + "." + SQLiteHelper.COLUMN_DETAILS + " = '" + date + "'", null);
         Signature s = null;
 
-        if (c.moveToFirst()) {
+        if (c.moveToLast()) {
             ArrayList<Validation> validacoes = new ArrayList<Validation>();
             Cursor cursor2 = database.query(SQLiteHelper.TABLE_VALIDATIONS, null, SQLiteHelper.COLUMN_IDTICKET + " =?", new String[]{String.valueOf(c.getInt(0))}, null, null, SQLiteHelper.COLUMN_IDVALIDATION + " DESC");
             cursor2.moveToFirst();
