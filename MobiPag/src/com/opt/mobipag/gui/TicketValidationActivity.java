@@ -133,7 +133,7 @@ public class TicketValidationActivity extends Activity {
         t2.setMaxWidth((int) Math.round(width * 0.35));
 
         Date d = new Date();
-        t2.setText(getText(R.string.assinatura).subSequence(0, getText(R.string.assinatura).length() - 1) + "\n" + getResources().getStringArray(R.array.meses)[d.getMonth()] + "\n" + s.getListZonas() + "\nValidações: " + s.getNumvalidacoes());
+        t2.setText(getText(R.string.assinatura).subSequence(0, getText(R.string.assinatura).length() - 1) + "\n" + getResources().getStringArray(R.array.meses)[d.getMonth()] + "\n" + s.getListZonas() + "\n" + getString(R.string.consultar_num_valid) + s.getNumvalidacoes());
 
         r.addView(t);
         r.addView(t2);
