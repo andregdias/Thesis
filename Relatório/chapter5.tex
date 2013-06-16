@@ -2,7 +2,7 @@
 
 \section*{}
 
-Neste capítulo é especificado de forma detalhada o desenvolvimento e implementação do protótipo desenvolvido, bem como as suas principais características. Pretende-se apresentar as várias fase de desenvolvimento e, em cada uma delas, o trabalho realizado e as conclusões retiradas, tendo em vista uma melhoria constante do produto final.
+Neste capítulo é especificado de forma detalhada o desenvolvimento e implementação do protótipo desenvolvido, bem como as suas principais características. Pretende-se apresentar as várias fases de desenvolvimento e, em cada uma delas, o trabalho realizado e as conclusões retiradas tendo em vista uma melhoria constante do produto final.
 
 \section{Especificação de Requisitos}
 
@@ -43,7 +43,7 @@ Por fim, os requisitos funcionais relacionados com a visualização de informaç
 
 Para além dos requisitos acima especificados, foram também delineadas algumas características que a aplicação deve conter:
 \begin{itemize}
-\item Comunicação - É necessário uma ligação à rede com um acesso estável e com uma largura de banda mínima que permita a plena utilização de todas as funcionalidades disponíveis;\item Eficiência - Uma normal utilização do sistema requer inúmeros acessos simultâneos à aplicação e, consequentemente, à sua base de dados. Logo, é fulcral que a aplicação esteja estruturada para que a informação seja acedida e apresentada em tempos de resposta mínimos, de modo a que o utilizador veja satisfeitos os seus propósitos de manipulação de informação;\item Fiabilidade - O sistema deverá garantir a integridade dos dados submetidos;\item Manutenção - O sistema deverá permitir uma fácil manutenção e adição de novas funcionalidades;\item Segurança - O sistema deve estar devidamente protegido para que não haja a possibilidade de acessos indevidos a dados confidenciais dos utilizadores.
+\item Comunicação - É necessário uma ligação à rede com um acesso estável e com uma largura de banda mínima, que permita a plena utilização de todas as funcionalidades disponíveis;\item Eficiência - Uma normal utilização do sistema requer inúmeros acessos simultâneos à aplicação e, consequentemente, à sua base de dados. Logo, é fulcral que a aplicação esteja estruturada para que a informação seja acedida e apresentada em tempos de resposta mínimos, de modo a que o utilizador veja satisfeitos os seus propósitos de manipulação de informação;\item Fiabilidade - O sistema deverá garantir a integridade dos dados submetidos;\item Manutenção - O sistema deverá permitir uma fácil manutenção e adição de novas funcionalidades;\item Segurança - O sistema deve estar devidamente protegido para que não haja a possibilidade de acessos indevidos a dados confidenciais dos utilizadores.
 \item Usabilidade - Pretende-se que a interface da aplicação seja intuitiva e de fácil utilização, para que o utilizador não perca muito tempo no processo de aprendizagem do manuseamento da mesma. É importante também que o número de cliques para execução das ações seja o menor possível, reduzindo assim o tempo de execução. O sistema deverá, também, oferecer mensagens de erro claras e ajuda contextual;\item Compatibilidade - O sistema deverá funcionar perfeitamente em dispositivos Android com verão 2.2 (API 8) ou superior. Para além disso, o sistema deverá ter uma integração coerente com a aplicação MOVE-ME.
 \end{itemize}
 
@@ -60,18 +60,18 @@ O primeiro passo a realizar, tal como acontece hoje em dia, é a compra de títu
 
 Para poder viajar nos veículos de transportes públicos, o utilizador deve proceder à validação de um dos títulos disponíveis. Para tal deve, de antemão, garantir que possui o título necessário para a viagem que vai realizar.
 \\Antes de realizar a validação do título é necessário selecionar a paragem e linha de entrada. A aplicação tenta, de forma automática, calcular a posição do utilizador e apresentar as paragens encontradas num raio de 80 metros, permitindo assim uma margem de erro de cálculo. No entanto, caso não seja possível calcular a posição atual do utilizador ou esta seja errada, é possível uma introdução manual da paragem, escolhendo o operador, a linha e finalmente a paragem.
-\\Após a escolha da paragem, são listadas todas as linhas que param na paragem selecionada, permitindo ao utilizador escolher aquela onde vai entrar.
+\\Após a escolha da paragem são listadas todas as linhas que nela param, permitindo ao utilizador escolher aquela onde vai entrar.
 \\Concluído o processo de validação, o utilizador pode viajar normalmente no veículo e será criada uma notificação no telemóvel que lhe indica o tempo restante e o título em uso. Para além disso, essa notificação permite aceder ao menu de fiscalização, caso solicitado pelo revisor.
 
 \subsection{Consulta}
 
 É importante também aceder ao estado atual da carteira de títulos e da carteira virtual. Muitas vezes os utilizadores deparam-se com o problema de estarem em casa e não saberem se têm títulos carregados para poder efetuar uma viagem, tendo de se deslocarem a um posto de venda para efetuar essa verificação. Isso muitas vezes implica a perda do veículo desejado ou alterações no planeamento diário.
-\\A aplicação permite ao utilizador consultar em qualquer altura quais os títulos que tem disponíveis, bem como as operações que efetuou (carregamentos, compras, etc.). Para além disso permite-lhe ainda visualizar o histórico de validações efetuadas, separando os títulos ocasionais da assinatura, porque normalmente existe uma discrepância no número de validações dum tipo e doutro sendo mais fácil a visualização em separado.
+\\A aplicação permite ao utilizador consultar em qualquer altura quais os títulos que tem disponíveis, bem como as operações que efetuou (carregamentos, compras, etc.). Para além disso permite-lhe ainda visualizar o histórico de validações efetuadas, separando os títulos ocasionais da assinatura, porque normalmente existe uma discrepância no número de validações dum tipo e doutro, sendo mais fácil a visualização em separado.
 
 \section{Arquitetura}
 
 A aplicação baseia-se numa arquitetura Servidor-Cliente tradicional, com utilização de uma base de dados de suporte local, mas que serve apenas para acelerar alguns processos, sendo sempre necessário comunicar ao servidor quaisquer alterações que sejam feitas.
-\\A aplicação comunica com o servidor através de ligação à Internet, utilizando serviços \web com API própria. Alguns dos serviços em utilização são os mesmos que se encontram na aplicação Move-Me pois fornecem informação pertinente para ambas as aplicações e também tendo em foco uma futura integração das duas. Ver Figura~\ref{fig:architecture}.
+\\A aplicação comunica com o servidor através de ligação à Internet, utilizando serviços \web com API própria. Alguns dos serviços em utilização são os mesmos que se encontram na aplicação MOVE-ME, pois fornecem informação pertinente para ambas as aplicações e também tendo em foco uma futura integração das duas. Ver Figura~\ref{fig:architecture}.
 
 \begin{figure}[t]
   \begin{center}
@@ -106,7 +106,7 @@ Os títulos são a componente central da aplicação, sendo que é através dele
 
 \subsubsection{Ocasional}
 
-Em termos concetuais, o conceito ocasional engloba tanto os títulos de viagem como os títulos Andante 24, por se basearem no mesmo princípio: uso limitado durante um determinado período de tempo e pelo número de zonas estipulado na tipologia do título. A única diferença prende-se com o facto de num título ocasional, o tempo de viagem ser calculado em função da tipologia e num título Andante 24, ser sempre de vinte e quatro horas.
+Em termos concetuais, o conceito ocasional engloba tanto os títulos de viagem como os títulos Andante 24, por se basearem no mesmo princípio: uso limitado durante um determinado período de tempo e pelo número de zonas estipulado na tipologia do título. A única diferença prende-se com o facto de num título ocasional o tempo de viagem ser calculado em função da tipologia enquanto que num título Andante 24 é sempre de vinte e quatro horas.
 \\Para além dos atributos herdados, é também necessário saber o número de zonas permitidas durante a utilização do título.
 
 \subsubsection{Assinatura}
@@ -115,16 +115,16 @@ A assinatura é o modelo mensal, com número ilimitado de utilizações dentro d
 \\Para disponibilizar alguma informação extra ao utilizador, é também guardado o número de validações. Pode ser utilizado, no futuro, para aconselhar o utilizador a utilizar títulos ocasionais caso o número de validações seja baixo, por exemplo.
 
 \subsection{Validação}
-Uma validação é o conceito que relaciona a utilização de um determinado título a uma paragem e linha, registando a data e hora, e tendo associado um número sequencial único que serve para controlo por parte do revisor.
+Uma validação é o conceito que relaciona a utilização de um determinado título a uma paragem e linha, registando a data e hora, tendo associado um número sequencial único que serve para controlo por parte do revisor.
 
 \subsection{Paragem}
 Paragem é a localização física onde os veículos de determinadas linhas efetuam paragem, permitindo a entrada e saída de passageiros. Sendo uma das funcionalidades da aplicação, a apresentação das paragens mais próximas da localização do utilizador, é necessário saber as coordenadas de cada paragem, bem como a informação que a identifica unicamente.
 
 \subsection{Linha}
-Linha corresponde ao trajeto efetuado pelos veículos e que é constituído por diversas paragens. Para além de identificar unicamente cada linha, é necessário distinguir também o sentido do trajeto, pois, em muitos casos, o percurso efetuado (e respetivas paragens) difere no sentido de ida e de volta.
+Linha corresponde ao trajeto efetuado pelos veículos e que é constituído por diversas paragens. Para além de identificar unicamente cada linha é necessário distinguir também o sentido do trajeto, pois, em muitos casos, o percurso efetuado (e respetivas paragens) difere no sentido de ida e de volta.
 
 \subsection{Zona}
-Partindo da designação de zona, do sistema Andante, é o conceito que permite ao utilizador identificar a tipologia do título a adquirir para determinada viagem. Cada paragem tem uma zona associada.
+Partindo da designação de zona do sistema Andante, é o conceito que permite ao utilizador identificar a tipologia do título a adquirir para determinada viagem. Cada paragem tem uma zona associada.
 
 \subsection{Transação}
 Uma transação é uma operação efetuada na aplicação que envolva movimentos monetários. Isto envolve tanto o carregamento da carteira virtual, como a compra de títulos. Este conceito é fundamental para permitir ao utilizador visualizar o histórico de operações efetuadas na aplicação.
@@ -233,7 +233,7 @@ Este menu é a base da aplicação e serve de lançamento para todas as funciona
 
 \subsection{Menu Validação}
 
-Este menu permite efetuar a validação de um título disponível em saldo, para uma determinada paragem e linha. Através dos serviços de localização do dispositivo móvel (GPS e redes móveis), a aplicação tenta calcular a posição atual do utilizador e listar-lhe as paragens que se encontram mais próximas. Caso não seja possível efetuar a localização do utilizador ou esta se encontre errada, o utilizador pode optar por efetuar uma seleção manual da paragem de entrada. Ver Figura~\ref{fig:menu_validacao}. Após a validação, surge no ecrã uma mensagem de confirmação, indicando a paragem até à qual o utilizador pode viajar com o título que selecionou, tal como se pode ver na Figura~\ref{fig:confirm_validacao}.
+Este menu permite efetuar a validação de um título disponível em saldo, para uma determinada paragem e linha. Através dos serviços de localização do dispositivo móvel (GPS e redes móveis), a aplicação tenta calcular a posição atual do utilizador e listar-lhe as paragens que se encontram mais próximas. Caso não seja possível efetuar a localização do utilizador ou esta se encontre errada, o utilizador pode optar por efetuar uma seleção manual da paragem de entrada. Ver Figura~\ref{fig:menu_validacao}. Após a validação surge no ecrã uma mensagem de confirmação, indicando a paragem até à qual o utilizador pode viajar com o título que selecionou, tal como se pode ver na Figura~\ref{fig:confirm_validacao}.
 
 \subsection{Menu Seleção Manual}
 
@@ -253,7 +253,7 @@ Este menu permite ao utilizador comprar uma assinatura mensal, selecionando as z
 
 \subsection{Menu Consulta}
 
-Este menu é onde o utilizador pode consultar os dados operacionais da sua conta. Para além de consultar o saldo atual de títulos, pode também consultar o histórico de operações realizadas na conta, e também as validações efetuadas com os seus títulos. Ver Figura~\ref{fig:menu_consulta}.
+Este menu é onde o utilizador pode consultar os dados operacionais da sua conta. Para além de consultar o saldo atual de títulos, pode consultar o histórico de operações realizadas na conta e também as validações efetuadas com os seus títulos. Ver Figura~\ref{fig:menu_consulta}.
 
 \subsection{Menu Saldo Títulos}
 
@@ -261,7 +261,7 @@ Este menu permite visualizar o saldo atual de títulos. Neste menu são listados
 
 \subsection{Menu Operações de Conta}
 
-Este menu permite ao utilizador verificar as operações efetuadas na sua conta, quer sejam carregamentos da conta como compras de títulos. Ver Figura~\ref{fig:menu_operacoes}.
+Este menu permite ao utilizador verificar as operações efetuadas na sua conta, quer sejam carregamentos da conta ou compras de títulos. Ver Figura~\ref{fig:menu_operacoes}.
 
 \subsection{Menu Histórico Validações}
 
@@ -269,7 +269,7 @@ Este menu mostra as validações efetuadas pelo utilizador, tanto em títulos oc
 
 \subsection{Menu Definições}
 
-Este menu permite alterar os dados pessoais do utilizador. Para além disso permite também fazer \emph{logout} da conta ativa. Ver Figura~\ref{fig:menu_definicoes}.
+Este menu permite alterar os dados pessoais do utilizador. Para além disso, permite também fazer \emph{logout} da conta ativa. Ver Figura~\ref{fig:menu_definicoes}.
 
 \subsection{Menu Sobre}
 
@@ -277,7 +277,7 @@ Este menu fornece informação relativa à autoria e desenvolvimento da aplicaç
 
 \subsection{Menu PIN}
 
-Este menu aparece sempre que se inicia a aplicação e permite adicionar uma camada de segurança à aplicação. O PIN do utilizador é definido no registo e pode ser alterado nas Definições. Este método de autenticação surge quando já existe um utilizado com a conta autenticada na aplicação. Para além disso permite também fazer \emph{logout} da conta ativa. Ver Figura~\ref{fig:menu_login_pin}.
+Este menu aparece sempre que se inicia a aplicação e permite adicionar uma camada de segurança à aplicação. O PIN do utilizador é definido no registo e pode ser alterado nas Definições. Este método de autenticação surge quando já existe um utilizador com a conta autenticada na aplicação. Para além disso, permite também fazer \emph{logout} da conta ativa. Ver Figura~\ref{fig:menu_login_pin}.
 
 \subsection{Menu Login}
 
