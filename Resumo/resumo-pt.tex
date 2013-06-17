@@ -22,6 +22,8 @@
 %% page layout
 \usepackage[a4paper,margin=30mm,noheadfoot]{geometry}
 
+\usepackage{multirow}
+
 %% space between columns
 \columnsep 12mm
 
@@ -44,10 +46,9 @@
 
 \begin{document}
 
-\title{\vspace*{-8mm}\textbf{\textsc{Modelo de Escrita de Resumos de\\Projecto/Dissertação: um Exemplo}}}
-\author{\emph{António Manuel Silva}\\[2mm]
-\small{Projecto/Dissertação realizado sob a orientação do \emph{Prof.\ José Marco Soares}}\\
-\small{na \emph{FazSoft Lda}}}
+\title{\vspace*{-8mm}\textbf{\textsc{Estudo, conceção, desenvolvimento e teste de uma aplicação móvel de pagamento e validação para Transportes Públicos de Passageiros}}}
+\author{\emph{André Gonçalves Dias}\\[2mm]
+\small{Projeto/Dissertação realizado sob a orientação do \emph{Prof.\ João Bernardo de Sena Esteves Falcão e Cunha} e \emph{Prof.\ Marta Maria Campos Ferreira}}}
 \date{}
 \maketitle
 %no page number 
@@ -59,125 +60,53 @@
 
 \section{Motivação}\label{sec:motiva}
 
-Neste documento apresentam-se alguns conselhos e instruções para a preparação dos resumos de projecto/dissertação. 
-Pede-se aos autores o favor de, dentro do possível, cumprirem com as instruções que são dadas, assim como com a estrutura apresentada, de forma a manter-se o mesmo aspecto em todos os resumos. 
-Nas sub-secções~\ref{sec:lingua} a ~\ref{sec:number} podem encontrar-se alguns detalhes sobre a formatação do documento. 
+Este projeto pretende facilitar os pagamentos e a validação de títulos de viagem nos transportes públicos na Área Metropolitana do Porto, tirando partido de dispositivos móveis. Por outro lado, pretende solucionar o problema causado pelo esquecimento, perda ou extravio de bilhetes, o que muitas vezes leva à necessidade da compra de um novo bilhete e títulos de viagem e, no caso da perda ou extravio, à impossibilidade de utilização dos títulos armazenados no bilhete perdido/extraviado.
+\\A principal motivação deste trabalho é o elevado número de passageiros que utilizam os transportes públicos na Área Metropolitana do Porto. Durante o ano de 2012, cinquenta e quatro milhões e meio de passageiros utilizaram o Metro do Porto \cite{INE20130528} e quarenta e cinco milhões de passageiros viajaram nos autocarros da STCP (dados relativos a validações do sistema intermodal) durante o primeiro semestre de 2012. \cite{andante}
+\\Se o elevado número de passageiros serviu de base para a escolha da área de desenvolvimento, a escolha do meio tecnológico baseia-se no facto de que atualmente já uma em cada cinco pessoas acede à Internet no telemóvel \cite{INE20121106}, e também de cada vez mais ser menos provável deixar o telemóvel em casa. Um estudo efetuado revela que é mais provável as pessoas saírem de casa sem a carteira do que sem o telemóvel. \cite{NFCForum2011}.
+\\Poder adicionar valor aos serviços já existentes é também uma motivação para o desenvolvimento do projeto.
 
-Na secção ``Motivação'' deve ser apresentado o enquadramento do trabalho, dando ideia das necessidades que o mesmo cobre.
+\section{Objetivos}\label{sec:goals}
 
-\section{Objectivos}\label{sec:goals}
-
-A secção ``Objectivos'' deve enunciar claramente os objectivos a atingir com o trabalho de projecto/dissertação, enquadrando-os na respectiva área de actividade a que o trabalho se destina. 
-Por exemplo, este documento tem como objectivos:
+Os objetivos deste projeto são os seguintes:
 \begin{itemize}
-\item Servir de modelo/exemplo do ponto de vista da dos resumos;
-\item Apresentar o aspecto gráfico que se pretende para os resumos;
-\item Disponibilizar \emph{templates} a quem pretenda utilizar \LaTeX.
+\item Criar uma nova forma de pagamento e validação de títulos de viagem, não substituindo os modelos atuais, servindo como um complemento dos mesmos;
+\item Reduzir filas nas lojas Andante e postos de venda automáticos, descentralizando a operação de compra de títulos de viagem que muitas vezes causa longos períodos de espera, principalmente no início de cada mês, com a necessidade de renovação das assinaturas;
+\item Reduzir custos de emissão e manuseamento de cartões, pois deixa de haver necessidade de um cartão físico, tudo está armazenado no dispositivo móvel do passageiro;
+\item Fornecer informação estatística sobre os passageiros aos operadores de transportes, permitindo um melhor ajuste e planeamento de rotas e distribuição de veículos;
+\item Possibilitar a realização de múltiplas operações em qualquer lugar e através do um único canal, concentrando um conjunto de serviços à distância de um clique, deixando de haver necessidade de consultar informações nos painéis informativos, comprar títulos de viagem num posto de venda automático ou num balcão e validar o título nas máquinas específicas para esse efeito;
+\item Aumentar a satisfação geral dos utilizadores, trazendo-lhes mais comodidade e fornecendo-lhes um serviço que lhes permitirá poupar tempo e trabalho.
 \end{itemize}
+
 
 \section{Descrição do Trabalho}\label{sec:work}
 
-Na secção ``Descrição do Trabalho'' (com este ou com outro nome que se julgue mais adequado) devem ser apresentadas as principais partes do trabalho, começando pela sua estruturação. Devem ser mencionadas as tecnologias utilizadas, com referências à sua interdependência e interligação dando especial ênfase aos componentes desenvolvidos pelo estudante no âmbito do trabalho em causa.
+O objetivo deste projeto é remover a necessidade de um elemento físico (cartão) nos pagamentos e validações em transportes públicos na Área Metropolitana do Porto, com a implementação de um sistema de pagamento e validação remoto via Internet, utilizando dispositivos móveis com o sistema operativo Android. Para além disso pretende-se recolher informação relativa às infraestruturas mais utilizadas neste âmbito, estudar as principais funcionalidades e operações existentes para implementação na aplicação e desenvolver soluções apropriadas para os problemas existentes.
+\\Como principais requisitos funcionais, este sistema dispõe de funcionalidades de carregamento da carteira virtual, compra e validação (entrada e saída (opcional)) de títulos de viagem, verificação da validade por parte do revisor; sendo estas as necessidades de um sistema tradicional de transportes públicos.\cite{Buttyan2009}
+\\Pretende-se que o projeto permita, numa fase posterior, uma integração com a aplicação MOVE-ME já existente no mercado, servindo como uma implementação de funcionalidades extra da mesma e também que seja possível por parte do administrador, a recolha, processamento e análise de informações relativas às viagens dos utilizadores.
 
-No presente documento, seguem-se 9 subsecções com instruções acerca da extensão da comunicação, margens, estilos e outras recomendações gerais acerca da elaboração da versão final dos resumos.
+\subsection{Arquitetura}
 
-\subsection{Línguas Obrigatórias}\label{sec:lingua}
-
-Os resumos deverão ser apresentados, em ficheiros separados, em versões portuguesa e inglesa. 
-No resumo em Português e em caso de necessidade de utilização de termos em língua Inglesa, estes deverão ser devidamente salientados pela adopção da fonte em itálico, como, por exemplo, \emph{Ray-Tracing}.
-
-\subsection{Cabeçalho de Identificação}
-
-O cabeçalho de identificação deve ser centrado e inicia-se com o título da comunicação, em letras maiúsculas de tamanho 12 e em negrito. 
-Seguem-se, em linhas separadas e em tamanho 9, a identificação do estudante, da empresa e dos orientadores (estes dois numa única linha). 
-Todos os quatro nomes devem ser em itálico.
-
-\subsection{Extensão do Artigo e Tipo de Letra}
-
-Cada resumo deve ser formatado com texto a duas colunas, não devendo exceder duas páginas de formato A4. 
-\textbf{As duas colunas devem terminar sensivelmente à mesma altura}, em cada uma das páginas. 
-
-O tipo de letra para o texto genérico deverá ser \emph{Times New Roman} com tamanho 9 e espaçamento simples entre linhas. 
-O espaçamento entre parágrafos deverá ser estendido a 1.5 linhas (0.5 linha de espaçamento extra).
-
-\subsection{Dimensões das Margens}
-
-As margens a manter à volta do texto deverão ser as constantes na Tab.~\ref{tab:medidas}.
-
-\begin{table}[H]
-  \centering
-  \caption{Margens expressas em centímetros}
-\begin{tabular}{c | c}
-	\hline
-\textbf{Espaçamento} & \textbf{Medida}\\
-	\hline
-	\hline
-        Margem Superior & 3 cm\\
-        Margem Inferior & 3 cm\\
-        Margem Esquerda & 3 cm\\
-        Margem Direita  & 3 cm\\
-        Entre Colunas   & 1.2 cm\\
-	\hline
-\end{tabular}
-  \label{tab:medidas}
-\end{table}
-
-\subsection{Corpo do Texto}
-
-Todos os títulos de secções e subsecções devem ser escritos em negrito e com um espaçamento para cima ligeiramente superior ao de um parágrafo normal. 
-Os títulos de níveis um e dois devem ter tamanhos, respectivamente, 11 e 9. 
-As ``subsubsecções'' devem ser evitadas.
-
-\subsection{Numeração das Secções}
-
-As secções deverão ser numeradas com início em "1", de acordo com os níveis e subníveis respectivos, usando-se o ponto como separador.
-
-\subsection{Figuras, Equações e Quadros}
-
-As figuras e as tabelas deverão ser centradas, sempre que possível, à largura da coluna de texto em que se
-inserem (Tab.~\ref{tab:medidas} e Fig.~\ref{fig:figura}). 
-As figuras e tabelas cujas dimensões não o permitam, podem ser centradas à largura da página.
+O sistema é composto por três componentes fundamentais. A componente servidor (\emph{Server}) que pode ser considerado o centro do sistema, uma vez que é este que disponibiliza os vários serviços, com a qual as outras componentes interagem remotamente. A componente cliente (\emph{Client}), a qual permite ao passageiro interagir diretamente com os serviços disponibilizados. Finalmente, a componente revisor (\emph{Conductor}), a qual permite aos revisores fiscalizar os passageiros que usam este sistema. De referir que, nesta fase, estas duas últimas componentes estão integradas na mesma aplicação, no telemóvel do passageiro, removendo a necessidade de os revisores andarem equipados com dispositivos apropriados.\\Esta arquitetura segue a típica arquitetura cliente/servidor. Ver Figura~\ref{fig:architecture}.
 
 \begin{figure}[H]
-\centerline{\includegraphics[scale=.6]{figura.png}}
-\caption{Esta é a legenda da figura}  
-\label{fig:figura}
+\centerline{\includegraphics[scale=0.45]{architecture}}
+    \caption{Arquitetura Servidor-Cliente}
+    \label{fig:architecture}
 \end{figure}
 
-As legendas das figuras, a negrito, devem ser colocadas na sua parte inferior, contendo a respectiva numeração antecedida do termo \textbf{Fig.} 
-O mesmo é aplicável às tabelas, excepto que a legenda deve ser iniciada pelo termo \textbf{Tab.}\ e deve ser colocada acima da tabela respectiva. 
-Devem ser evitadas figuras ou outros elementos com cores.
+\subsection{Android}
 
-\begin{equation}
-  S_{L,i} = S_{L,i-1} . (1-S_{P,i-1}) = \prod_{k=0}^{i-1} (1-S_{p,k}) \label{eq:cif}
-\end{equation}
-% \begin{eqnarray}
-% S_{L,i} &=& S_{L,i-1} . (1-S_{P,i-1}) \nonumber\\
-%        &=& \prod_{k=0}^{i-1} (1-S_{p,k}) \label{eq:cif}
-% \end{eqnarray}
-
-As equações deverão conter a respectiva numeração na mesma linha de texto e à sua direita, entre parêntesis, como se mostra no exemplo da Equação~\ref{eq:cif}.
-
-As figuras deverão ser numeradas a partir do número 1 e com uma única sequência, i.e., sem reinício em cada secção. 
-O mesmo deve suceder com as equações e com as tabelas.
-
-\subsection{Numeração de Páginas}\label{sec:number}
-
-As páginas \textbf{NÃO} devem ser numeradas.
-
-\subsection{Codificação dos Caracteres}\label{sec:encomding}
-
-Este exemplo está escrito em UTF-8; para outras codificações deverá
-ser alterado \texttt{\\usepackage[utf8]\{inputenc\}}.
-
+A escolha relativa ao sistema operativo recaiu sobre o Android por ser a plataforma móvel mais popular no mundo. Com um dispositivo Android, os utilizadores podem usar todos os serviços Google a que estão habituados, para além de mais de 600 mil aplicações e jogos disponíveis na loja virtual Google Play, sendo que muitas das aplicações são gratuitas. Para além disso, é possível obter milhões de músicas e livros e também milhares de filmes. Os dispositivos Android são melhorados constantemente com lançamentos de atualizações e novas funcionalidades com bastante frequência. Proporcionam também aos utilizadores uma experiência única e personalização de conteúdos.
+\\Uma mais valia é o facto de a aplicação MOVE-ME se encontrar também desenvolvida para este sistema operativo, sendo assim mais fácil a integração.
+\\A versão base escolhida será 2.2 (Froyo), pois mais de 98\% dos dispositivos possuem esta versão ou superior e ela oferece as funcionalidades necessárias. \cite{dashboards}
 
 \section{Conclusões}\label{sec:conclui}
 
-Espera-se que este documento possa contribuir para uma melhor qualidade dos resumos dos projectos/dissertações do MIEIC/FEUP.
+O facto de cada vez mais utilizadores dos transportes públicos serem possuidores de dispositivos móveis, consumindo informação constantemente, abre as portas à bilhética móvel, não havendo quaisquer entraves por parte do utilizador, que se mostra bastante satisfeito com a comodidade e simplicidade presentes no conceito.
+\\Uma outra vantagem deste sistema face a outros na mesma área, é a remoção de quaisquer intervenientes físicos durante todo o processo de utilização. Todas as operações são realizadas através dos dispositivos móveis. No entanto, este sistema tira proveito de um modelo de transportes sem barreiras, como é o caso da Área Metropolitana do Porto, não sendo possível implementá-lo em sistemas fechados sem as devidas modificações que permitissem comunicar com os sistemas de barreiras.
 
-Documentos que não respeitem este aspecto gráfico serão liminarmente recusados, ficando os respectivos autores em falta em relação à sua entrega.
+~\\Numa conclusão geral, o conceito está aprovado, é viável e é agora necessário torná-lo robusto e simples de modo a que possa ser utilizado por todos os operadores de transportes públicos da Área Metropolitana do Porto, trazendo-lhes informações adicionais sobre os seus passageiros e também fornecendo aos utilizadores uma solução prática, cómoda e eficaz para as suas deslocações.
 
-Para as dissertações existem regras definidas noutro lado~\cite{kn:Mat93}.
 
 %%English version: comment first, uncomment second
 \bibliographystyle{unsrt-pt}  % numeric, unsorted refs
