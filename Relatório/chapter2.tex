@@ -29,8 +29,8 @@ Os pagamentos móveis e outros serviços móveis, como por exemplo \textit{mobil
 O cliente envia um pedido de pagamento através de uma mensagem de texto SMS ou USSD para um \textit{short code} e é aplicado um débito no seu saldo do telemóvel ou numa carteira virtual. O vendedor é informado do sucesso da operação e envia então o conteúdo desejado.\cite{Blervaque2003} Como normalmente não há um endereço de entrega fiável definido, estes conteúdos são normalmente digitais, sendo a resposta recebida através de MMS contendo o conteúdo comprado (músicas, toques, fundos, etc.). Podem ser também enviados códigos de barras através de MMS que servem depois para confirmar o pagamento por parte do vendedor. Este método é utilizado como um bilhete eletrónico para aceder ao cinema ou eventos ou para recolha de objetos físicos.
 \\Este meio de pagamento está a ser cada vez mais substituído pelos que se apresentam posteriormente, sendo as principais razões as que se seguem:
 \begin{itemize}
-\item Pouca fiabilidade – As transações podem facilmente falhar, tendo em conta que as mensagens se podem perder;
-\item Velocidade baixa – Enviar mensagens pode ser um processo lento e pode levar horas até o vendedor receber a confirmação do pagamento. Os clientes não querem ter de esperar mais do que alguns segundos;
+\item Pouca fiabilidade – As transações podem facilmente falhar, tendo em conta que as mensagens se podem perder \cite{innopay};
+\item Velocidade baixa – Enviar mensagens pode ser um processo lento e pode levar horas até o vendedor receber a confirmação do pagamento. Os clientes não querem ter de esperar mais do que alguns segundos \cite{Mallat2007};
 \item Segurança – A encriptação de SMS/USSD termina na interface de rede, portanto a mensagem é texto puro, sem qualquer encriptação;
 \item Custo elevado – Há muitos custos associados a este tipo de pagamento. Primeiro o custo de definir um \textit{short code}, depois o custo de enviar os conteúdos para os clientes através de MMS e também os custos de apoio ao cliente para os casos de mensagens perdidas ou atrasadas.
 \end{itemize} 
@@ -94,14 +94,16 @@ Desde novembro de 2012 que são utilizados pagamentos via QR Code em grande esca
 \textit{Near Field Communication} (NFC) é usada maioritariamente para compras feitas em lojas físicas ou serviços de transportes. Um cliente, usando um telemóvel especial equipado com um \textit{smartcard} aproxima o dispositivo de um módulo de leitura. A maioria das transações não requer autenticação, mas algumas fazem-nos através de PIN, antes de completar a transação. O pagamento pode ser deduzido duma conta pré-carregada ou debitada diretamente do saldo do telemóvel ou de uma conta bancária.\cite{SmartCardAlliance2011}
 \\Pagamentos móveis através de NFC enfrentam desafios significativos para uma rápida e abrangente adoção, devido à falta de infraestruturas de suporte, ao complexo ecossistema de intervenientes e standards. Apesar disso, alguns produtores de telemóveis e bancos estão entusiasmados com esta tecnologia emergente.\cite{vdc}
 \\Os fornecedores de NFC no Japão estão intimamente ligados a redes de trânsito massivo, como por exemplo a Mobile Suica, utilizado na rede férrea JR East. O sistema Osaifu-Keitai, utilizado na Mobile Suica e em muitas outras aplicações, tornou-se o método standard para pagamentos no Japão.
-\\Outros fornecedores, principalmente na Europa, usam pagamentos sem contacto através de telemóveis para estacionamento em parques ou na rua em áreas especialmente demarcadas. Os clientes beneficiam porque podem fazer o pagamento no conforto do seu carro com o seu telemóvel e os operadores de estacionamento não são obrigados a investir em infraestruturas, novas ou existentes. Os responsáveis pelo estacionamento mantêm a ordem através da matrícula, \textit{transponders} ou códigos de barras.
+\\Outros fornecedores, principalmente na Europa, usam pagamentos sem contacto através de telemóveis para estacionamento em parques ou na rua em áreas especialmente demarcadas. Os clientes beneficiam porque podem fazer o pagamento no conforto do seu carro com o seu telemóvel, à saída do estacionamento, e os operadores de estacionamento não são obrigados a investir em infraestruturas, novas ou existentes. Os responsáveis pelo estacionamento mantêm a ordem através da matrícula, \textit{transponders} ou códigos de barras. \cite{pargi}
 \\Alguns fornecedores usam uma combinação de NFC e código de barras no dispositivo para pagamento, tornando esta técnica mais atrativa nos pontos de venda porque muitos dispositivos móveis no mercado ainda não suportam NFC.\cite{cimbal}
 
 \section{Projetos} \label{projetos}
 
+Segue-se a descrição de alguns projetos existentes, nomeadamente relativos a pagamentos móveis em Portugal. São também apresentados alguns projetos relacionados com bilhética móvel aplicada aos transportes, implementados noutros países.
+
 \subsection{MB Phone}
 
-Lançado em 1996, o MB Phone é um serviço inovador que permite efetuar no telemóvel algumas das operações que, habitualmente, se efetuam no Caixa Automático (normalmente conhecido por multibanco ou ATM). Estas operações têm a particularidade de poderem ser realizadas com ecrãs idênticos aos encontrados nos Caixa Automático, através de uma aplicação Java. Pode ainda utilizar-se o serviço através de serviços de voz ou SMS. 
+Lançado em 1996 em Portugal, o MB Phone é um serviço inovador que permite efetuar no telemóvel algumas das operações que, habitualmente, se efetuam no Caixa Automático (normalmente conhecido por multibanco ou ATM). Estas operações têm a particularidade de poderem ser realizadas com ecrãs idênticos aos encontrados nos Caixa Automático, através de uma aplicação Java. Pode ainda utilizar-se o serviço através de serviços de voz ou SMS. 
 \\O serviço MB Phone está ativo 24 horas por dia, em Portugal ou em qualquer outro país, com o qual a operadora de telecomunicações tenha acordos de roaming.
 \\Ao aliar a mobilidade à funcionalidade, este serviço vai ao encontro do consumidor final mas também dos bancos acionistas que apresentam um serviço que satisfaz as necessidades dos seus clientes. Este serviço está disponível nas operadoras TMN, Vodafone e Optimus e permite as seguintes operações: carregamentos de telemóveis (pré-pagos), pagamentos de serviços, consultas de saldos e movimentos bancários, consultas de NIB, pedidos de livros de cheques e transferência entre contas associadas.\cite{mbphone}
 \\A utilização do MB Phone pode ser feita de três maneiras distintas:
@@ -123,7 +125,7 @@ Lançado em 1996, o MB Phone é um serviço inovador que permite efetuar no tele
 %%%%%%%%%%%%%%%%%%%%%%%%%%%NEEDS CONFIRMATION
 \subsection{WalletPT} 
 
-O WalletPT é uma solução inovadora que permite fazer pagamentos em edifícios PT através do telemóvel. Este serviço baseia-se num saldo pré-pago, distinto do saldo de comunicações, que pode carregar-se na página \web através de diversos meios de pagamento, nomeadamente cartão de crédito, PayPal, multibanco ou MB Phone. É este saldo que permite efetuar pagamentos nos vários comerciantes aderentes. Desta forma, é possível controlar eficazmente os gastos, podendo consultar-se todo o histórico de movimentos na página \web ou os mais recentes através do telemóvel. Pode ser efetuada qualquer compra mesmo sem ter dinheiro na carteira.
+O WalletPT é uma solução portuguesa inovadora que permite fazer pagamentos em edifícios PT através do telemóvel. Este serviço baseia-se num saldo pré-pago, distinto do saldo de comunicações, que pode carregar-se na página \web através de diversos meios de pagamento, nomeadamente cartão de crédito, PayPal, multibanco ou MB Phone. É este saldo que permite efetuar pagamentos nos vários comerciantes aderentes. Desta forma, é possível controlar eficazmente os gastos, podendo consultar-se todo o histórico de movimentos na página \web ou os mais recentes através do telemóvel. Pode ser efetuada qualquer compra mesmo sem ter dinheiro na carteira.
 \\Para se utilizar o serviço é necessário um registo prévio e estão disponíveis quatro formas de pagamento:
 \begin{itemize}
 \item SMS
@@ -190,6 +192,29 @@ Durante o programa piloto, as operadoras distribuíram telemóveis com NFC, equi
 Em 2008, a empresa de soluções de pagamento sem contacto ViVOtech desenvolveu um ensaio de pagamento móvel através de NFC em São Francisco (Bay Area Rapid Transit). Em parceria com a Sprint, a First Data, a cadeia de restaurantes \textit{fast-food} Jack in the Box, o projeto permitiu a centenas de passageiros viajar na rede apenas tocando com o seu dispositivo móvel com NFC nos portões de acesso às estações.
 \\Este ensaio foi o primeiro nos Estados Unidos da América a combinar viagens baseadas em bilhetes móveis com pagamentos móveis em lojas associadas, permitindo aos utilizadores pagarem refeições nos restaurantes Jack in the Box. Para além disso, o ensaio incluía promoções em posters inteligentes que ajudavam os utilizadores a dirigirem-se à loja referenciada.
 \\O ensaio foi um grande sucesso, com um número elevado de utilização por parte dos utilizadores, tanto no sistema de transportes como na cadeia de restaurantes.\cite{NFCForum2011} \cite{Casey2000}
+
+\subsection{Mobipay}
+
+Mobipay é um sistema espanhol que ativa os meios de pagamento existentes (crédito normal ou virtual, débito ou cartões pré-pagos) e que permite efetuar uma série de operações no telemóvel. Pode, por exemplo, ser usado para realizar compras na Internet, pagar um táxi, carregar um cartão pré-pago, viajar nos transportes públicos, transferir dinheiro para outra pessoa, etc.
+\\Os utilizadores podem optar por associar o seu cartão de crédito ou débito Visa ou MasterCard à sua conta Mobipay e realizar os pagamentos diretamente do cartão ou então, em compras pequenas (menos de \euro 6), podem deduzir diretamente do saldo do cartão SIM.
+\\Mobipay surge duma parceria conjunta entre todas as operadoras móveis espanholas e 80\% das instituições financeiras. O objetivo é lançar os serviços de comércio móvel em Espanha e transformar o dispositivo móvel num meio de pagamento seguro, flexível e intuitivo. \cite{atos}
+
+\subsection{ÖBB SMS-Ticket}
+
+O operador de caminhos de ferro austríaco, ÖBB, possui um serviço de bilhetes via SMS, que podem facilmente ser obtidos pelos seus passageiros através do telemóvel. O custo da operação é debitado diretamente do saldo do cartão SIM, caso seja um utilizador da operadora móvel A1, ou das contas bancárias associadas, no caso das outras operadoras móveis.
+\\O utilizador envia uma SMS com a palavra ZUG e a seguinte lista de parâmetros (separados por espaço):
+\begin{itemize}
+\item Estação de partida;
+\item Estação de destino;
+\item Primeiro e último nome;
+\item Número de adultos (opcional);
+\item Número de crianças (opcional);
+\item Cartão VORTEILS (cartão que oferece vantagens, nomeadamente desconto no preço) (opcional);
+\item Classe (1ª ao 2ª) (opcional);
+\item Data da Viagem (opcional).
+\end{itemize}
+Recebe seguidamente uma SMS contendo o resumo da viagem e a indicação do preço. Para confirmar a compra basta responder à SMS.
+\\Por fim, apenas alguns segundos depois, o utilizador recebe o bilhete via SMS e deverá mantê-la até ao final da viagem, como prova de validade. \cite{obb}
 
 \subsection{Mobill} 
 

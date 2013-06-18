@@ -3,6 +3,7 @@
 \section*{}
 
 O objetivo deste projeto é remover a necessidade de um elemento físico (cartão) nos pagamentos e validações em transportes públicos na Área Metropolitana do Porto, com a implementação de um sistema de pagamento e validação remoto via Internet, utilizando dispositivos móveis com o sistema operativo Android. Para além disso pretende-se recolher informação relativa às infraestruturas mais utilizadas neste âmbito, estudar as principais funcionalidades e operações existentes para implementação na aplicação e desenvolver soluções apropriadas para os problemas existentes.
+\\Optou-se por um sistema baseado em WAP pela facilidade de implementação, o facto de não ser necessária qualquer infraestrutura física (como seria no caso do NFC) e por se apresentar como uma solução segura e fiável. Como referido anteriormente, os sistemas baseados em SMS não são encriptados e não há garantias de entrega dos conteúdos, pelo que essa opção foi prontamente excluída das possíveis alternativas.
 
 \section{Introdução}
 O modelo de utilização baseia-se no sistema atual, com algumas alterações:
@@ -25,9 +26,9 @@ O sistema é composto por três componentes fundamentais. A componente servidor 
 \begin{itemize}
 \item Compra de títulos por zonas, permitindo a compra de mais do que um título;
 \item Capacidade de armazenamento de títulos de viagem para uso posterior, sendo que os títulos podem ser de diferentes tipologias (diferente número de zonas, diferente modalidade);
-\item Validação um título de viagem, escolhendo o título desejado para utilização, sendo feita a comunicação com o servidor e recebendo a confirmação do mesmo;
+\item Validação de um título de viagem, escolhendo o título desejado para utilização, sendo feita a comunicação com o servidor e recebendo a confirmação do mesmo;
 \item Visualização do saldo da carteira virtual e dos títulos adquiridos;
-\item Visualização do histórico de operações;
+\item Visualização do histórico de operações da carteira virtual;
 \item Visualização do histórico de validações de títulos.
 \end{itemize}
 
@@ -39,7 +40,7 @@ O sistema é composto por três componentes fundamentais. A componente servidor 
 
 \subsection{Android}
 
-A escolha relativa ao sistema operativo recaiu sobre o Android por ser a plataforma móvel mais popular no mundo. Com um dispositivo Android, os utilizadores podem usar todos os serviços Google a que estão habituados, para além de mais de 600 mil aplicações e jogos disponíveis na loja virtual Google Play, sendo que muitas das aplicações são gratuitas. Para além disso, é possível obter milhões de músicas e livros e também milhares de filmes. Os dispositivos Android são melhorados constantemente com lançamentos de atualizações e novas funcionalidades com bastante frequência. Proporcionam também aos utilizadores uma experiência única e personalização de conteúdos.
+A escolha relativa ao sistema operativo recaiu sobre o Android por ser a plataforma móvel mais popular no mundo. \cite{jornalnegocios} \cite{computerworld} Com um dispositivo Android, os utilizadores podem usar todos os serviços Google a que estão habituados, para além de mais de 600 mil aplicações e jogos disponíveis na loja virtual Google Play, sendo que muitas das aplicações são gratuitas. Para além disso, é possível obter milhões de músicas e livros e também milhares de filmes. Os dispositivos Android são melhorados constantemente com lançamentos de atualizações e novas funcionalidades com bastante frequência. Proporcionam também aos utilizadores uma experiência única e personalização de conteúdos.
 \\Uma mais valia é o facto de a aplicação MOVE-ME se encontrar também desenvolvida para este sistema operativo, sendo assim mais fácil a integração.
 \\A versão base escolhida será 2.2 (Froyo), pois mais de 98\% dos dispositivos possuem esta versão ou superior e ela oferece as funcionalidades necessárias. Ver Tabela~\ref{tab:android}.
 
